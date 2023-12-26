@@ -1,0 +1,57 @@
+=====================================================
+> @Autowired Annotation With Single Bean Of Same Type
+=====================================================
+- The @Autowired annotation can be marked on a field, constructor and setter to auto-wire the beans that is 'injecting beans'(Objects) at runtime by
+  Spring Dependency Injection mechanism.
+- The @Autowired(required = false) will help to avoid NoSuchBeamDefinitionException if the bean isn't available during Auto-wiring Process.
+- The @Autowired on field and setter are not recommended for production usage.
+- Only @Autowired on constructor can be recommended for production usage.
+========================================================
+> @Autowired Annotation With Multiple Beans Of Same Type
+========================================================
+- Spring has 2 ways in auto-wiring multiple beans of same type...
+  1) By Type (default mechanism used by Spring)
+  2) By Name
+- In "By Type" mechanism, Spring automatically auto-wires the bean with same class type.
+- In "By Name" mechanism, Spring auto-wire process is carried out in 3 steps...
+  STEP-1: It checks for the parameter field name, if the same bean name is found in ProjectConfig.class then it auto-wires the bean.
+          Example: @Autowired
+                   public Constructor(Class class1) {
+                      this.class = class1;
+                   }
+  STEP-2: If step-1 fails, Spring checks for @Primary annotation; if it is found in ProjectConfig.class then it auto-wires the bean.
+          Example: // ProjectConfig.class has a bean marked with @Primary annotation.
+                   @Autowired
+                   public Constructor(Class class) {
+                      this.class = class;
+                   }
+  STEP-3: If step-2 fails, Spring checks for [ @Qualifier("name-of-bean") Class name ] in the parameter field name.
+          Example: // Here, even if @Primary annotation is present on bean in ProjectConfig.class it will still give priority to @Qualifier annotation.
+                   @Autowired
+                   public Constructor(@Qualifier("name-of-bean") Class class) {
+                      this.class = class;
+                   }
+  FINALLY: If all the steps fail during execution then Spring throws exception/error.
+
+====================================                           =======================================
+> EXAMPLES For @Autowired Annotation                           > EXAMPLES @Autowired(required = false)
+====================================                           =======================================
+- field                                                        - field
+  @Autowired                                                     @Autowired(required = false)
+  private Vehicle vehicle;                                       private Vehicle vehicle;
+
+- constructor                                                  - constructor
+  private String name;                                           private String name;
+  private final Vehicle vehicle;                                 private Vehicle vehicle;
+
+  @Autowired                                                     @Autowired(required = false)
+  public Person(Vehicle vehicle) {                               public Person(Vehicle vehicle) {
+     System.out.println("> Person Bean created by Spring...");      System.out.println("> Person Bean created by Spring...");
+     this.vehicle = vehicle;                                        this.vehicle = vehicle;
+  }                                                              }
+
+- setter                                                       - setter
+  @Autowired                                                     @Autowired(required = false)
+  public void setVehicle(Vehicle vehicle) {                      public void setVehicle(Vehicle vehicle) {
+     this.vehicle = vehicle;                                        this.vehicle = vehicle;
+  }                                                              }

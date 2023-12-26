@@ -1,0 +1,25 @@
+> Race Condition
+- A race condition occurs when two threads access a shared variable/resource at the same time.
+- The first thread reads the variable, and the second thread reads the same value from the variable.
+- Then the first thread and second thread perform their operations on the value and they race to see which thread can write the value last to the shared variable.
+- The value of the thread that writes its value last is preserved, because the thread is writing over the value that the previous thread wrote.
+- In Singleton Beans Scope, a race condition occurs when we implement Singleton Scope of Bean incorrectly.
+  - If we have a single object instance for our entire application and multiple threads at multiple places inside our application,
+    they are trying to access it.
+  - There is a good chance we will end up in this kind of race conditions.
+  - So it’s our responsibility as a developer, whatever beans that we are choosing as a Singleton Beans Scope,
+    there is no data related to application or correction or deletion happening inside these beans.
+  - In Java, we used to avoid this race condition is with synchronization and locking which adds unnecessary complexity to handle inside Spring applications.
+
+Example Code:-
+// if both the threads run the if condition at the same time, then both of them will
+// reserve the table for different users.
+Map<String, String> reservedTables = new HashMap()<>; // Shared Value Inside An Object
+// Thread - 1
+if (!reservedTables.containsKey(“table-1”)) {
+   reservedTables.put(“table-1”,”user-1”);
+}
+// Thread - 2
+if (!reservedTables.containsKey(“table-1”)) {
+   reservedTables.put(“table-1”,”user-2”);
+}

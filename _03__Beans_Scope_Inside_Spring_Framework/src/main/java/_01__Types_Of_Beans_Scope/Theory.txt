@@ -1,0 +1,43 @@
+> @Scope Annotation i.e. Beans Scope Inside Spring Framework
+There are 5 types of Beans Scope inside Spring Framework:-
+- Singleton   - Request   - Application
+- Prototype   - Session
+
+[1] @Scope(BeanDefinition.SCOPE_SINGLETON)
+- Singleton is the default scope of a bean inside Spring Framework.
+- In this scope, for a single bean we always get the same instance when we refer to or autowire inside our application.
+- Unlike Singleton Design Pattern where we have only 1 instance in the entire app, inside Scope; Spring will make sure to have only 1 instance per unique bean.
+- For example, if we have multiple beans of the same type, then Spring Singleton Scope will maintain 1 instance per each bean declared of the same type.
+- Use Cases Of Singleton Beans Scope:-
+  1) Since the same instance of a singleton bean will be used by multiple threads inside your application, it is very important that these beans are immutable.
+  2) Singleton Scope is more suitable for beans which handles service layer, repository layer business logic.
+- Points To Remember:-
+  1) Building mutable singleton beans will result in race conditions inside multithreaded environments.
+  2) There are ways to avoid race conditions due to mutable singleton beans with the help of synchronization and locking.
+  3) But it is not recommended, since it brings a lot of complexity and performance issues inside your app. So, please don’t try to build mutable singleton beans.
+- Example Code:-
+  var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+  Vehicle carObj1 = context.getBean(“vehicle1”, Vehicle.class);
+  Vehicle carObj2 = context.getBean(“vehicle1”, Vehicle.class);
+  Vehicle carObj3 = context.getBean(“vehicle2”, Vehicle.class);
+  String carHash1 = carObj1.hashCode();
+  String carHash2 = carObj2.hashCode();
+  String carHash3 = carObj3.hashCode();
+  if (carHash1 = = carHash2) {
+     System.out.println(“> Singleton Scope”);
+  }
+  if (carHash1 ! = carHash3 || carHash2 ! = carHash3) {
+     System.out.println(“> There is only 1 instance for multiple beans of same type.”);
+  }
+
+[2] @Scope(BeanDefinition.SCOPE_PROTOTYPE)
+- It is
+
+[3] @Scope(BeanDefinition.SCOPE_REQUEST)
+- It is
+
+[4] @Scope(BeanDefinition.SCOPE_SESSION)
+- It is
+
+[5] @Scope(BeanDefinition.SCOPE_APPLICATION)
+- It is

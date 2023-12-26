@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/_00__Basic_Concepts/pom.xml" />
+        <option value="$PROJECT_DIR$/_01__Create_Beans_Inside_Spring_Context/pom.xml" />
+        <option value="$PROJECT_DIR$/_02__Wiring_Beans_Using_Annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/_03__Beans_Scope_Inside_Spring_Framework/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="20" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
