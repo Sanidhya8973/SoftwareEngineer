@@ -11,7 +11,7 @@ public class Vehicle {
     private String name;
 
     public Vehicle() {
-        this.name = "LEXUS LFA";
+        setName("LEXUS LFA");
     }
 
     public String getName() {

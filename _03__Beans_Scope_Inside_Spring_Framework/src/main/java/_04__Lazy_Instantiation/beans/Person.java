@@ -17,7 +17,7 @@ public class Person {
     @Autowired
     public Person(Vehicle vehicle) {
         this.vehicle = vehicle;
-        this.name = "Sanidhya";
+        setName("SANIDHYA");
         System.out.println("> Beans Instantiation: LAZY INSTANTIATION");
     }
 
