@@ -6,7 +6,6 @@ import java.time.*;
 
 public class _01__LocalDate {
 
-
     private static final Logger log = LogManager.getLogger(_01__LocalDate.class);
 
     public static void initialiseLog() {
