@@ -6,7 +6,7 @@ import java.time.*;
 
 public class _03__LocalDateTime {
 
-    private static Logger log = LogManager.getLogger(_03__LocalDateTime.class);
+    private static final Logger log = LogManager.getLogger(_03__LocalDateTime.class);
 
     public static void initialiseLog() {
         Layout layout =
