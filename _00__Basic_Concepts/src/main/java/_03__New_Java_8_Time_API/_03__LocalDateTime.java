@@ -56,7 +56,7 @@ public class _03__LocalDateTime {
         executeLog(typeDateTime, localDateTime, localDateTimeHashCode, localDate, localTime, year, month, monthValue, dayOfWeek, dayOfMonth, dayOfYear, chronology, hour, minute, second, nanosecond);
     }
 
-    // other methods
+    // - - - other methods
     // localDateTime1.isBefore(localDateTime2);
     // localDateTime1.isAfter(localDateTime2);
     // localDateTime1.isEqual(localDateTime2);
