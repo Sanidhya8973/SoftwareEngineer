@@ -26,12 +26,12 @@ public class _04__Instant_Duration_Period {
         Instant endInstant = Instant.now();
         Duration durationInstant = Duration.between(startInstant, endInstant);
         // 2. LocalTime class with Duration class
-        LocalTime startLocalTime = LocalTime.of(06, 30, 10);
+        LocalTime startLocalTime = LocalTime.of(6, 30, 10);
         LocalTime endLocalTime = LocalTime.of(20, 30, 20);
         Duration durationLocalTime = Duration.between(startLocalTime, endLocalTime);
         // 3. LocalDateTime class with Duration class
-        LocalDateTime startDateTime = LocalDateTime.of(2023, 12, 29, 06, 30, 10);
-        LocalDateTime endDateTime = LocalDateTime.of(2023, 12, 30, 03, 30, 20);
+        LocalDateTime startDateTime = LocalDateTime.of(2023, 12, 29, 6, 30, 10);
+        LocalDateTime endDateTime = LocalDateTime.of(2023, 12, 30, 3, 30, 20);
         Duration durationDateTime = Duration.between(startDateTime, endDateTime);
         // 4. LocalDate class with Period class
         LocalDate startLocalDate = LocalDate.of(2003, 3, 4);
