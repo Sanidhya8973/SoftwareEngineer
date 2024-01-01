@@ -17,11 +17,11 @@ public class MrfTyres implements Tyres {
     }
 
     public String rotateTyres() {
-        return "  > " + getName() + ": active";
+        return "    > " + getName() + ": active";
     }
 
     public String stopRotatingTyres() {
-        return "  > " + getName() + ": de-active";
+        return "    > " + getName() + ": de-active";
     }
 
 }

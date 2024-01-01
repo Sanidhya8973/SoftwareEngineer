@@ -19,11 +19,11 @@ public class MichelinTyres implements Tyres {
     }
 
     public String rotateTyres() {
-        return "  > " + getName() + ": active";
+        return "    > " + getName() + ": active";
     }
 
     public String stopRotatingTyres() {
-        return "  > " + getName() + ": de-active";
+        return "    > " + getName() + ": de-active";
     }
 
 }

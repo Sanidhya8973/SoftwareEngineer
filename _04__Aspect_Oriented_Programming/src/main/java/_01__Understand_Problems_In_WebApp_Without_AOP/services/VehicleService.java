@@ -26,13 +26,13 @@ public class VehicleService {
     }
 
     public void initializeLog() {
-        Layout layout = new PatternLayout("  LOGGING PROCESS: %p - %m %n");
+        Layout layout = new PatternLayout("  %p - %m %n");
         Appender appender = new ConsoleAppender(layout);
         log.addAppender(appender);
     }
 
     public void playMusic(boolean vehicleStarted, Song song) throws Exception {
-        System.out.println();
+        log.info("LOGS: playMusic(boolean vehicleStarted, Song song);");
         log.info("Method Started Executing The Code.");
         Instant startTime = Instant.now();
         String music = null;
@@ -40,7 +40,7 @@ public class VehicleService {
             music = speakers.makeSound(song);
             Thread.sleep(1000);
         } else {
-            System.out.println("  > Please Start The Engine Of The Vehicle.");
+            System.out.println("    > Please Start The Engine Of The Vehicle.");
             log.log(Priority.WARN, "The Engine Of The Vehicle Is OFF, Please Turn It ON.");
         }
         System.out.println(music);
@@ -53,16 +53,16 @@ public class VehicleService {
     }
 
     public void carGripOn(boolean vehicleStarted) throws Exception {
-        System.out.println();
+        log.info("LOGS: carGripOn(boolean vehicleStarted);");
         log.info("Method Started Executing The Code.");
         Instant startTime = Instant.now();
         String drive = null;
         if (vehicleStarted) {
             drive = tyres.rotateTyres();
-            System.out.println("  > Let's Drive And Enjoy  : " + tyres.getName());
+            System.out.println("    > Let's Drive And Enjoy  : " + tyres.getName());
             Thread.sleep(3500);
         } else {
-            System.out.println("  > Please Start The Engine Of The Vehicle.");
+            System.out.println("    > Please Start The Engine Of The Vehicle.");
             log.log(Priority.WARN, "The Engine Of The Vehicle Is OFF, Please Turn It ON.");
         }
         System.out.println(drive);
@@ -75,16 +75,16 @@ public class VehicleService {
     }
 
     public void carGripOff(boolean vehicleStarted) throws Exception {
-        System.out.println();
+        log.info("LOGS: carGripOff(boolean vehicleStarted);");
         log.info("Method Started Executing The Code.");
         Instant startTime = Instant.now();
         String drive = null;
         if (vehicleStarted) {
             drive = tyres.stopRotatingTyres();
-            System.out.println("  > Let's Enjoy The Scenery: " + tyres.getName());
+            System.out.println("    > Let's Enjoy The Scenery: " + tyres.getName());
             Thread.sleep(2500);
         } else {
-            System.out.println("  > Please Start The Engine Of The Vehicle.");
+            System.out.println("    > Please Start The Engine Of The Vehicle.");
             log.log(Priority.WARN, "The Engine Of The Vehicle Is OFF, Please Turn It ON.");
         }
         System.out.println(drive);

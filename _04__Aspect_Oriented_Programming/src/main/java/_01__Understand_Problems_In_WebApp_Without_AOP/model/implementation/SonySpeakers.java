@@ -18,7 +18,7 @@ public class SonySpeakers implements Speakers {
     }
 
     public String makeSound(Song song) {
-        return "  > " + getName() + ": Playing Song: " + song.getName() + ", By " + song.getSinger();
+        return "    > " + getName() + ": Playing Song: " + song.getName() + ", By " + song.getSinger();
     }
 
 }
