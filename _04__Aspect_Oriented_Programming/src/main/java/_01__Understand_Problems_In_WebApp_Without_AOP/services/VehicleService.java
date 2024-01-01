@@ -21,17 +21,18 @@ public class VehicleService {
     public VehicleService(Speakers speakers, Tyres tyres) {
         this.speakers = speakers;
         this.tyres = tyres;
+        // fixed multiple logging problem when methods like carGripOn(), carGripOff() and playMusic() invoked
+        initializeLog();
     }
 
     public void initializeLog() {
         Layout layout = new PatternLayout("  LOGGING PROCESS: %p - %m %n");
         Appender appender = new ConsoleAppender(layout);
         log.addAppender(appender);
-        System.out.println();
     }
 
     public void playMusic(boolean vehicleStarted, Song song) throws Exception {
-        initializeLog();
+        System.out.println();
         log.info("Method Started Executing The Code.");
         Instant startTime = Instant.now();
         String music = null;
@@ -52,13 +53,13 @@ public class VehicleService {
     }
 
     public void carGripOn(boolean vehicleStarted) throws Exception {
-        initializeLog();
+        System.out.println();
         log.info("Method Started Executing The Code.");
         Instant startTime = Instant.now();
         String drive = null;
         if (vehicleStarted) {
             drive = tyres.rotateTyres();
-            System.out.println("  > Let's Play Some Music  : " + tyres.getName());
+            System.out.println("  > Let's Drive And Enjoy  : " + tyres.getName());
             Thread.sleep(3500);
         } else {
             System.out.println("  > Please Start The Engine Of The Vehicle.");
@@ -74,7 +75,7 @@ public class VehicleService {
     }
 
     public void carGripOff(boolean vehicleStarted) throws Exception {
-        initializeLog();
+        System.out.println();
         log.info("Method Started Executing The Code.");
         Instant startTime = Instant.now();
         String drive = null;
