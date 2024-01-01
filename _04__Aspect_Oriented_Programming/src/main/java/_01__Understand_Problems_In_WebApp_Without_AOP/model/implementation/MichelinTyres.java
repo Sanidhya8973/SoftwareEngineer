@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Primary
 public class MichelinTyres implements Tyres {
 
-    private String name;
+    private final String name;
 
     public MichelinTyres() {
         this.name = "MICHELIN TYRES";

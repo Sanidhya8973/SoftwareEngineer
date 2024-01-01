@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component("mrfTyres")
 public class MrfTyres implements Tyres {
 
-    private String name;
+    private final String name;
 
     public MrfTyres() {
         this.name = "MICHELIN TYRES";

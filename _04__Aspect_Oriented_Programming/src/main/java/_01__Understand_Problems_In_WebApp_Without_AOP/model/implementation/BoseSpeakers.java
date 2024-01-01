@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Primary
 public class BoseSpeakers implements Speakers {
 
-    private String name;
+    private final String name;
 
     public BoseSpeakers() {
         this.name = "BOSE SPEAKERS";

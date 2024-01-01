@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component("sonySpeakers")
 public class SonySpeakers implements Speakers {
 
-    private String name;
+    private final String name;
 
     public SonySpeakers() {
         this.name = "SONY SPEAKERS";
