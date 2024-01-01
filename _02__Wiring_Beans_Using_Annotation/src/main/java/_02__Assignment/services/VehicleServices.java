@@ -33,16 +33,8 @@ public class VehicleServices {
         return speakers;
     }
 
-    public void setSpeakers(Speakers speakers) {
-        this.speakers = speakers;
-    }
-
     public Tyres getTyres() {
         return tyres;
-    }
-
-    public void setTyres(Tyres tyres) {
-        this.tyres = tyres;
     }
 
 }

@@ -12,8 +12,8 @@ public class Vehicle {
 
     @Autowired
     public Vehicle(VehicleServices vehicleServices) {
-        this.name = "FORD";
         this.vehicleServices = vehicleServices;
+        setName("FORD");
     }
 
     public String getName() {

@@ -11,8 +11,8 @@ public class Person {
 
     @Autowired
     public Person(Vehicle vehicle) {
-        this.name = "SANIDHYA";
         this.vehicle = vehicle;
+        setName("SANIDHYA");
     }
 
     public String getName() {
