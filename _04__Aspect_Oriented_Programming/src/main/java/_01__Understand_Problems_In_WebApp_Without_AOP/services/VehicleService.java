@@ -58,13 +58,13 @@ public class VehicleService {
         String drive = null;
         if (vehicleStarted) {
             drive = tyres.rotateTyres();
-            System.out.println(drive);
             System.out.println("  > Let's Play Some Music  : " + tyres.getName());
             Thread.sleep(3500);
         } else {
             System.out.println("  > Please Start The Engine Of The Vehicle.");
             log.log(Priority.WARN, "The Engine Of The Vehicle Is OFF, Please Turn It ON.");
         }
+        System.out.println(drive);
         Instant endTime = Instant.now();
         log.info("Method Completed Executing The Code.");
         long timeInSeconds = Duration.between(startTime, endTime).toSeconds();
@@ -80,13 +80,13 @@ public class VehicleService {
         String drive = null;
         if (vehicleStarted) {
             drive = tyres.stopRotatingTyres();
-            System.out.println(drive);
             System.out.println("  > Let's Enjoy The Scenery: " + tyres.getName());
             Thread.sleep(2500);
         } else {
             System.out.println("  > Please Start The Engine Of The Vehicle.");
             log.log(Priority.WARN, "The Engine Of The Vehicle Is OFF, Please Turn It ON.");
         }
+        System.out.println(drive);
         Instant endTime = Instant.now();
         log.info("Method Completed Executing The Code.");
         long timeInSeconds = Duration.between(startTime, endTime).toSeconds();
