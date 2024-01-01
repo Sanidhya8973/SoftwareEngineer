@@ -10,6 +10,7 @@
         <module name="_00__Basic_Concepts" />
         <module name="_03__Beans_Scope_Inside_Spring_Framework" />
         <module name="_01__Create_Beans_Inside_Spring_Context" />
+        <module name="_04__Aspect_Oriented_Programming" />
       </profile>
     </annotationProcessing>
   </component>
