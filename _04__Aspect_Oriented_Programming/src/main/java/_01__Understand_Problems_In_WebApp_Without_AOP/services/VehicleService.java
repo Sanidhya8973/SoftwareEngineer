@@ -37,12 +37,12 @@ public class VehicleService {
         String music = null;
         if (vehicleStarted) {
             music = speakers.makeSound(song);
-            System.out.println(music);
             Thread.sleep(1000);
         } else {
             System.out.println("  > Please Start The Engine Of The Vehicle.");
             log.log(Priority.WARN, "The Engine Of The Vehicle Is OFF, Please Turn It ON.");
         }
+        System.out.println(music);
         Instant endTime = Instant.now();
         log.info("Method Completed Executing The Code.");
         long timeInSeconds = Duration.between(startTime, endTime).toSeconds();
