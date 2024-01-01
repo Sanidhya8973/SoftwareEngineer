@@ -1,5 +1,6 @@
 package _01__Understand_Problems_In_WebApp_Without_AOP.services;
 
+import _01__Understand_Problems_In_WebApp_Without_AOP.model.beans.Song;
 import org.apache.log4j.*;
 
 import java.time.*;
@@ -29,15 +30,14 @@ public class VehicleService {
         System.out.println();
     }
 
-    public void playMusic(boolean vehicleStarted) throws Exception {
+    public void playMusic(boolean vehicleStarted, Song song) throws Exception {
         initializeLog();
         log.info("Method Started Executing The Code.");
         Instant startTime = Instant.now();
         String music = null;
         if (vehicleStarted) {
-            music = speakers.makeSound();
+            music = speakers.makeSound(song);
             System.out.println(music);
-            System.out.println("  > Let's Play Some Music  : " + speakers.getName());
             Thread.sleep(1000);
         } else {
             System.out.println("  > Please Start The Engine Of The Vehicle.");

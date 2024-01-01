@@ -2,6 +2,7 @@ package _01__Understand_Problems_In_WebApp_Without_AOP.main;
 
 import _01__Understand_Problems_In_WebApp_Without_AOP.config.ProjectConfig;
 import _01__Understand_Problems_In_WebApp_Without_AOP.model.beans.Person;
+import _01__Understand_Problems_In_WebApp_Without_AOP.model.beans.Song;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
@@ -12,9 +13,10 @@ public class Main {
         System.out.println("> OWNER  : " + person.getName());
         System.out.println("> VEHICLE: " + person.getVehicle().getName());
         System.out.println("> VEHICLE STATUS:-");
-        person.getVehicle().getVehicleService().playMusic(true);
-        person.getVehicle().getVehicleService().carGripOn(true);
-        person.getVehicle().getVehicleService().carGripOff(true);
+        boolean isVehicleOn = true;
+        person.getVehicle().getVehicleService().playMusic(isVehicleOn, new Song("valid-song-name","valid-singer-name"));
+        person.getVehicle().getVehicleService().carGripOn(isVehicleOn);
+        person.getVehicle().getVehicleService().carGripOff(isVehicleOn);
     }
 
 }
