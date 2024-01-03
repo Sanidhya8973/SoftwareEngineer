@@ -123,14 +123,14 @@ There are 5 types of Beans Scope inside Spring Framework:-
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |   |                     EAGER INSTANTIATION                      |   |                                LAZY INSTANTIATION                                |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-| 1 | This is the default behavior inside Spring Framework.        | 1 | This is not a default behavior and needs to be configured explicitly using @LAZY.
-| 2 | The singleton bean will be created during the startup of the | 2 | The singleton bean will be created when the application is trying to refer to
-      application.                                                 |   | the bean for the first time.
-| 3 | The server will not start if bean is not able to be created  | 3 | Application will throw an exception runtime if bean creation is failed due to
-      due to any dependent exceptions.                             |   | any dependent exceptions.
-| 4 | Spring context will occupy a lot of memory if we try to use  | 4 | The performance will be impacted if we try to use “lazy” for all beans inside
-      "eager" for all beans inside an application.                 |   | an application.
-| 5 | Eager can be followed for all the beans which are required   | 5 | Lazy can be followed for the beans that are used in a very remote scenario
-      very commonly inside an application.                         |   | inside an application.
+| 1 | This is the default behavior inside Spring Framework.        | 1 | This is not a default behavior and needs to be configured explicitly using @LAZY.|
+| 2 | The singleton bean will be created during the startup of the | 2 | The singleton bean will be created when the application is trying to refer to    |
+|   | application.                                                 |   | the bean for the first time.                                                     |
+| 3 | The server will not start if bean is not able to be created  | 3 | Application will throw an exception runtime if bean creation is failed due to    |
+|   | due to any dependent exceptions.                             |   | any dependent exceptions.                                                        |
+| 4 | Spring context will occupy a lot of memory if we try to use  | 4 | The performance will be impacted if we try to use “lazy” for all beans inside    |
+|   | "eager" for all beans inside an application.                 |   | an application.                                                                  |
+| 5 | Eager can be followed for all the beans which are required   | 5 | Lazy can be followed for the beans that are used in a very remote scenario       |
+|   | very commonly inside an application.                         |   | inside an application.                                                           |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
