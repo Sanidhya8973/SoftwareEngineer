@@ -1,0 +1,90 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+> A.O.P. In Spring Framework:- (Aspect-Oriented Programming)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+- Spring AOP enables Aspect-Oriented Programming in Spring applications.
+- An aspect is simply a piece of code that the Spring Framework executes when we call specific methods inside our application.
+- In AOP, aspects enable the modularization of concerns such as security, logging, or the transaction management that cut across multiple types and objects (often termed crosscutting concerns).
+> Benefits & Uses:-
+- AOP helps in separating and maintaining many non-business logic related code (cross-cutting concerns)
+  like logging, auditing, security, transaction management.
+- AOP provides the way to dynamically add the cross-cutting concern before, after or around the actual logic using simple pluggable configurations.
+- AOP is a programming paradigm that aims to increase modularity by allowing the separation of cross-cutting concerns.
+  It does this by adding additional behavior to existing code without modifying the code itself.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+> Aspect Oriented Programming Jargon:-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+- When we define an Aspect or doing configurations, we need to follow WWW (3 Ws):-
+  1. WHAT (Aspect)
+  2. WHEN (Advice)
+  3. WHICH (Pointcut)
+- What code or business logic we want the Spring Framework to execute when we call a specific method. This is known as Aspect.
+- When the Spring Framework needs to execute the given Aspect. For example is it before or after the method call. This is known as Advice.
+- Which method inside the application that Spring Framework needs to intercept and execute the given Aspect. This is known as Pointcut.
+- Join Point defines the event that triggers the execution of an Aspect. Inside Spring, this event is always a method call.
+- Target Object in Spring Framework is the bean that declares the method/pointcut which is intercepted by an Aspect.
+- Example: Developer wants some business logic to be executed before each execution of method playMusic() present inside the bean VehicleService.
+           - Aspect      : some business logic // related to coding
+           - Advice      : before              // related to time of execution
+           - Pointcut    : playMusic()         // related to which method to execute
+           - Joinpoint   : each execution      // characteristics of executing the method
+           - TargetObject: VehicleService      // location of methods/objects/class
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+> Weaving Inside Aspect Oriented Programming:-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+- When we are implementing AOP inside our application using Spring Framework, it will intercept each method call and apply the logic defined in the Aspect.
+- Weaving is a concept inside Aspect Oriented Programming where Spring Framework controls all the interception of the Java methods
+  and applies aspect logic with the help of Proxy Object.
+- Lets deep dive on how Spring Framework does Weaving with the help of the Proxy Object.
+  1. So, whenever we try to invoke a method inside a bean
+  2. Spring instead of directly giving reference of the bean, it will give a proxy object
+  3. This proxy object will manage each call to a method and apply the Aspect logic
+  4. This process is known as Weaving.
+-----------------------------------------------------------------------------------------------
+| Visual Representation Of The Weaving Process Inside Aspect Oriented Programming             |
+-----------------------------------------------------------------------------------------------
+| Without AOP:-                                             | @Component(“music_service”)     |
+|  method is directly called and no interception by Spring. | public MusicService {           |
+| - - - - - - - - - - - - - - - - - - - - - - - - - - - - > |                                 |
+| With AOP   :-                                             |    String name = "valid-music"; |
+|  intercept - - >   Proxy Object of   - - > delegate - - > |                                 |
+|                  VehicleService Bean                      |    public void playMusic() {    |
+|  - method execution will be intercepted by Proxy Object   |       // business-logic         |
+|    and Aspect will be executed.                           |    }                            |
+|  - post that actual method invocation will happen.        | }                               |
+-----------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+> Types Of Advice In Aspect Oriented Programming:-                                                                                                        |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+1) @Before                                                                                                                                                |
+- @Before Advice runs before the matched method execution.                                                                                                |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+2) @AfterReturning                                                                                                                                        |
+- @AfterReturning Advice runs when a matched method execution exits/completes normally.                                                                   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+3) @AfterThrowing                                                                                                                                         |
+- @AfterThrowing Advice runs when a matched method execution exits by throwing an exception.                                                              |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+4) @After (finally)                                                                                                                                       |
+- @After (finally) Advice runs no matter how a matched method execution exits.                                                                            |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+5) @Around                                                                                                                                                |
+- @Around Advice runs around a matched method execution.                                                                                                  |
+- It has the opportunity to do work both before and after the method runs and to determine when, how, and even if the method actually gets to run at all. |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
