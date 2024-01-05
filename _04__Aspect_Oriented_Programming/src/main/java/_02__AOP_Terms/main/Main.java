@@ -20,7 +20,7 @@ public class Main {
         System.out.println("--------------");
         System.out.println("VEHICLE STATUS");
         System.out.println("--------------");
-        boolean isVehicleOn = true;
+        boolean isVehicleOn = true; // false
         person.getVehicle().getVehicleService().playMusic(isVehicleOn, new Song("valid-song-name", "valid-singer-name"));
         person.getVehicle().getVehicleService().carGripOn(isVehicleOn);
         person.getVehicle().getVehicleService().carGripOff(isVehicleOn);

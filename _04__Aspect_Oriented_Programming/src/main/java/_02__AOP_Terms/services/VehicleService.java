@@ -29,40 +29,22 @@ public class VehicleService {
     }
 
     public void playMusic(boolean vehicleStarted, Song song) throws Exception {
-        String music = null;
-        if (vehicleStarted) {
-            music = speakers.makeSound(song);
-            Thread.sleep(1000);
-        } else {
-            System.out.println("> Please Start The Engine Of The Vehicle.");
-            log.log(Priority.WARN, "The Engine Of The Vehicle Is OFF, Please Turn It ON.");
-        }
+        String music = speakers.makeSound(song);
+        Thread.sleep(1000);
         System.out.println(music);
     }
 
     public void carGripOn(boolean vehicleStarted) throws Exception {
-        String drive = null;
-        if (vehicleStarted) {
-            drive = tyres.rotateTyres();
-            System.out.println("> Let's Drive And Enjoy  : " + tyres.getName());
-            Thread.sleep(3500);
-        } else {
-            System.out.println("> Please Start The Engine Of The Vehicle.");
-            log.log(Priority.WARN, "The Engine Of The Vehicle Is OFF, Please Turn It ON.");
-        }
+        String drive = tyres.rotateTyres();
+        System.out.println("> Let's Drive And Enjoy  : " + tyres.getName());
+        Thread.sleep(3500);
         System.out.println(drive);
     }
 
     public void carGripOff(boolean vehicleStarted) throws Exception {
-        String drive = null;
-        if (vehicleStarted) {
-            drive = tyres.stopRotatingTyres();
-            System.out.println("> Let's Enjoy The Scenery: " + tyres.getName());
-            Thread.sleep(2500);
-        } else {
-            System.out.println("> Please Start The Engine Of The Vehicle.");
-            log.log(Priority.WARN, "The Engine Of The Vehicle Is OFF, Please Turn It ON.");
-        }
+        String drive = tyres.stopRotatingTyres();
+        System.out.println("> Let's Enjoy The Scenery: " + tyres.getName());
+        Thread.sleep(2500);
         System.out.println(drive);
     }
 

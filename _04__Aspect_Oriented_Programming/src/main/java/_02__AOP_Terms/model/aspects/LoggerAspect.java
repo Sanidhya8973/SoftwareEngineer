@@ -4,12 +4,14 @@ import org.apache.log4j.*;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 import java.time.Instant;
 
 @Aspect
+@Order(2)
 @Component
 public class LoggerAspect {
 
@@ -21,13 +23,13 @@ public class LoggerAspect {
         logs.addAppender(appender);
     }
 
-    @Around("execution(public void _02__AOP_Terms.services.VehicleService.*(..)) throws *")
-    public void log(ProceedingJoinPoint jp) throws Throwable {
-        logs.info(jp.getSignature().toString() + ": Method Execution Started");
+    @Around("execution(public void _02__AOP_Terms.services.VehicleService.*(..))")
+    public void log(ProceedingJoinPoint pjp) throws Throwable {
+        logs.info(pjp.getSignature().toString() + ": Method Execution Started");
         Instant startTime = Instant.now();
-        jp.proceed();
+        pjp.proceed();
         Instant endTime = Instant.now();
-        logs.info(jp.getSignature().toString() + ": Method Execution Completed");
+        logs.info(pjp.getSignature().toString() + ": Method Execution Completed");
         logs.info("Time Taken For Execution: " + Duration.between(startTime, endTime).toSeconds() + " seconds");
         logs.info("Time Taken For Execution: " + Duration.between(startTime, endTime).toMillis() + " milliseconds");
     }
