@@ -23,7 +23,7 @@ public class LoggerAspect {
         logs.addAppender(appender);
     }
 
-    @Around("execution(public void _02__AOP_Terms.services.VehicleService.*(..))")
+    @Around("execution(public * _02__AOP_Terms.services.VehicleService.*(..))")
     public void log(ProceedingJoinPoint pjp) throws Throwable {
         logs.info(pjp.getSignature().toString() + ": Method Execution Started");
         Instant startTime = Instant.now();
