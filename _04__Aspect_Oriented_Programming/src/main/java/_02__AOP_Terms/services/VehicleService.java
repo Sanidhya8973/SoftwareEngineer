@@ -1,5 +1,6 @@
 package _02__AOP_Terms.services;
 
+import _02__AOP_Terms.model.annotations.LogAspect;
 import _02__AOP_Terms.model.beans.Song;
 import _02__AOP_Terms.model.interfaces.Speakers;
 import _02__AOP_Terms.model.interfaces.Tyres;
@@ -46,6 +47,14 @@ public class VehicleService {
         System.out.println("> Let's Enjoy The Scenery: " + tyres.getName());
         Thread.sleep(2500);
         System.out.println(drive);
+    }
+
+    @LogAspect
+    public String getVehicleServiceSummary(Boolean vehicleStarted) throws Exception {
+        String music = speakers.makeSound(new Song("valid-music-name", "valid-singer"));
+        String drive = tyres.rotateTyres();
+        Thread.sleep(2000);
+        return "\n       > MUSICS STATUS " + music + "\n       > CAR STATUS    " + drive;
     }
 
     public String getSpeakersData() {

@@ -15,15 +15,20 @@ public class Main {
         System.out.println("---------------");
         System.out.println("VEHICLE PRESETS");
         System.out.println("---------------");
-        System.out.println("> SPEAKERS: " + person.getVehicle().getVehicleService().getSpeakersData());
-        System.out.println("> TYRES   : " + person.getVehicle().getVehicleService().getTyresData());
+        person.getVehicle().getVehicleService().getSpeakersData();
+        person.getVehicle().getVehicleService().getTyresData();
+        // System.out.println("> SPEAKERS: " + person.getVehicle().getVehicleService().getSpeakersData()); // returning null, some problem
+        // System.out.println("> TYRES   : " + person.getVehicle().getVehicleService().getTyresData());    // returning null, some problem
         System.out.println("--------------");
         System.out.println("VEHICLE STATUS");
         System.out.println("--------------");
-        boolean isVehicleOn = true; // false
+        boolean isVehicleOn = true; // true false
         person.getVehicle().getVehicleService().playMusic(isVehicleOn, new Song("valid-song-name", "valid-singer-name"));
         person.getVehicle().getVehicleService().carGripOn(isVehicleOn);
         person.getVehicle().getVehicleService().carGripOff(isVehicleOn);
+        System.out.println();
+        person.getVehicle().getVehicleService().getVehicleServiceSummary(isVehicleOn);
+        // System.out.println(person.getVehicle().getVehicleService().getVehicleServiceSummary(isVehicleOn)); // returning null, some problem
     }
 
 }
