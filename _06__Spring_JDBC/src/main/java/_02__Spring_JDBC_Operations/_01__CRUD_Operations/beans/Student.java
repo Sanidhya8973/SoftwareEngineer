@@ -1,5 +1,8 @@
-package _02__Spring_JDBC_Operations.beans;
+package _02__Spring_JDBC_Operations._01__CRUD_Operations.beans;
 
+import org.springframework.stereotype.Component;
+
+@Component("student")
 public class Student {
 
     private int id;

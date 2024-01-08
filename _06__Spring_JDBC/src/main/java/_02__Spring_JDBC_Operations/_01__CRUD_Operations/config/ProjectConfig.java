@@ -1,4 +1,4 @@
-package _02__Spring_JDBC_Operations.config;
+package _02__Spring_JDBC_Operations._01__CRUD_Operations.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,7 +11,8 @@ import javax.sql.DataSource;
 @Configuration
 @ComponentScan(
         basePackages = {
-                "_02__Spring_JDBC_Operations.beans"
+                "_02__Spring_JDBC_Operations._01__CRUD_Operations.beans",
+                "_02__Spring_JDBC_Operations._01__CRUD_Operations.dao"
         }
 )
 public class ProjectConfig {
