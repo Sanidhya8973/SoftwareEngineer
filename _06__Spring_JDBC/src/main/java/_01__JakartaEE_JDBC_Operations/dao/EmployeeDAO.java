@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class EmployeeDAO extends Query {
 
     public static void insert(Employee employee) {
-
         try {
             Connection con = ConnectionProvider.connectDB();
             String query = Query.insert;
@@ -26,11 +25,9 @@ public class EmployeeDAO extends Query {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     public static void view() { // Easy...
-
         try {
             Connection con = ConnectionProvider.connectDB();
             String query = Query.view;
@@ -49,11 +46,9 @@ public class EmployeeDAO extends Query {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     public static ArrayList<Employee> viewList() { // Hard...
-
         ArrayList<Employee> employeeList = new ArrayList<>();
         try {
             Connection con = ConnectionProvider.connectDB();
@@ -75,11 +70,9 @@ public class EmployeeDAO extends Query {
             e.printStackTrace();
         }
         return employeeList;
-
     }
 
     public static void updateId(String newId, String id) {
-
         try {
             Connection con = ConnectionProvider.connectDB();
             String query = Query.updateId;
@@ -93,11 +86,9 @@ public class EmployeeDAO extends Query {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     public static void updateName(String newName, String id) {
-
         try {
             Connection con = ConnectionProvider.connectDB();
             String query = Query.updateName;
@@ -111,11 +102,9 @@ public class EmployeeDAO extends Query {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     public static void updateEmail(String newEmail, String id) {
-
         try {
             Connection con = ConnectionProvider.connectDB();
             String query = Query.updateEmail;
@@ -129,11 +118,9 @@ public class EmployeeDAO extends Query {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     public static void updateSalary(String newSalary, String id) {
-
         try {
             Connection con = ConnectionProvider.connectDB();
             String query = Query.updateSalary;
@@ -147,7 +134,6 @@ public class EmployeeDAO extends Query {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     public static void delete(String id) {
