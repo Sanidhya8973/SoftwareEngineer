@@ -1,4 +1,4 @@
-package _01__JakartaEE_JDBC_Operations.dao.helper;
+package _01__JakartaEE_JDBC_Operations._01__CRUD_Operations.dao.helper;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

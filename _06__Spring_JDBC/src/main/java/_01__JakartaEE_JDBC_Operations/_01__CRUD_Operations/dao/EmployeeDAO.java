@@ -1,8 +1,8 @@
-package _01__JakartaEE_JDBC_Operations.dao;
+package _01__JakartaEE_JDBC_Operations._01__CRUD_Operations.dao;
 
-import _01__JakartaEE_JDBC_Operations.dao.helper.ConnectionProvider;
-import _01__JakartaEE_JDBC_Operations.dao.helper.Query;
-import _01__JakartaEE_JDBC_Operations.model.Employee;
+import _01__JakartaEE_JDBC_Operations._01__CRUD_Operations.model.Employee;
+import _01__JakartaEE_JDBC_Operations._01__CRUD_Operations.dao.helper.ConnectionProvider;
+import _01__JakartaEE_JDBC_Operations._01__CRUD_Operations.dao.helper.Query;
 
 import java.sql.*;
 import java.util.ArrayList;

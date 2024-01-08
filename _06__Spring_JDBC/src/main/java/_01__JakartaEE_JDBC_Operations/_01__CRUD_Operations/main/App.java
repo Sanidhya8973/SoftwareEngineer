@@ -1,7 +1,7 @@
-package _01__JakartaEE_JDBC_Operations.main;
+package _01__JakartaEE_JDBC_Operations._01__CRUD_Operations.main;
 
-import _01__JakartaEE_JDBC_Operations.model.Employee;
-import _01__JakartaEE_JDBC_Operations.dao.EmployeeDAO;
+import _01__JakartaEE_JDBC_Operations._01__CRUD_Operations.model.Employee;
+import _01__JakartaEE_JDBC_Operations._01__CRUD_Operations.dao.EmployeeDAO;
 
 import java.util.ArrayList;
 import java.util.Scanner;

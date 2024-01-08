@@ -1,4 +1,4 @@
-package _01__JakartaEE_JDBC_Operations.model;
+package _01__JakartaEE_JDBC_Operations._01__CRUD_Operations.model;
 
 public class Employee {
 
