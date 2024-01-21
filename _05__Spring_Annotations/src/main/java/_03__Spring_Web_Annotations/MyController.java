@@ -55,6 +55,7 @@ public class MyController {
     // @RequestMapping(path = "/{obj}")
     // @RequestMapping(path = "/${obj}")
     // @RequestMapping(path = "/path/${obj}")
+    // @RequestMapping(path = {"/{obj}", "/${obj}", "/path/${obj}"})
     // @RequestMapping(path = "/path/${obj-1}/path/${obj-2}")
 
     // basic
