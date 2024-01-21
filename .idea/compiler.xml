@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="_02__Wiring_Beans_Using_Annotation" />
-        <module name="_05__Spring_MVC" />
+        <module name="_05__Spring_Annotations" />
         <module name="_04__Aspect_Oriented_Programming" />
         <module name="_00__Basic_Concepts" />
         <module name="_03__Beans_Scope_Inside_Spring_Framework" />
@@ -15,6 +15,9 @@
         <module name="_01__Create_Beans_Inside_Spring_Context" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="_05__Spring_MVC" target="20" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
