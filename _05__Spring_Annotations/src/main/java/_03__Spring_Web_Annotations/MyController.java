@@ -145,7 +145,39 @@ public class MyController {
 
 // 2.1 @ResponseBody Annotation
 
+    @ResponseBody
+    @RequestMapping(path = "/path")
+    public String responseBody() {
+        return "Hello World!";
+    }
+
+    @ResponseBody
+    @RequestMapping(path = "/path-class", method = RequestMethod.GET)
+    public class Test {
+
+        @RequestMapping(path = "/path-method")
+        public String responseBody() {
+            return "Hello World!";
+        }
+
+    }
+
 // 2.2 @ExceptionHandler Annotation
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public String onException1(Exception e) {
+        return ">" + e.getMessage() + "\n" + e.getStackTrace();
+    }
+
+    @ExceptionHandler(value = IllegalArgumentException.class)
+    public String onException2(Exception e) {
+        return ">" + e.getMessage() + "\n" + e.getStackTrace();
+    }
+
+    @ExceptionHandler(value = {IllegalAccessException.class, IllegalAccessError.class})
+    public String onException3(Exception e) {
+        return ">" + e.getMessage() + "\n" + e.getStackTrace();
+    }
 
 // 2.3 @ResponseStatus Annotation
 
