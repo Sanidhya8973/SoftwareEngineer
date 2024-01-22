@@ -2,13 +2,13 @@ package _03__Spring_Web_Annotations;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.*;
 
 //----------------------
 //Spring Web Annotations
 //----------------------
 
 @Controller(value = "myController")
-@RequestMapping(path = "/website", method = RequestMethod.POST)
 public class MyController {
 
 // -------------------------------
@@ -17,10 +17,22 @@ public class MyController {
 
 // 1.1 @RequestMapping Annotation
 
-    // basic
-    @RequestMapping(path = "/home")
+    // basic: method level annotation
+    @RequestMapping(path = "/home", method = RequestMethod.GET)
     public String serveRequestHome() {
         return "home";
+    }
+
+    // basic: class level annotation
+    @Controller
+    @RequestMapping(path = "/website", method = RequestMethod.POST)
+    public class Test1 {
+
+        @RequestMapping(path = "/home")
+        public String serveRequestHome() {
+            return "home";
+        }
+
     }
 
     // advance
@@ -31,7 +43,8 @@ public class MyController {
 
     // master
     @RequestMapping(path = "/path", method = RequestMethod.POST, params = {"parameter-1", "parameter-2"}, headers = {
-            "header-1", "header-2"}, consumes = {"consume-1", "cosume-2"}, produces = {"produce-1", "produce-2"})
+            "header-1",
+            "header-2"}, consumes = {"consume-1", "cosume-2"}, produces = {"produce-1", "produce-2"})
     public String serveRequest2() {
         return "serve-request-path";
     }
@@ -153,7 +166,7 @@ public class MyController {
 
     @ResponseBody
     @RequestMapping(path = "/path-class", method = RequestMethod.GET)
-    public class Test {
+    public class Test2 {
 
         @RequestMapping(path = "/path-method")
         public String responseBody() {
@@ -181,16 +194,155 @@ public class MyController {
 
 // 2.3 @ResponseStatus Annotation
 
+    // 2.3.1
+    // returning HttpStatus code via @ResponseStatus
+    @RequestMapping(path = "/path", method = RequestMethod.GET)
+    @ResponseStatus(code = HttpStatus.BAD_REQUEST, reason = "specify-the-reason-here")
+    public void responseStatus1() {
+        // business logic
+    }
+
+    // 2.3.2
+    // returning HttpStatus code via @ExceptionHandler and @ResponseStatus
+    @RequestMapping(path = "/path", method = RequestMethod.GET)
+    @ExceptionHandler(IllegalArgumentException.class)
+    @ResponseStatus(code = HttpStatus.BAD_REQUEST, reason = "specify-the-reason-here")
+    public void responseStatus2(IllegalArgumentException exception) {
+        // business logic
+    }
+
+    // 2.3.3
+    // a) returning custom HttpStatus code via ResponseEntity class
+    // b) returning custom HttpStatus code via an exception i.e. @ResponseStatus annotation on exception classes
+    // c) returning custom HttpStatus code via @Controller and @ExceptionHandler annotations
+
+    // 2.3.3
+    // a) returning custom HttpStatus code via ResponseEntity class
+    @RequestMapping(path = "/path", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity responseStatus3() {
+        return new ResponseEntity(HttpStatus.BAD_REQUEST);
+    }
+
+    // 2.3.3
+    // b) returning custom HttpStatus code via an exception i.e. @ResponseStatus annotation on exception classes
+    @ResponseStatus(code = HttpStatus.FORBIDDEN, reason = "specify-the-reason-here")
+    public class ForbiddenException extends RuntimeException {
+        // business logic
+    }
+
+    @ResponseBody
+    @RequestMapping(path = "/path/exception", method = RequestMethod.GET)
+    public ResponseEntity responseStatus4() {
+        throw new ForbiddenException();
+    }
+
+    // 2.3.3
+    // c) returning custom HttpStatus code via @Controller & @ExceptionHandler annotations
+
 // -----------------------------------------------------------------------
 // [3] Annotations That Do Not Manage HTTP Requests And Responses Directly
 // -----------------------------------------------------------------------
 
 // 3.1 @Controller Annotation
 
+    @Controller
+    public class Test3 {
+        // business logic
+    }
+
+    @Controller("myController")
+    public class Test4 {
+        // business logic
+    }
+
+    @Controller(value = "myController")
+    public class Test5 {
+        // business logic
+    }
+
 // 3.2 @RestController Annotation
+
+    @Controller
+    @ResponseBody
+    public class Test6 {
+        // business logic
+    }
+
+    @RestController
+    public class Test7 {
+        // business logic
+    }
+
+    @RestController(value = "myController")
+    public class Test8 {
+        // business logic
+    }
 
 // 3.3 @ModelAttribute Annotation
 
+    // basic method-parameter level annotation
+    @PostMapping(path = "/path")
+    public void modelAttribute1(@ModelAttribute("obj") Object objX) {
+        // business logic
+    }
+
+    @PostMapping(path = "/path")
+    public void modelAttribute2(@ModelAttribute Object obj) {
+        // business logic
+    }
+
+    // basic method level annotation
+    @ModelAttribute("obj")
+    public Object modelAttribute3(Object objX) {
+        // Spring will automatically add the method’s return value to the model
+        // business logic
+        return objX;
+    }
+
+    @ModelAttribute
+    public Object modelAttribute4(Object obj) {
+        // Spring will automatically add the method’s return value to the model
+        // business logic
+        return obj;
+    }
+
+    // advance
+    @RequestMapping(path = "/path", method = RequestMethod.GET, params = "param", headers = "header", consumes = "consume", produces = "produce")
+    public void modelAttribute5(@ModelAttribute("obj") Object objX, @ModelAttribute Object obj) {
+        // business logic
+    }
+
 // 3.4 @CrossOrigin Annotation
+
+    // basic: method level annotation
+    @CrossOrigin
+    @RequestMapping(path = "/path", method = RequestMethod.GET)
+    public String enableCrossOrigin1() {
+        return "path";
+    }
+
+    @CrossOrigin(origins = "http://example.com", maxAge = 3600)
+    @RequestMapping(path = "/path/${id}", method = RequestMethod.GET)
+    public String enableCrossOrigin2(@PathVariable long id) {
+        return "path-id";
+    }
+
+    // basic: class level annotation
+    @CrossOrigin
+    @RequestMapping(path = "/website")
+    public class Test {
+
+        @RequestMapping(path = "/path", method = RequestMethod.GET)
+        public String enableCrossOrigin1() {
+            return "path";
+        }
+
+        @RequestMapping(path = "/path", method = RequestMethod.GET)
+        public String enableCrossOrigin2() {
+            return "path";
+        }
+
+    }
 
 }
