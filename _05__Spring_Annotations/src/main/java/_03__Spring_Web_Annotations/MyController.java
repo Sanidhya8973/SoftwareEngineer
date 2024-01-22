@@ -55,8 +55,8 @@ public class MyController {
     // @RequestMapping(path = "/{obj}")
     // @RequestMapping(path = "/${obj}")
     // @RequestMapping(path = "/path/${obj}")
-    // @RequestMapping(path = {"/{obj}", "/${obj}", "/path/${obj}"})
     // @RequestMapping(path = "/path/${obj-1}/path/${obj-2}")
+    // @RequestMapping(path = { "/{obj}", "/${obj}", "/path/${obj}" })
 
     // basic
     @RequestMapping(path = "/{obj}")
@@ -93,6 +93,47 @@ public class MyController {
     }
 
 // 1.3 @RequestParam Annotation
+
+    // basic
+    @RequestMapping(path = "/path")
+    public String requestParam1(@RequestParam("id") String id) {
+        return id;
+    }
+
+    @RequestMapping(path = "/path", params = "id")
+    public String requestParam2(@RequestParam("id") String id) {
+        return id;
+    }
+
+    @RequestMapping(path = "/path", params = {"id", "name"})
+    public String requestParam3(@RequestParam("id") String id, @RequestParam("name") String name) {
+        return id + ":" + name;
+    }
+
+    @RequestMapping(path = "/path")
+    public String requestParam4(@RequestParam(defaultValue = "1") String id) {
+        return id;
+    }
+
+    @RequestMapping(path = "/path")
+    public String requestParam5(@RequestParam(required = false) String id) {
+        return id;
+    }
+
+    // advance
+    @RequestMapping(path = "/path/${obj-1}/path${obj-2}", params = "param", method = RequestMethod.GET)
+    public Object requestParam6(@PathVariable("obj") Object obj1, @RequestParam("param-1") String str) {
+        Object obj = new Object();
+        // business logic
+        return obj;
+    }
+
+    @RequestMapping(path = {"/path/${obj}", "/path/${obj-1}/path${obj-2}"}, params = {"param-1", "param-2"})
+    public Object requestParam7(@PathVariable("obj") Object obj1, @RequestParam("param-1") String str) {
+        Object obj = new Object();
+        // business logic
+        return obj;
+    }
 
 // 1.4 @RequestHeader Annotation
 
