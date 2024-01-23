@@ -2,20 +2,25 @@ package _03__Spring_Web_Annotations;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 import org.springframework.http.*;
 
-//----------------------
-//Spring Web Annotations
-//----------------------
+// ----------
+// Spring MVC
+// ----------
 
 @Controller(value = "myController")
 public class MyController {
 
-// -------------------------------
-// [1] Request Handler Annotations
-// -------------------------------
+// --------------------------
+// [1] Spring Web Annotations
+// --------------------------
 
-// 1.1 @RequestMapping Annotation
+// ---------------------------------
+// [1.1] Request Handler Annotations
+// ---------------------------------
+
+// 1.1.1 @RequestMapping Annotation
 
     // basic: method level annotation
     @RequestMapping(path = "/home", method = RequestMethod.GET)
@@ -49,7 +54,7 @@ public class MyController {
         return "serve-request-path";
     }
 
-// 1.2 @RequestBody Annotation
+// 1.1.2 @RequestBody Annotation
 
     // basic
     @RequestMapping(path = "/home")
@@ -63,7 +68,7 @@ public class MyController {
         // business logic
     }
 
-// 1.3 @PathVariable Annotation
+// 1.1.3 @PathVariable Annotation
 
     // @RequestMapping(path = "/{obj}")
     // @RequestMapping(path = "/${obj}")
@@ -105,7 +110,7 @@ public class MyController {
         return obj;
     }
 
-// 1.3 @RequestParam Annotation
+// 1.1.3 @RequestParam Annotation
 
     // basic
     @RequestMapping(path = "/path")
@@ -148,15 +153,15 @@ public class MyController {
         return obj;
     }
 
-// 1.4 @RequestHeader Annotation
+// 1.1.4 @RequestHeader Annotation
 
-// 1.5 @CookieValue Annotation
+// 1.1.5 @CookieValue Annotation
 
-// --------------------------------
-// [2] Response Handler Annotations
-// --------------------------------
+// ----------------------------------
+// [1.2] Response Handler Annotations
+// ----------------------------------
 
-// 2.1 @ResponseBody Annotation
+// 1.2.1 @ResponseBody Annotation
 
     @ResponseBody
     @RequestMapping(path = "/path")
@@ -175,7 +180,7 @@ public class MyController {
 
     }
 
-// 2.2 @ExceptionHandler Annotation
+// 1.2.2 @ExceptionHandler Annotation
 
     @ExceptionHandler(IllegalArgumentException.class)
     public String onException1(Exception e) {
@@ -192,9 +197,9 @@ public class MyController {
         return ">" + e.getMessage() + "\n" + e.getStackTrace();
     }
 
-// 2.3 @ResponseStatus Annotation
+// 1.2.3 @ResponseStatus Annotation
 
-    // 2.3.1
+    // 1.2.3.1
     // returning HttpStatus code via @ResponseStatus
     @RequestMapping(path = "/path", method = RequestMethod.GET)
     @ResponseStatus(code = HttpStatus.BAD_REQUEST, reason = "specify-the-reason-here")
@@ -202,7 +207,7 @@ public class MyController {
         // business logic
     }
 
-    // 2.3.2
+    // 1.2.3.2
     // returning HttpStatus code via @ExceptionHandler and @ResponseStatus
     @RequestMapping(path = "/path", method = RequestMethod.GET)
     @ExceptionHandler(IllegalArgumentException.class)
@@ -211,12 +216,12 @@ public class MyController {
         // business logic
     }
 
-    // 2.3.3
+    // 1.2.3.3
     // a) returning custom HttpStatus code via ResponseEntity class
     // b) returning custom HttpStatus code via an exception i.e. @ResponseStatus annotation on exception classes
     // c) returning custom HttpStatus code via @Controller and @ExceptionHandler annotations
 
-    // 2.3.3
+    // 1.2.3.3
     // a) returning custom HttpStatus code via ResponseEntity class
     @RequestMapping(path = "/path", method = RequestMethod.GET)
     @ResponseBody
@@ -224,7 +229,7 @@ public class MyController {
         return new ResponseEntity(HttpStatus.BAD_REQUEST);
     }
 
-    // 2.3.3
+    // 1.2.3.3
     // b) returning custom HttpStatus code via an exception i.e. @ResponseStatus annotation on exception classes
     @ResponseStatus(code = HttpStatus.FORBIDDEN, reason = "specify-the-reason-here")
     public class ForbiddenException extends RuntimeException {
@@ -237,14 +242,14 @@ public class MyController {
         throw new ForbiddenException();
     }
 
-    // 2.3.3
+    // 1.2.3.3
     // c) returning custom HttpStatus code via @Controller & @ExceptionHandler annotations
 
 // -----------------------------------------------------------------------
-// [3] Annotations That Do Not Manage HTTP Requests And Responses Directly
+// [1.3] Annotations That Do Not Manage HTTP Requests And Responses Directly
 // -----------------------------------------------------------------------
 
-// 3.1 @Controller Annotation
+// 1.3.1 @Controller Annotation
 
     @Controller
     public class Test3 {
@@ -261,7 +266,7 @@ public class MyController {
         // business logic
     }
 
-// 3.2 @RestController Annotation
+// 1.3.2 @RestController Annotation
 
     @Controller
     @ResponseBody
@@ -279,7 +284,7 @@ public class MyController {
         // business logic
     }
 
-// 3.3 @ModelAttribute Annotation
+// 1.3.3 @ModelAttribute Annotation
 
     // basic method-parameter level annotation
     @PostMapping(path = "/path")
@@ -313,7 +318,7 @@ public class MyController {
         // business logic
     }
 
-// 3.4 @CrossOrigin Annotation
+// 1.3.4 @CrossOrigin Annotation
 
     // basic: method level annotation
     @CrossOrigin
@@ -343,6 +348,40 @@ public class MyController {
             return "path";
         }
 
+    }
+
+//---------------------------------------
+// [2] Spring MVC: Redirecting / Redirect
+//---------------------------------------
+
+// 2.1 using redirect prefix
+
+    @RequestMapping(path = "/path", method = RequestMethod.POST)
+    public String redirect1() {
+        return "redirect:" + "https://www.google.com";
+    }
+
+    @RequestMapping(path = "/path", method = RequestMethod.POST)
+    public String redirect2(String search) {
+        return "redirect:" + "https://www.google.com/search?q=" + search;
+    }
+
+// 2.2 using RedirectView class
+
+    @RequestMapping(path = "/path", method = RequestMethod.POST)
+    public RedirectView redirect3() {
+        String myUrl = "https://www.google.com/search";
+        RedirectView rv = new RedirectView();
+        rv.setUrl(myUrl);
+        return rv;
+    }
+
+    @RequestMapping(path = "/path", method = RequestMethod.POST)
+    public RedirectView redirect4(String search) {
+        String myUrl = "https://www.google.com/search?q=" + search;
+        RedirectView rv = new RedirectView();
+        rv.setUrl(myUrl);
+        return rv;
     }
 
 }
