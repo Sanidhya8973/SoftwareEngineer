@@ -358,18 +358,23 @@ public class MyController {
 
     @RequestMapping(path = "/path", method = RequestMethod.POST)
     public String redirect1() {
+        return "redirect:/path-of-redirection";
+    }
+
+    @RequestMapping(path = "/path", method = RequestMethod.POST)
+    public String redirect2() {
         return "redirect:" + "https://www.google.com";
     }
 
     @RequestMapping(path = "/path", method = RequestMethod.POST)
-    public String redirect2(String search) {
+    public String redirect3(String search) {
         return "redirect:" + "https://www.google.com/search?q=" + search;
     }
 
 // 2.2 using RedirectView class
 
     @RequestMapping(path = "/path", method = RequestMethod.POST)
-    public RedirectView redirect3() {
+    public RedirectView redirect4() {
         String myUrl = "https://www.google.com/search";
         RedirectView rv = new RedirectView();
         rv.setUrl(myUrl);
@@ -377,7 +382,7 @@ public class MyController {
     }
 
     @RequestMapping(path = "/path", method = RequestMethod.POST)
-    public RedirectView redirect4(String search) {
+    public RedirectView redirect5(String search) {
         String myUrl = "https://www.google.com/search?q=" + search;
         RedirectView rv = new RedirectView();
         rv.setUrl(myUrl);
