@@ -1,6 +1,9 @@
 package _03__Spring_Web_Annotations;
 
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 import org.springframework.http.*;
@@ -72,12 +75,15 @@ public class MyController {
 
     // @RequestMapping(path = "/{obj}")
     // @RequestMapping(path = "/${obj}")
+    // @RequestMapping(path = "/search?{obj}")
     // @RequestMapping(path = "/path/${obj}")
+    // @RequestMapping(path = "/path/search?${obj}")
+    // @RequestMapping(path = "/path/q?${obj}")
     // @RequestMapping(path = "/path/${obj-1}/path/${obj-2}")
     // @RequestMapping(path = { "/{obj}", "/${obj}", "/path/${obj}" })
 
     // basic
-    @RequestMapping(path = "/{obj}")
+    @RequestMapping(path = "/search?{obj}")
     public Object pathVariable1(@PathVariable Object obj) {
         // business logic
         return obj;
@@ -318,6 +324,14 @@ public class MyController {
         // business logic
     }
 
+    @ModelAttribute
+    public Object modelAttribute6(Model model) {
+        // set common key-value pairs that remains the same throughout the WebApp
+        // for example set the user credentials throughout your WebApp to reduce the code complexity
+        model.addAttribute("common-key", "common-values");
+        return model;
+    }
+
 // 1.3.4 @CrossOrigin Annotation
 
     // basic: method level annotation
@@ -351,7 +365,7 @@ public class MyController {
     }
 
 //---------------------------------------
-// [2] Spring MVC: Redirecting / Redirect
+// [2] Spring MVC: Redirection / Redirect
 //---------------------------------------
 
 // 2.1 using redirect prefix
@@ -387,6 +401,22 @@ public class MyController {
         RedirectView rv = new RedirectView();
         rv.setUrl(myUrl);
         return rv;
+    }
+
+// --------------------------------------------------------------------------------
+// [3] Spring MVC: Handle Messages To Be Displayed on HTML Form When There Is Error
+// --------------------------------------------------------------------------------
+
+    @RequestMapping(path = "/form", method = RequestMethod.POST)
+    public String getForm(BindingResult br, @ModelAttribute("obj") Object obj, Model m) {
+        if (br.hasErrors()) {
+            m.addAttribute("message", "msg-value");
+            return "form";
+            // at view->form there is a jstl tag to display the error
+            // <form:errors path="user.*" />
+        }
+
+        return "user-profile";
     }
 
 }
