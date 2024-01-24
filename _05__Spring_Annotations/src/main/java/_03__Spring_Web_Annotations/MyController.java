@@ -1,6 +1,5 @@
 package _03__Spring_Web_Annotations;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -188,6 +187,7 @@ public class MyController {
 
 // 1.2.2 @ExceptionHandler Annotation
 
+    // basic
     @ExceptionHandler(IllegalArgumentException.class)
     public String onException1(Exception e) {
         return ">" + e.getMessage() + "\n" + e.getStackTrace();
@@ -202,6 +202,22 @@ public class MyController {
     public String onException3(Exception e) {
         return ">" + e.getMessage() + "\n" + e.getStackTrace();
     }
+
+    // advance
+    @ExceptionHandler(value = {Exception.class})
+    public String displayException(Model model, Exception e) {
+        String key = "message";
+        String value = e.getMessage();
+        model.addAttribute(key, value);
+        return "exception-page-path";
+    }
+
+    // there is a exception-page-path.jsp file where we have <%@page isELIgnored = false %>
+    // now we will use this Model class to display dynamic Exception message
+    // <h1> ${message} </h1>
+    // OR go with traditional flow using jsp EL
+    // <% String message = (String) request.getAttribute("message"); %>
+    // <h1> <%= message %> </h1>
 
 // 1.2.3 @ResponseStatus Annotation
 
