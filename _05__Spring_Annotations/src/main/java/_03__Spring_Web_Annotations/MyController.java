@@ -219,9 +219,29 @@ public class MyController {
     // <% String message = (String) request.getAttribute("message"); %>
     // <h1> <%= message %> </h1>
 
-// 1.2.3 @ResponseStatus Annotation
+// 1.2.3 @ControllerAdvice Annotation
 
-    // 1.2.3.1
+    @ControllerAdvice(value = "excpetion-handling-mechanism-for-enitre-project")
+    public class ExceptionTest1 {
+
+        @ExceptionHandler(value = {Exception.class})
+        public String displayException(Model model, Exception e) {
+            String key = "message";
+            String value = e.getMessage();
+            model.addAttribute(key, value);
+            return "exception-page-path";
+        }
+
+        @ExceptionHandler(value = {IllegalAccessException.class, IllegalAccessError.class})
+        public String onException3(Exception e) {
+            return ">" + e.getMessage() + "\n" + e.getStackTrace();
+        }
+
+    }
+
+// 1.2.4 @ResponseStatus Annotation
+
+    // 1.2.4.1
     // returning HttpStatus code via @ResponseStatus
     @RequestMapping(path = "/path", method = RequestMethod.GET)
     @ResponseStatus(code = HttpStatus.BAD_REQUEST, reason = "specify-the-reason-here")
@@ -229,7 +249,7 @@ public class MyController {
         // business logic
     }
 
-    // 1.2.3.2
+    // 1.2.4.2
     // returning HttpStatus code via @ExceptionHandler and @ResponseStatus
     @RequestMapping(path = "/path", method = RequestMethod.GET)
     @ExceptionHandler(IllegalArgumentException.class)
@@ -238,12 +258,12 @@ public class MyController {
         // business logic
     }
 
-    // 1.2.3.3
+    // 1.2.4.3
     // a) returning custom HttpStatus code via ResponseEntity class
     // b) returning custom HttpStatus code via an exception i.e. @ResponseStatus annotation on exception classes
     // c) returning custom HttpStatus code via @Controller and @ExceptionHandler annotations
 
-    // 1.2.3.3
+    // 1.2.4.3
     // a) returning custom HttpStatus code via ResponseEntity class
     @RequestMapping(path = "/path", method = RequestMethod.GET)
     @ResponseBody
@@ -251,7 +271,7 @@ public class MyController {
         return new ResponseEntity(HttpStatus.BAD_REQUEST);
     }
 
-    // 1.2.3.3
+    // 1.2.4.3
     // b) returning custom HttpStatus code via an exception i.e. @ResponseStatus annotation on exception classes
     @ResponseStatus(code = HttpStatus.FORBIDDEN, reason = "specify-the-reason-here")
     public class ForbiddenException extends RuntimeException {
@@ -264,8 +284,20 @@ public class MyController {
         throw new ForbiddenException();
     }
 
-    // 1.2.3.3
+    // 1.2.4.3
     // c) returning custom HttpStatus code via @Controller & @ExceptionHandler annotations
+    @ControllerAdvice(value = "excpetion-handling-mechanism-for-enitre-project")
+    public class ExceptionTest2 {
+
+        @ExceptionHandler(value = {Exception.class})
+        public String displayException(Model model, Exception e) {
+            String key = "message";
+            String value = e.getMessage();
+            model.addAttribute(key, value);
+            return "exception-page-path";
+        }
+
+    }
 
 // -----------------------------------------------------------------------
 // [1.3] Annotations That Do Not Manage HTTP Requests And Responses Directly
