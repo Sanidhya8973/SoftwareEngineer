@@ -6,11 +6,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.client.HttpServerErrorException.InternalServerError;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(value = {Exception.class})
+    @ExceptionHandler(value = {InternalServerError.class})
     @ResponseStatus(code = HttpStatus.INTERNAL_SERVER_ERROR, reason = "specify-excuse-for-corresponding-exception")
     public String onException(Exception e, Model model) {
         String title = "error";
