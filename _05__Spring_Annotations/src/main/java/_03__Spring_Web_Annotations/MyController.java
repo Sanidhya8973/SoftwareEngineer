@@ -43,15 +43,13 @@ public class MyController {
     }
 
     // advance
-    @RequestMapping(path = "/path", method = RequestMethod.POST, params = "parameter", headers = "header", consumes = "cosume", produces = "produce")
+    @RequestMapping(path = "/path", method = RequestMethod.POST, params = "parameter", headers = "key=value", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_XML_VALUE)
     public String serveRequest1() {
         return "serve-request-path";
     }
 
     // master
-    @RequestMapping(path = "/path", method = RequestMethod.POST, params = {"parameter-1", "parameter-2"}, headers = {
-            "header-1",
-            "header-2"}, consumes = {"consume-1", "cosume-2"}, produces = {"produce-1", "produce-2"})
+    @RequestMapping(path = "/path", method = RequestMethod.POST, params = {"parameter-1", "parameter-2"}, headers = {"key1=value1", "key2=value2"}, consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public String serveRequest2() {
         return "serve-request-path";
     }
@@ -65,7 +63,7 @@ public class MyController {
     }
 
     // advance
-    @RequestMapping(path = "/path", method = RequestMethod.POST, params = "parameter", headers = "header", consumes = "cosume", produces = "produce")
+    @RequestMapping(path = "/path", method = RequestMethod.POST, params = "parameter", headers = "key=value", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_XML_VALUE)
     public void serveRequestBody(@RequestBody Object obj) {
         // business logic
     }
@@ -73,13 +71,13 @@ public class MyController {
 // 1.1.3 @PathVariable Annotation
 
     // @RequestMapping(path = "/{obj}")
-    // @RequestMapping(path = "/${obj}")
+    // @RequestMapping(path = "/path/{obj}")
+    // @RequestMapping(path = "/path/{obj-1}/path/{obj-2}")
+    // @RequestMapping(path = { "/{obj}", "/path/{obj}" })
+
+    // @RequestMapping(path = "/path/q?{obj}")
+    // @RequestMapping(path = "/path/search?{obj}")
     // @RequestMapping(path = "/search?{obj}")
-    // @RequestMapping(path = "/path/${obj}")
-    // @RequestMapping(path = "/path/search?${obj}")
-    // @RequestMapping(path = "/path/q?${obj}")
-    // @RequestMapping(path = "/path/${obj-1}/path/${obj-2}")
-    // @RequestMapping(path = { "/{obj}", "/${obj}", "/path/${obj}" })
 
     // basic
     @RequestMapping(path = "/search?{obj}")
@@ -88,19 +86,19 @@ public class MyController {
         return obj;
     }
 
-    @RequestMapping(path = {"/{obj}", "/${obj}", "/path/${obj}"})
+    @RequestMapping(path = {"/{obj}", "/path/{obj}"})
     public Object pathVariable2(@PathVariable("obj") Object obj) {
         // business logic
         return obj;
     }
 
-    @RequestMapping(path = "/path/${obj}")
+    @RequestMapping(path = "/path/{obj}")
     public Object pathVariable3(@PathVariable(required = false) Object obj) {
         // business logic
         return obj;
     }
 
-    @RequestMapping(path = "/path/${obj-1}/path/${obj-2}")
+    @RequestMapping(path = "/path/{obj-1}/path/{obj-2}")
     public Object pathVariable4(@PathVariable("obj-1") Object obj1, @PathVariable("obj-2") Object obj2) {
         Object obj = new Object();
         // business logic
@@ -108,7 +106,7 @@ public class MyController {
     }
 
     // advance
-    @RequestMapping(path = {"/path/${obj}", "/path/${obj-1}/path${obj-2}"}, params = {"param-1", "param-2"})
+    @RequestMapping(path = {"/path/{obj}", "/path/{obj-1}/path/{obj-2}"}, params = {"param-1", "param-2"})
     public Object pathVariable5(@PathVariable("obj") Object obj1, @RequestParam("param-1") String str) {
         Object obj = new Object();
         // business logic
@@ -144,14 +142,14 @@ public class MyController {
     }
 
     // advance
-    @RequestMapping(path = "/path/${obj-1}/path${obj-2}", params = "param", method = RequestMethod.GET)
+    @RequestMapping(path = "/path/{obj-1}/path/{obj-2}", params = "param", method = RequestMethod.GET)
     public Object requestParam6(@PathVariable("obj") Object obj1, @RequestParam("param-1") String str) {
         Object obj = new Object();
         // business logic
         return obj;
     }
 
-    @RequestMapping(path = {"/path/${obj}", "/path/${obj-1}/path${obj-2}"}, params = {"param-1", "param-2"})
+    @RequestMapping(path = {"/path/{obj}", "/path/{obj-1}/path/{obj-2}"}, params = {"param-1", "param-2"})
     public Object requestParam7(@PathVariable("obj") Object obj1, @RequestParam("param-1") String str) {
         Object obj = new Object();
         // business logic
@@ -390,7 +388,7 @@ public class MyController {
     }
 
     @CrossOrigin(origins = "http://example.com", maxAge = 3600)
-    @RequestMapping(path = "/path/${id}", method = RequestMethod.GET)
+    @RequestMapping(path = "/path/{id}", method = RequestMethod.GET)
     public String enableCrossOrigin2(@PathVariable long id) {
         return "path-id";
     }
