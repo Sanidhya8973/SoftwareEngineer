@@ -156,6 +156,20 @@ public class MyController {
         return obj;
     }
 
+    // creating the form is required...
+    //<form action="search" method="post">
+    //    <label for="key">KEY:</label> <input type="number" id="key" name="key">
+    //    <label for="value">VALUE:</label> <input type="text" id="value" name="value">
+    //    <input type="submit" value="submit">
+    //</form>
+    @RequestMapping(path = "/search", method = RequestMethod.GET)
+    public String getKeyValue(@RequestParam("key") int key, @RequestParam("value") String value, Model model) {
+        String keyValue = "KEY: " + key + " -> VALUE: " + value;
+        System.out.println(keyValue);
+        model.addAttribute("msg", keyValue);
+        return "message";
+    }
+
 // 1.1.4 @RequestHeader Annotation
 
 // 1.1.5 @CookieValue Annotation
