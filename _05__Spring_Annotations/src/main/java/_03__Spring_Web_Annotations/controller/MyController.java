@@ -34,12 +34,10 @@ public class MyController {
     @Controller
     @RequestMapping(path = "/website", method = RequestMethod.POST)
     public class Test1 {
-
         @RequestMapping(path = "/home")
         public String serveRequestHome() {
             return "home";
         }
-
     }
 
     // advance
@@ -52,6 +50,28 @@ public class MyController {
     @RequestMapping(path = "/path", method = RequestMethod.POST, params = {"parameter-1", "parameter-2"}, headers = {"key1=value1", "key2=value2"}, consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public String serveRequest2() {
         return "serve-request-path";
+    }
+
+    // fallback for all GET requests // fallback = backup
+    @RequestMapping(path = "/*", method = RequestMethod.GET)
+    @ResponseBody
+    public String fallbackGET() {
+        return "> Server Crashed: backup is live...";
+    }
+
+    // fallback for all POST requests // fallback = backup
+    @RequestMapping(path = "/*", method = RequestMethod.POST)
+    @ResponseBody
+    public String fallbackPOST() {
+        return "> Server Crashed: backup is live...";
+    }
+
+    // fallback for all requests // fallback = backup
+    @RequestMapping(path = "/*", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT,
+            RequestMethod.PATCH, RequestMethod.DELETE})
+    @ResponseBody
+    public String fallbackMechanism() {
+        return "> Server Crashed: backup is live...";
     }
 
 // 1.1.2 @RequestBody Annotation
@@ -174,21 +194,19 @@ public class MyController {
 
 // 1.2.1 @ResponseBody Annotation
 
-    @ResponseBody
     @RequestMapping(path = "/path")
+    @ResponseBody
     public String responseBody() {
         return "Hello World!";
     }
 
-    @ResponseBody
     @RequestMapping(path = "/path-class", method = RequestMethod.GET)
+    @ResponseBody
     public class Test2 {
-
         @RequestMapping(path = "/path-method")
         public String responseBody() {
             return "Hello World!";
         }
-
     }
 
 // 1.2.2 @ExceptionHandler Annotation
