@@ -11,8 +11,8 @@ import org.springframework.http.*;
 // Spring MVC
 // ----------
 
-@Controller(value = "myController")
-public class MyController {
+@Controller(value = "dispatcherServlet")
+public class FrontController {
 
 // --------------------------
 // [1] Spring Web Annotations
