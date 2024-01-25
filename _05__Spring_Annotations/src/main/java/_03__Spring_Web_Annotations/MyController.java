@@ -116,52 +116,46 @@ public class MyController {
 // 1.1.3 @RequestParam Annotation
 
     // basic
-    @RequestMapping(path = "/path")
+    @RequestMapping(path = "/search", method = RequestMethod.POST)
     public String requestParam1(@RequestParam("id") String id) {
         return id;
     }
 
-    @RequestMapping(path = "/path", params = "id")
+    @RequestMapping(path = "/search", method = RequestMethod.POST, params = "id")
     public String requestParam2(@RequestParam("id") String id) {
         return id;
     }
 
-    @RequestMapping(path = "/path", params = {"id", "name"})
+    @RequestMapping(path = "/search", method = RequestMethod.POST, params = {"id", "name"})
     public String requestParam3(@RequestParam("id") String id, @RequestParam("name") String name) {
         return id + ":" + name;
     }
 
-    @RequestMapping(path = "/path")
+    @RequestMapping(path = "/search", method = RequestMethod.POST)
     public String requestParam4(@RequestParam(defaultValue = "1") String id) {
         return id;
     }
 
-    @RequestMapping(path = "/path")
+    @RequestMapping(path = "/search", method = RequestMethod.POST)
     public String requestParam5(@RequestParam(required = false) String id) {
         return id;
     }
 
     // advance
-    @RequestMapping(path = "/path/{obj-1}/path/{obj-2}", params = "param", method = RequestMethod.GET)
+    @RequestMapping(path = "/path/{obj-1}/path/{obj-2}", params = "param", method = RequestMethod.POST)
     public Object requestParam6(@PathVariable("obj") Object obj1, @RequestParam("param-1") String str) {
         Object obj = new Object();
         // business logic
         return obj;
     }
 
-    @RequestMapping(path = {"/path/{obj}", "/path/{obj-1}/path/{obj-2}"}, params = {"param-1", "param-2"})
+    @RequestMapping(path = {"/path/{obj}", "/path/{obj-1}/path/{obj-2}"}, params = {"param-1", "param-2"}, method = RequestMethod.POST)
     public Object requestParam7(@PathVariable("obj") Object obj1, @RequestParam("param-1") String str) {
         Object obj = new Object();
         // business logic
         return obj;
     }
 
-    // creating the form is required...
-    //<form action="search" method="post">
-    //    <label for="key">KEY:</label> <input type="number" id="key" name="key">
-    //    <label for="value">VALUE:</label> <input type="text" id="value" name="value">
-    //    <input type="submit" value="submit">
-    //</form>
     @RequestMapping(path = "/search", method = RequestMethod.GET)
     public String getKeyValue(@RequestParam("key") int key, @RequestParam("value") String value, Model model) {
         String keyValue = "KEY: " + key + " -> VALUE: " + value;
