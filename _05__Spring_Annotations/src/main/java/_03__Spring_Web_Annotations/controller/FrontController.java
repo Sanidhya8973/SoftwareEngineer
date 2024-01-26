@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 import org.springframework.http.*;
 
+import java.util.HashMap;
+
 // ----------
 // Spring MVC
 // ----------
@@ -192,24 +194,7 @@ public class FrontController {
 // [1.2] Response Handler Annotations
 // ----------------------------------
 
-// 1.2.1 @ResponseBody Annotation
-
-    @RequestMapping(path = "/path")
-    @ResponseBody
-    public String responseBody() {
-        return "Hello World!";
-    }
-
-    @RequestMapping(path = "/path-class", method = RequestMethod.GET)
-    @ResponseBody
-    public class Test2 {
-        @RequestMapping(path = "/path-method")
-        public String responseBody() {
-            return "Hello World!";
-        }
-    }
-
-// 1.2.2 @ExceptionHandler Annotation
+// 1.2.1 @ExceptionHandler Annotation
 
     // basic
     @ExceptionHandler(IllegalArgumentException.class)
@@ -243,7 +228,7 @@ public class FrontController {
     // <% String message = (String) request.getAttribute("message"); %>
     // <h1> <%= message %> </h1>
 
-// 1.2.3 @ControllerAdvice Annotation
+// 1.2.2 @ControllerAdvice Annotation
 
     @ControllerAdvice(value = "excpetion-handling-mechanism-for-enitre-project")
     public class ExceptionTest1 {
@@ -263,7 +248,57 @@ public class FrontController {
 
     }
 
-// 1.2.4 @ResponseStatus Annotation
+// 1.2.3 ResponseEntity Class
+
+    // basic
+    @GetMapping(path = "/path")
+    public ResponseEntity<String> getResponseEntity1() {
+        return new ResponseEntity<String>("message-reason", HttpStatus.ACCEPTED);
+    }
+
+    // advance
+    @GetMapping(path = "/path")
+    public ResponseEntity<String> getResponseEntity2() {
+        return ResponseEntity.status(HttpStatus.ACCEPTED).header("custom-header", "value").body("body");
+    }
+
+    @ExceptionHandler(value = Exception.class)
+    public ResponseEntity<String> getResponseEntity3(Exception e) {
+        return ResponseEntity.status(HttpStatusCode.valueOf(404))
+                .header("custom-header", "value").body(e.getMessage());
+    }
+
+    @ExceptionHandler(value = Exception.class)
+    public ResponseEntity<String> getResponseEntity4(Exception e) {
+        return ResponseEntity.status(404).header("custom-header", "value").body(e.getMessage());
+    }
+
+    // variety of data structures can be used to display corresponding HttpStatus / HttpStatusCode
+    @GetMapping(path = "/path")
+    public ResponseEntity<HashMap<String, String>> getResponseEntity5() {
+        HashMap<String, String> hm = new HashMap<>();
+        hm.put("message", "reason-behind-the-message-displayed");
+        return new ResponseEntity<>(hm, HttpStatus.ACCEPTED);
+    }
+
+// 1.2.4 @ResponseBody Annotation
+
+    @RequestMapping(path = "/path")
+    @ResponseBody
+    public String responseBody() {
+        return "Hello World!";
+    }
+
+    @RequestMapping(path = "/path-class", method = RequestMethod.GET)
+    @ResponseBody
+    public class Test2 {
+        @RequestMapping(path = "/path-method")
+        public String responseBody() {
+            return "Hello World!";
+        }
+    }
+
+// 1.2.5 @ResponseStatus Annotation
 
     // 1.2.4.1
     // returning HttpStatus code via @ResponseStatus
