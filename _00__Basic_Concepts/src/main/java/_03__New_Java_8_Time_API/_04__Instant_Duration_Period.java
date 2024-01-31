@@ -59,7 +59,7 @@ public class _04__Instant_Duration_Period {
         log.info("duration             : " + duration
                 + "\n                - duration.hashcode    : " + duration.hashCode()
                 + "\n                - duration.isNegative(): " + duration.isNegative()
-                + "\n                - duration.isPositive(): " + duration.isPositive()
+               // + "\n                - duration.isPositive(): " + duration.isPositive()
                 + "\n                - duration.isZero()    : " + duration.isZero()
                 + "\n                  - duration.getNano()       : " + duration.getNano()
                 + "\n                  - duration.getSeconds()    : " + duration.getSeconds()
