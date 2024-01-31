@@ -1,9 +1,9 @@
-package _0__Hibernate.main;
+package _0__Hibernate._02__main;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import _0__Hibernate.config.HibernateJavaConfig;
+import _0__Hibernate._01__config.HibernateConfig;
 
 public class Main {
 
@@ -20,7 +20,7 @@ public class Main {
         System.out.println(sessionFactory2);
 
         // Method - 3: java based configurations
-        SessionFactory sessionFactory3 = HibernateJavaConfig.getSessionFactory();
+        SessionFactory sessionFactory3 = HibernateConfig.getSessionFactory();
         System.out.println(sessionFactory3);
 
     }
