@@ -1,4 +1,4 @@
-package _0__Hibernate._04__company.model;
+package _0__Hibernate._02__Hibernate_Annotations.model;
 
 import java.time.LocalDate;
 
