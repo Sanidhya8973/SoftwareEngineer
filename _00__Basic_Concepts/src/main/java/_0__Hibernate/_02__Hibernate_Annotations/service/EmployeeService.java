@@ -1,7 +1,7 @@
-package _0__Hibernate._04__company.service;
+package _0__Hibernate._02__Hibernate_Annotations.service;
 
-import _0__Hibernate._04__company.model.Employee;
-import _0__Hibernate._04__company.dao.EmployeeDao;
+import _0__Hibernate._02__Hibernate_Annotations.model.Employee;
+import _0__Hibernate._02__Hibernate_Annotations.dao.EmployeeDao;
 
 public class EmployeeService {
 

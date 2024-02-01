@@ -1,4 +1,4 @@
-package _0__Hibernate._04__company.dao;
+package _0__Hibernate._02__Hibernate_Annotations.dao;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import _0__Hibernate._01__config.HibernateConfig;
-import _0__Hibernate._04__company.model.Employee;
+import _0__Hibernate._01__Ways_To_Configure_Hibernate.config.HibernateConfig;
+import _0__Hibernate._02__Hibernate_Annotations.model.Employee;
 
 public class EmployeeDao {
 
