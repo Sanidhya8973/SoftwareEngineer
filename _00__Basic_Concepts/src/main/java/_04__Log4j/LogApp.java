@@ -1,4 +1,4 @@
-package _02__Log4j;
+package _04__Log4j;
 
 import org.apache.log4j.*;
 

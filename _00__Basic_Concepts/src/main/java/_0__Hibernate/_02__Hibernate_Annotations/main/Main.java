@@ -1,14 +1,9 @@
-package _0__Hibernate._04__company.main;
+package _0__Hibernate._02__Hibernate_Annotations.main;
 
-import _0__Hibernate._01__config.HibernateConfig;
-import _0__Hibernate._04__company.model.Address;
-import _0__Hibernate._04__company.model.Certificate;
-import _0__Hibernate._04__company.model.Employee;
-import _0__Hibernate._04__company.model.Gender;
-import _0__Hibernate._04__company.service.EmployeeService;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import _0__Hibernate._02__Hibernate_Annotations.model.Address;
+import _0__Hibernate._02__Hibernate_Annotations.model.Certificate;
+import _0__Hibernate._02__Hibernate_Annotations.model.Employee;
+import _0__Hibernate._02__Hibernate_Annotations.model.Gender;
 
 import java.io.FileInputStream;
 import java.time.LocalDate;
