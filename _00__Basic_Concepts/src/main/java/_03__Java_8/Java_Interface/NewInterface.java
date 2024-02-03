@@ -13,6 +13,10 @@ public interface NewInterface {
         // static business logic
     }
 
+    public static void main(String[] args) {
+        // since java 8, static methods are allowed, so we can write a main method inside an interface and execute it as well
+    }
+
     // method - 2
     void method4();
 
