@@ -14,7 +14,7 @@ public class B implements A {
         b.method();
         // method - 2
         B.method();
-        // we can call the static method from interface A
+        // we can call the "static" method from interface A
         A.method();
     }
 
