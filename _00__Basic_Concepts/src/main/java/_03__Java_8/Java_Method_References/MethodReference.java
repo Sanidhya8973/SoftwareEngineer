@@ -17,9 +17,7 @@ public class MethodReference {
     public static void main(String[] args) {
 
         // these techniques are mainly used with custom @FunctionalInterface to eliminate code duplication
-        BiFunction<Integer, Integer, String> test = (a, b) -> {
-            return "> Addition: " + (a + b);
-        };
+        BiFunction<Integer, Integer, String> test = (a, b) -> "> Addition: " + (a + b);
         System.out.println(test.apply(1, 1));
 
         // Class::staticMethod -> static method reference
@@ -33,8 +31,8 @@ public class MethodReference {
 
         // Class::instanceMethod -> a reference to an instance method from a class type (Class.method())
         List<Character> test3 = Arrays.asList('a', 'b', 'c', 'd');
-        test3.forEach(c -> System.out.println(c));
-        test3.forEach(System.out::println);
+        test3.forEach(c -> System.out.println(c)); // before Java 8
+        test3.forEach(System.out::println);        // after Java 8
 
         // Class::new -> constructor reference
         BiFunction<String, Integer, User> test4 = User::new;
