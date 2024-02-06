@@ -35,8 +35,8 @@ public class _05__Consumer_Functional_Interface {
 - Consumer Functional Interface consumes/accepts the given input for processing but not returning anything to the invocation method.
 - No static methods are available in Consumer Functional Interface.
 
-    Consumer<T>
-    @param <T> the type of the input to the function
+  Consumer<T>
+  @param <T> the type of the input to the function
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
