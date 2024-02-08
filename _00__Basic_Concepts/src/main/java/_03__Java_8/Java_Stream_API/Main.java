@@ -1,14 +1,144 @@
 package _03__Java_8.Java_Stream_API;
 
-import java.util.List;
-import java.util.Arrays;
-import java.util.function.Supplier;
-import java.util.function.Consumer;
+import java.util.*;
+import java.util.function.*;
 import java.util.stream.Stream;
 
 public class Main {
 
     public static void main(String[] args) {
+        createStreamMethod();
+        limitMethod();
+        skipMethod();
+        sortedMethod();
+        distinctMethod();
+        // peekMethod();
+        mapMethod();
+        flatMapMethod();
+        filterMethod();
+        reduceMethod();
+        // collectMethod();
+        // Method();
+    }
+
+    public static void limitMethod() {
+        Stream.iterate(1, n -> n + 1).limit(20).forEach(System.out::println);
+        Stream.generate(new Random()::nextInt).limit(20).forEach(System.out::println);
+    }
+
+    public static void skipMethod() {
+        Stream.iterate(1, n -> n + 1).skip(10).limit(20).forEach(System.out::println);
+        Stream.generate(new Random()::nextInt).skip(10).limit(20).forEach(System.out::println);
+    }
+
+    public static void sortedMethod() {
+        Stream.iterate(10, n -> n - 1).limit(20).sorted().forEach(System.out::println);
+        Stream.generate(new Random()::nextInt).limit(20).sorted().forEach(System.out::println);
+    }
+
+    public static void distinctMethod() {
+        Arrays.stream(new int[]{1, 3, 2, 3, 2, 1}).distinct().sorted().forEach(System.out::println);
+    }
+
+    public static void mapMethod() {
+
+        Supplier<List<User>> supplyUserList = () -> {
+            List<User> userList = new ArrayList<User>();
+            for (int i = 1; i <= 5; i++) {
+                User user = new User("user-" + i, i);
+                userList.add(user);
+            }
+            return userList;
+        };
+
+        System.out.println("NOTE: map(Function<T,R> mapper)");
+
+        System.out.println("\n[ Supplier<List<User>> Returns List<User> ]");
+        List<User> userList = supplyUserList.get();
+        supplyUserList.get().forEach(System.out::println);
+
+        System.out.println("\n[ Supplier<List<User>> Returns List<User> To List<String> ]");
+        supplyUserList.get().stream().map((user) -> {
+            return user.getName().toUpperCase() + ":" + user.getId();
+        }).toList().forEach(System.out::println);
+
+    }
+
+    public static void flatMapMethod() {
+
+        String[] stringArray = {"first", "middle", "last"};
+
+        // problem
+        Arrays.stream(stringArray).map((word) -> word.split("")).forEach(System.out::println);
+        Arrays.stream(stringArray).map((word) -> word.split("")).map(Arrays::stream).forEach(System.out::println);
+        // solution
+        Arrays.stream(stringArray).map((word) -> word.split("")).flatMap(Arrays::stream).forEach(System.out::println);
+
+        List<List<String>> stringList = Arrays.asList(Arrays.asList("first"), Arrays.asList("middle"), Arrays.asList("last"));
+
+        // problem
+        stringList.stream().map(Collection::stream).forEach(System.out::println);
+        // solution
+        stringList.stream().flatMap(Collection::stream).forEach(System.out::println);
+
+        // problem
+        stringList.stream().flatMap(Collection::stream).map(e -> e.split("")).forEach(System.out::println);
+        stringList.stream().flatMap(Collection::stream).map(e -> e.split("")).map(Arrays::stream).forEach(System.out::println);
+        // solution
+        stringList.stream().flatMap(Collection::stream).map(e -> e.split("")).flatMap(Arrays::stream).forEach(System.out::println);
+
+    }
+
+    public static void filterMethod() {
+
+        Supplier<List<Integer>> supplyList = () -> {
+            List<Integer> intList = new ArrayList<Integer>();
+            for (int i = 0; i < 10; i++) {
+                intList.add(i);
+            }
+            return intList;
+        };
+
+        Supplier<List<User>> supplyUserList = () -> {
+            List<User> userList = new ArrayList<User>();
+            for (int i = 0; i < 10; i++) {
+                User user = new User("user-" + i, i);
+                userList.add(user);
+            }
+            return userList;
+        };
+
+        System.out.println("> EVEN: " + supplyList.get().stream().filter(x -> x % 2 == 0 ? true : false).toList());
+        supplyUserList.get().stream().filter(u -> u.getId() % 2 == 0 ? true : false).forEach(System.out::println);
+
+        System.out.println("> ODD : " + supplyList.get().stream().filter(x -> x % 2 == 1 ? true : false).toList());
+        supplyUserList.get().stream().filter(u -> u.getId() % 2 == 1 ? true : false).forEach(System.out::println);
+
+    }
+
+    public static void reduceMethod() {
+
+        // return new Random().nextInt(10); // 0 to 9
+        // return new Random().nextInt(10) + 1; // 1 to 10
+
+        System.out.println(Stream.generate(() -> new Random().nextInt(10) + 1).limit(10).filter(x -> x % 2 == 0).reduce(0, (x, y) -> x + y));
+
+        // simplified code
+        System.out.println(Stream.generate(() -> {
+            Random random = new Random();
+            int r = random.nextInt(10) + 1;
+            return r;
+        }).limit(10).filter((x) -> {
+            if (x % 2 == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }).reduce(0, (x, y) -> x + y));
+
+    }
+
+    public static void createStreamMethod() {
 
         Character[] cArr = {'a', 'b', 'c', 'd'};
         List<Character> cList = Arrays.asList('A', 'B', 'C', 'D');
@@ -53,18 +183,20 @@ public class Main {
 
         // Stream.iterate(T seed, UnaryOperator<T> f);
         // infinite sequential ordered Stream, elements generated by UnaryOperator
-        Stream<Character> stream10 = Stream.iterate(null, null);
+        Stream<Character> stream10 = Stream.iterate(1, n -> n + 1).limit(50);
         println.accept(stream10);
 
         // Stream.generate(Supplier<? extends T> s);
         // infinite sequential unordered stream, elements generated by Supplier
         Supplier<List<Character>> supplierList = () -> Arrays.asList('a', 'b', 'c', 'd');
         Stream<List<Character>> stream11 = Stream.generate(supplierList);
-        println.accept(stream11);
+        println.accept(stream11); // infinite printing supplierList on the console, i.e. single list of characters
+        Stream<List<Character>> stream12 = Stream.generate(new Random()::nextInt).limit(50);
+        println.accept(stream12);
 
         // Stream.concat(Stream<? extends T> a, Stream<? extends T> b); // it concats 2 streams into 1
-        Stream<Character> stream12 = Stream.concat(stream3, stream4);
-        println.accept(stream12);
+        Stream<Character> stream13 = Stream.concat(stream3, stream4);
+        println.accept(stream13);
 
     }
 
