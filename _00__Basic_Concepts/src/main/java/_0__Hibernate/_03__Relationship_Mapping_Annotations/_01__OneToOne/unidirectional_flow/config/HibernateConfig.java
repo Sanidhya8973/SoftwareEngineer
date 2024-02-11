@@ -25,8 +25,8 @@ public class HibernateConfig {
                 property.put(Environment.JAKARTA_JDBC_URL, "jdbc:mysql://127.0.0.1:3306/hibernate_one2one_relationship?useSSL=false");
                 property.put(Environment.JAKARTA_JDBC_USER, "root");
                 property.put(Environment.JAKARTA_JDBC_PASSWORD, "root");
-                // property.put(Environment.HBM2DDL_AUTO, "create");
-                property.put(Environment.HBM2DDL_AUTO, "update");
+                property.put(Environment.HBM2DDL_AUTO, "create");
+                // property.put(Environment.HBM2DDL_AUTO, "update");
                 property.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");
                 property.put(Environment.SHOW_SQL, "true");
                 property.put(Environment.FORMAT_SQL, "false");
