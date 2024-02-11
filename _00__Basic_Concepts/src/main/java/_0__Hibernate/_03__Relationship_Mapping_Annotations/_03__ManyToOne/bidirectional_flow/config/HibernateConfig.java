@@ -22,7 +22,7 @@ public class HibernateConfig {
             Supplier<Properties> properties = () -> {
                 Properties property = new Properties();
                 property.put(Environment.JAKARTA_JDBC_DRIVER, "com.mysql.cj.jdbc.Driver");
-                property.put(Environment.JAKARTA_JDBC_URL, "jdbc:mysql://127.0.0.1:3306/hibernate_one2many_relationship?useSSL=false");
+                property.put(Environment.JAKARTA_JDBC_URL, "jdbc:mysql://127.0.0.1:3306/hibernate_many2one_relationship?useSSL=false");
                 property.put(Environment.JAKARTA_JDBC_USER, "root");
                 property.put(Environment.JAKARTA_JDBC_PASSWORD, "root");
                 property.put(Environment.HBM2DDL_AUTO, "create");
