@@ -1,15 +1,18 @@
 package _0__Hibernate._03__Relationship_Mapping_Annotations._02__OneToMany.bidirectional_flow;
 
+import java.util.*;
+
+import _0__Hibernate._03__Relationship_Mapping_Annotations._02__OneToMany.bidirectional_flow.config.*;
 import _0__Hibernate._03__Relationship_Mapping_Annotations._02__OneToMany.bidirectional_flow.model.*;
 import org.hibernate.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        testManyToOne();
+        testOneToManyAndManyToOne();
     }
 
-    public static void testManyToOne() {
+    public static void testOneToManyAndManyToOne() {
         Question q1 = new Question("question-1");
         Answer a1a = new Answer("answer-1.a", q1);
         Answer a1b = new Answer("answer-1.b", q1);
