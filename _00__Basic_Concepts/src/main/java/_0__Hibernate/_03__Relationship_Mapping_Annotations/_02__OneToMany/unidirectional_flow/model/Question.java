@@ -5,20 +5,21 @@ import jakarta.persistence.*;
 import java.util.List;
 import java.util.ArrayList;
 
-@Entity(name = "unidirectional_question")
-@Table(name = "unidirectional_question_table")
+@Entity(name = "entity_question")
+@Table(name = "table_question")
 public class Question {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_question_id")
+    @SequenceGenerator(name = "generator_question_id", sequenceName = "sequence_question_id", allocationSize = 1)
     @Column(name = "question_id")
     private int id;
 
-    @Column(name = "question_que")
+    @Column(name = "question_que", nullable = false, unique = false)
     private String question;
 
-    @OneToMany
-    @JoinColumn(name = "fk_question_id", referencedColumnName = "question_id")
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_question_id")
     private List<Answer> answer = new ArrayList<>();
 
     public Question() {
@@ -26,15 +27,18 @@ public class Question {
     }
 
     public Question(String question) {
+        super();
         this.question = question;
     }
 
     public Question(String question, List<Answer> answer) {
+        super();
         this.question = question;
         this.answer = answer;
     }
 
-    public Question(int id, List<Answer> answer) {
+    public Question(int id, String question, List<Answer> answer) {
+        super();
         this.id = id;
         this.question = question;
         this.answer = answer;

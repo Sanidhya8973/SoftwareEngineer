@@ -2,16 +2,17 @@ package _0__Hibernate._03__Relationship_Mapping_Annotations._02__OneToMany.unidi
 
 import jakarta.persistence.*;
 
-@Entity(name = "unidirectional_answer")
-@Table(name = "unidirectional_answer_table")
+@Entity(name = "entity_answer")
+@Table(name = "table_answer")
 public class Answer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_answer_id")
+    @SequenceGenerator(name = "generator_answer_id", sequenceName = "sequence_answer_id", allocationSize = 1)
     @Column(name = "answer_id")
     private int id;
 
-    @Column(name = "answer_ans")
+    @Column(name = "answer_ans", nullable = false, unique = false)
     private String answer;
 
     public Answer() {
@@ -19,10 +20,12 @@ public class Answer {
     }
 
     public Answer(String answer) {
+        super();
         this.answer = answer;
     }
 
     public Answer(int id, String answer) {
+        super();
         this.id = id;
         this.answer = answer;
     }
@@ -49,4 +52,3 @@ public class Answer {
     }
 
 }
-
