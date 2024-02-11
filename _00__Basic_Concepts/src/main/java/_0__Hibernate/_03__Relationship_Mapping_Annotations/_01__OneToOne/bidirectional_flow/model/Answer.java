@@ -2,12 +2,13 @@ package _0__Hibernate._03__Relationship_Mapping_Annotations._01__OneToOne.bidire
 
 import jakarta.persistence.*;
 
-@Entity(name = "bidirectional_answer")
-@Table(name = "bidirectional_answer_table")
+@Entity(name = "entity_answer")
+@Table(name = "table_answer")
 public class Answer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_answer_id")
+    @SequenceGenerator(name = "generator_answer_id", sequenceName = "sequence_answer_id", initialValue = 10, allocationSize = 5)
     @Column(name = "answer_id")
     private int id;
 
