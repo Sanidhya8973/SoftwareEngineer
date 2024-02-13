@@ -1,13 +1,12 @@
-package _0__Hibernate._03__Relationship_Mapping_Annotations._03__ManyToOne.unidirectional_flow;
+package _0__Hibernate._03__Hibernate_Mapping_Annotations._03__ManyToOne.unidirectional_flow;
 
-import _0__Hibernate._03__Relationship_Mapping_Annotations._03__ManyToOne.unidirectional_flow.config.HibernateConfig;
-import _0__Hibernate._03__Relationship_Mapping_Annotations._03__ManyToOne.unidirectional_flow.model.Answer;
-import _0__Hibernate._03__Relationship_Mapping_Annotations._03__ManyToOne.unidirectional_flow.model.Question;
+import _0__Hibernate._03__Hibernate_Mapping_Annotations._03__ManyToOne.unidirectional_flow.config.HibernateConfig;
+import _0__Hibernate._03__Hibernate_Mapping_Annotations._03__ManyToOne.unidirectional_flow.model.Answer;
+import _0__Hibernate._03__Hibernate_Mapping_Annotations._03__ManyToOne.unidirectional_flow.model.Question;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class Main {
