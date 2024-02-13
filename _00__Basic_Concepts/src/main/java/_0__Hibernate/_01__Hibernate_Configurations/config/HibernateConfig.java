@@ -20,10 +20,10 @@ public class HibernateConfig {
         if (sessionFactory == null) {
             Configuration cfg = new Configuration();
             Properties property = new Properties();
-            property.put(Environment.JAKARTA_JDBC_DRIVER, "com.mysql.cj.jdbc.Driver");
-            property.put(Environment.JAKARTA_JDBC_URL, "jdbc:mysql://127.0.0.1:3306/hibernate_db?useSSL=false");
-            property.put(Environment.JAKARTA_JDBC_USER, "root");
-            property.put(Environment.JAKARTA_JDBC_PASSWORD, "root");
+            property.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
+            property.put(Environment.URL, "jdbc:mysql://127.0.0.1:3306/hibernate_db?useSSL=false");
+            property.put(Environment.USER, "root");
+            property.put(Environment.PASS, "root");
             property.put(Environment.HBM2DDL_AUTO, "create");
             //property.put(Environment.HBM2DDL_AUTO, "update");
             property.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");
