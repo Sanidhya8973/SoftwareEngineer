@@ -1,10 +1,10 @@
-package _0__Hibernate._03__Relationship_Mapping_Annotations._02__OneToMany.unidirectional_flow;
+package _0__Hibernate._03__Hibernate_Mapping_Annotations._02__OneToMany.unidirectional_flow;
 
 
 import java.util.*;
 
-import _0__Hibernate._03__Relationship_Mapping_Annotations._02__OneToMany.unidirectional_flow.config.*;
-import _0__Hibernate._03__Relationship_Mapping_Annotations._02__OneToMany.unidirectional_flow.model.*;
+import _0__Hibernate._03__Hibernate_Mapping_Annotations._02__OneToMany.unidirectional_flow.config.*;
+import _0__Hibernate._03__Hibernate_Mapping_Annotations._02__OneToMany.unidirectional_flow.model.*;
 import org.hibernate.*;
 
 public class Main {
