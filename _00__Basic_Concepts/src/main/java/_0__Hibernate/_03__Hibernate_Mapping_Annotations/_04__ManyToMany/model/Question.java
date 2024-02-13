@@ -1,4 +1,4 @@
-package _0__Hibernate._03__Relationship_Mapping_Annotations._04__ManyToMany.model;
+package _0__Hibernate._03__Hibernate_Mapping_Annotations._04__ManyToMany.model;
 
 import jakarta.persistence.*;
 

@@ -1,7 +1,7 @@
-package _0__Hibernate._03__Relationship_Mapping_Annotations._04__ManyToMany.config;
+package _0__Hibernate._03__Hibernate_Mapping_Annotations._04__ManyToMany.config;
 
-import _0__Hibernate._03__Relationship_Mapping_Annotations._04__ManyToMany.model.Answer;
-import _0__Hibernate._03__Relationship_Mapping_Annotations._04__ManyToMany.model.Question;
+import _0__Hibernate._03__Hibernate_Mapping_Annotations._04__ManyToMany.model.Answer;
+import _0__Hibernate._03__Hibernate_Mapping_Annotations._04__ManyToMany.model.Question;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
