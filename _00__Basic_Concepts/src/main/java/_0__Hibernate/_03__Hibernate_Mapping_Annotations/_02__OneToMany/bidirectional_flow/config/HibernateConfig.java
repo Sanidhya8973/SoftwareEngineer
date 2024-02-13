@@ -1,7 +1,7 @@
-package _0__Hibernate._03__Relationship_Mapping_Annotations._02__OneToMany.bidirectional_flow.config;
+package _0__Hibernate._03__Hibernate_Mapping_Annotations._02__OneToMany.bidirectional_flow.config;
 
-import _0__Hibernate._03__Relationship_Mapping_Annotations._02__OneToMany.bidirectional_flow.model.Answer;
-import _0__Hibernate._03__Relationship_Mapping_Annotations._02__OneToMany.bidirectional_flow.model.Question;
+import _0__Hibernate._03__Hibernate_Mapping_Annotations._02__OneToMany.bidirectional_flow.model.Answer;
+import _0__Hibernate._03__Hibernate_Mapping_Annotations._02__OneToMany.bidirectional_flow.model.Question;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

@@ -1,4 +1,4 @@
-package _0__Hibernate._03__Relationship_Mapping_Annotations._02__OneToMany.bidirectional_flow.model;
+package _0__Hibernate._03__Hibernate_Mapping_Annotations._02__OneToMany.bidirectional_flow.model;
 
 import jakarta.persistence.*;
 
