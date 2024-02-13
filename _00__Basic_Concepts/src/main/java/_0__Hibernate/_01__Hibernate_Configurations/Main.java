@@ -1,9 +1,8 @@
-package _0__Hibernate._01__Ways_To_Configure_Hibernate.config.main;
+package _0__Hibernate._01__Hibernate_Configurations;
 
+import _0__Hibernate._01__Hibernate_Configurations.config.HibernateConfig;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-import _0__Hibernate._01__Ways_To_Configure_Hibernate.config.HibernateConfig;
 
 public class Main {
 

@@ -1,8 +1,8 @@
-package _0__Hibernate._01__Ways_To_Configure_Hibernate.config;
+package _0__Hibernate._01__Hibernate_Configurations.config;
 
-import _0__Hibernate._02__Hibernate_Annotations.model.Address;
-import _0__Hibernate._02__Hibernate_Annotations.model.Certificate;
-import _0__Hibernate._02__Hibernate_Annotations.model.Employee;
+import _0__Hibernate._02__Hibernate_Core_Annotations.model.Address;
+import _0__Hibernate._02__Hibernate_Core_Annotations.model.Certificate;
+import _0__Hibernate._02__Hibernate_Core_Annotations.model.Employee;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
