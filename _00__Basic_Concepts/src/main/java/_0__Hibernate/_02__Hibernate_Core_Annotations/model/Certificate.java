@@ -1,4 +1,4 @@
-package _0__Hibernate._02__Hibernate_Annotations.model;
+package _0__Hibernate._02__Hibernate_Core_Annotations.model;
 
 import java.time.LocalDate;
 
@@ -7,25 +7,28 @@ import jakarta.persistence.*;
 @Embeddable
 public class Certificate {
 
-    @Column(name = "signature", length = 20, nullable = false, unique = false)
-    private String signature;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_certificate_id")
+    @SequenceGenerator(name = "generator_certificate_id", sequenceName = "sequence_table_certificate_id", allocationSize = 1)
+    @Column(name = "certificate_signature")
+    private int signature;
 
-    @Column(name = "name", length = 20, nullable = false, unique = false)
+    @Column(name = "certificate_name", length = 20, nullable = false, unique = false)
     private String name;
 
     @Basic
-    @Column(name = "start")
+    @Column(name = "certificate_start")
     private LocalDate startDate;
 
     @Basic
-    @Column(name = "end")
+    @Column(name = "certificate_end")
     private LocalDate endDate;
 
     public Certificate() {
 
     }
 
-    public Certificate(String signature, String name, LocalDate startDate, LocalDate endDate) {
+    public Certificate(int signature, String name, LocalDate startDate, LocalDate endDate) {
         super();
         this.signature = signature;
         this.name = name;
@@ -33,11 +36,11 @@ public class Certificate {
         this.endDate = endDate;
     }
 
-    public String getSignature() {
+    public int getSignature() {
         return signature;
     }
 
-    public void setSignature(String signature) {
+    public void setSignature(int signature) {
         this.signature = signature;
     }
 
@@ -67,7 +70,7 @@ public class Certificate {
 
     @Override
     public String toString() {
-        return "\n> Certificate -> [ signature=" + signature + ", name=" + name + ", startDate=" + startDate + ", endDate=" + endDate + " ]";
+        return "\n Certificate -> [ signature=" + signature + ", name=" + name + ", startDate=" + startDate + ", endDate=" + endDate + " ]";
     }
 
 }
