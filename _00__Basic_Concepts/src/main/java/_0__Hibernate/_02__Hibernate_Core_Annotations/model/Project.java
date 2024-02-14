@@ -27,7 +27,7 @@ public class Project {
     @Column(name = "project_end_date", nullable = true)
     private LocalDate endDate;
 
-    @ManyToMany(mappedBy = "answer")
+    @ManyToMany(mappedBy = "project")
     private Employee employee;
 
     public Project() {
