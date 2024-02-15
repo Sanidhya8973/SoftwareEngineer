@@ -1,4 +1,4 @@
-package _01__Types_Of_Beans_Scope._1__Singleton_Beans_Scope.beans;
+package _12__Types_Of_Bean_Scopes._1__Singleton_Beans_Scope.beans;
 
 public class Vehicle {
 

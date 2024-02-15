@@ -1,7 +1,7 @@
-package _01__Types_Of_Beans_Scope._1__Singleton_Beans_Scope.main;
+package _12__Types_Of_Bean_Scopes._1__Singleton_Beans_Scope.main;
 
-import _01__Types_Of_Beans_Scope._1__Singleton_Beans_Scope.beans.Vehicle;
-import _01__Types_Of_Beans_Scope._1__Singleton_Beans_Scope.config.ProjectConfig;
+import _12__Types_Of_Bean_Scopes._1__Singleton_Beans_Scope.beans.Vehicle;
+import _12__Types_Of_Bean_Scopes._1__Singleton_Beans_Scope.config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
