@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sanidhya</groupId>
-    <artifactId>_02__Wiring_Beans_Using_Annotation</artifactId>
+    <artifactId>_01__Spring_Core</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
