@@ -1,7 +1,7 @@
-package _04__Lazy_Instantiation.main;
+package _15__Lazy_Instantiation.main;
 
-import _04__Lazy_Instantiation.beans.Person;
-import _04__Lazy_Instantiation.config.ProjectConfig;
+import _15__Lazy_Instantiation.beans.Person;
+import _15__Lazy_Instantiation.config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {

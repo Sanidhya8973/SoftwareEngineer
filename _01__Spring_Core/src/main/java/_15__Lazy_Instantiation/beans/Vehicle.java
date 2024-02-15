@@ -1,4 +1,4 @@
-package _04__Lazy_Instantiation.beans;
+package _15__Lazy_Instantiation.beans;
 
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
