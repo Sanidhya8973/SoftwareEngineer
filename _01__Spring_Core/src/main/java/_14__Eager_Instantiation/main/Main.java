@@ -1,7 +1,7 @@
-package _03__Eager_Instantiation.main;
+package _14__Eager_Instantiation.main;
 
-import _03__Eager_Instantiation.beans.Person;
-import _03__Eager_Instantiation.config.ProjectConfig;
+import _14__Eager_Instantiation.beans.Person;
+import _14__Eager_Instantiation.config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {

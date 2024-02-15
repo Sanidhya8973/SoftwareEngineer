@@ -1,4 +1,4 @@
-package _03__Eager_Instantiation.config;
+package _14__Eager_Instantiation.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
