@@ -1,4 +1,4 @@
-package _02__Assignment.model.beans;
+package _11__Assignment.model.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

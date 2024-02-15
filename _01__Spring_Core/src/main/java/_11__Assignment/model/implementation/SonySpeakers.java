@@ -1,7 +1,7 @@
-package _02__Assignment.model.implementation;
+package _11__Assignment.model.implementation;
 
+import _11__Assignment.model.interfaces.Speakers;
 import org.springframework.stereotype.Component;
-import _02__Assignment.model.interfaces.Speakers;
 
 @Component
 public class SonySpeakers implements Speakers {

@@ -1,6 +1,6 @@
-package _02__Assignment.model.beans;
+package _11__Assignment.model.beans;
 
-import _02__Assignment.services.VehicleServices;
+import _11__Assignment.services.VehicleServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package _02__Assignment.config;
+package _11__Assignment.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;

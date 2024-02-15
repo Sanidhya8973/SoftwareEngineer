@@ -1,8 +1,8 @@
-package _02__Assignment.model.implementation;
+package _11__Assignment.model.implementation;
 
-import org.springframework.stereotype.Component;
+import _11__Assignment.model.interfaces.Tyres;
 import org.springframework.context.annotation.Primary;
-import _02__Assignment.model.interfaces.Tyres;
+import org.springframework.stereotype.Component;
 
 @Component
 @Primary

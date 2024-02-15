@@ -1,9 +1,9 @@
-package _02__Assignment.services;
+package _11__Assignment.services;
 
-import org.springframework.stereotype.Component;
+import _11__Assignment.model.interfaces.Speakers;
+import _11__Assignment.model.interfaces.Tyres;
 import org.springframework.beans.factory.annotation.Autowired;
-import _02__Assignment.model.interfaces.Speakers;
-import _02__Assignment.model.interfaces.Tyres;
+import org.springframework.stereotype.Component;
 
 @Component
 public class VehicleServices {

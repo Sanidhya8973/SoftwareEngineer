@@ -1,8 +1,8 @@
-package _02__Assignment.main;
+package _11__Assignment.main;
 
-import _02__Assignment.config.ProjectConfig;
-import _02__Assignment.model.beans.Person;
-import _02__Assignment.model.beans.Vehicle;
+import _11__Assignment.config.ProjectConfig;
+import _11__Assignment.model.beans.Person;
+import _11__Assignment.model.beans.Vehicle;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {

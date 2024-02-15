@@ -1,4 +1,4 @@
-package _02__Assignment.model.interfaces;
+package _11__Assignment.model.interfaces;
 
 public interface Speakers {
 
