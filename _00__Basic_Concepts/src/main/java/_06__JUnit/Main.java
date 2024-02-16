@@ -18,4 +18,8 @@ public class Main {
         return new String(arr);
     }
 
+    public ArithmeticException getException() {
+        throw new ArithmeticException();
+    }
+
 }

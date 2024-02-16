@@ -1,34 +1,50 @@
 package _06__JUnit;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.condition.*;
+import org.junit.jupiter.api.function.*;
 
-public class MainTest implements MainInterfaceTest {
+public class MainTest {
 
-    @Test
-    void test1() {
-        System.out.println("the default behavior of @Test annotated method is success");
+    private Main main;
+
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("Testing: started");
+    }
+
+    @BeforeEach
+    void enable() {
+        main = new Main();
+        System.out.println("status: object created");
+    }
+
+    @AfterEach
+    void disable() {
+        main = null;
+        System.out.println("status: object destroyed");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("Testing: ended");
     }
 
     @Test
-    void test2() {
+    public void test1() {
         Assertions.fail("the default behavior of @Test annotated method is success");
     }
 
     @Test
-    public void test3() {
-        Main m = new Main();
-        String expectedResult = "avaj";
-        String actualResult = m.reverse("java");
-        Assertions.assertEquals(expectedResult, actualResult);
+    public void test2() {
+        String expectedResult = "avaJ";
+        String actualResutl = main.reverse("Java");
+        Assertions.assertEquals(expectedResult, actualResutl, "reverse a string");
     }
 
     @Test
-    protected void test4() {
-        Main m = new Main();
-        String expectedResult = "avaJ";
-        String actualResult = m.reverse("java");
-        Assertions.assertEquals(expectedResult, actualResult);
+    public void test3() {
+        Assertions.assertThrows(ArithmeticException.class, () -> main.getException(), "exception-thrown");
     }
 
 }
