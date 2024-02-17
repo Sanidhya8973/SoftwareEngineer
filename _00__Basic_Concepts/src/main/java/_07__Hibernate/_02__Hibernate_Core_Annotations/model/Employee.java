@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.util.*;
 import java.time.LocalDate;
 
+@EntityListeners({AuditEntityListeners.class})
 @Entity(name = "entity_employee")
 @Table(
         name = "table_employee",
