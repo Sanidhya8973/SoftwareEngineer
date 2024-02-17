@@ -30,6 +30,7 @@
         <option value="$PROJECT_DIR$/_01__Spring_Beans/pom.xml" />
         <option value="$PROJECT_DIR$/_02__Wiring_Beans_Using_Annotation/pom.xml" />
         <option value="$PROJECT_DIR$/_03__Beans_Scope_Inside_Spring_Framework/pom.xml" />
+        <option value="$PROJECT_DIR$/_03__Spring_Aspect_Oriented_Programming/pom.xml" />
         <option value="$PROJECT_DIR$/_04__Aspect_Oriented_Programming/pom.xml" />
         <option value="$PROJECT_DIR$/_05__Spring_Annotations/pom.xml" />
         <option value="$PROJECT_DIR$/_05__Spring_MVC/pom.xml" />
