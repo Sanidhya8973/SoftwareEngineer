@@ -1,8 +1,7 @@
-package _06__JUnit;
+package _06__JUnit5;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.*;
-import org.junit.jupiter.api.function.*;
 
 public class MainTest implements MainTestInterface {
 

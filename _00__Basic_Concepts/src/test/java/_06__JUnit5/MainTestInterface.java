@@ -1,4 +1,4 @@
-package _06__JUnit;
+package _06__JUnit5;
 
 import org.junit.jupiter.api.*;
 
