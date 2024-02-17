@@ -1,4 +1,4 @@
-package _06__JUnit;
+package _06__JUnit5;
 
 public class Main {
 
