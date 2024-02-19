@@ -18,7 +18,33 @@ import org.hibernate.annotations.UpdateTimestamp;
                 )
         }
 )
-public class ProductEntity {
+@NamedQueries(
+        value = {
+                @NamedQuery(
+                        name = "Product.findByPriceAsc1",
+                        query = "SELECT p FROM entity_product p ORDER BY p.price Asc"
+                ),
+                @NamedQuery(
+                        name = "Product.findByPriceDesc1",
+                        query = "SELECT p FROM entity_product p ORDER BY p.price Desc"
+                )
+        }
+)
+@NamedNativeQueries(
+        value = {
+                @NamedNativeQuery(
+                        name = "Product.findByPriceAsc2",
+                        query = "SELECT * FROM table_product ORDER BY product_price ASC ;",
+                        resultClass = Product.class
+                ),
+                @NamedNativeQuery(
+                        name = "Product.findByPriceDesc2",
+                        query = "SELECT * FROM table_product ORDER BY product_price DESC ;",
+                        resultClass = Product.class
+                )
+        }
+)
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_product")
@@ -55,12 +81,12 @@ public class ProductEntity {
     @Column(name = "product_date_updated", nullable = false, unique = false)
     private LocalDateTime dateUpdate;
 
-    public ProductEntity() {
+    public Product() {
 
     }
 
-    public ProductEntity(String stockKeepingUnit, String name, String description, BigDecimal price, boolean active,
-                         String imageUrl) {
+    public Product(String stockKeepingUnit, String name, String description, BigDecimal price, boolean active,
+                   String imageUrl) {
         super();
         this.stockKeepingUnit = stockKeepingUnit;
         this.name = name;
@@ -70,8 +96,8 @@ public class ProductEntity {
         this.imageUrl = imageUrl;
     }
 
-    public ProductEntity(String stockKeepingUnit, String name, String description, BigDecimal price, boolean active,
-                         String imageUrl, LocalDateTime dateCreate, LocalDateTime dateUpdate) {
+    public Product(String stockKeepingUnit, String name, String description, BigDecimal price, boolean active,
+                   String imageUrl, LocalDateTime dateCreate, LocalDateTime dateUpdate) {
         super();
         this.stockKeepingUnit = stockKeepingUnit;
         this.name = name;
@@ -83,8 +109,8 @@ public class ProductEntity {
         this.dateUpdate = dateUpdate;
     }
 
-    public ProductEntity(Long id, String stockKeepingUnit, String name, String description, BigDecimal price, boolean active,
-                         String imageUrl, LocalDateTime dateCreate, LocalDateTime dateUpdate) {
+    public Product(Long id, String stockKeepingUnit, String name, String description, BigDecimal price, boolean active,
+                   String imageUrl, LocalDateTime dateCreate, LocalDateTime dateUpdate) {
         super();
         this.id = id;
         this.stockKeepingUnit = stockKeepingUnit;
