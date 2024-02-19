@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.company.project.repository.ProductRepository;
-import com.company.project.entity.ProductEntity;
+import com.company.project.entity.Product;
 
 @Service(value = "service_product")
 public class ProductService {
@@ -21,30 +21,30 @@ public class ProductService {
         return productRepository.existsById(id);
     }
 
-    public ProductEntity findById(Long id) {
+    public Product findById(Long id) {
         return productRepository.findById(id).get();
     }
 
-    public List<ProductEntity> findAll() {
+    public List<Product> findAll() {
         return productRepository.findAll();
     }
 
-    public List<ProductEntity> findAllById(List<Long> productIdList) {
+    public List<Product> findAllById(List<Long> productIdList) {
         return productRepository.findAllById(productIdList);
     }
 
-    public void save(ProductEntity productEntity) {
-        productRepository.save(productEntity);
+    public void save(Product product) {
+        productRepository.save(product);
     }
 
-    public void saveAll(List<ProductEntity> productEntityList) {
-        productRepository.saveAll(productEntityList);
+    public void saveAll(List<Product> productList) {
+        productRepository.saveAll(productList);
     }
 
-    public void update(Long id, ProductEntity newProductEntity) {
-        ProductEntity oldProductEntity = productRepository.findById(id).get();
-        if (oldProductEntity.getId() == newProductEntity.getId()) {
-            productRepository.save(newProductEntity);
+    public void update(Long id, Product newProduct) {
+        Product oldProduct = productRepository.findById(id).get();
+        if (oldProduct.getId() == newProduct.getId()) {
+            productRepository.save(newProduct);
         }
     }
 
@@ -52,16 +52,16 @@ public class ProductService {
         productRepository.deleteById(id);
     }
 
-    public void delete(ProductEntity productEntity) {
-        productRepository.delete(productEntity);
+    public void delete(Product product) {
+        productRepository.delete(product);
     }
 
     public void deleteAll() {
         productRepository.deleteAll();
     }
 
-    public void deleteAll(List<ProductEntity> productEntityList) {
-        productRepository.deleteAll(productEntityList);
+    public void deleteAll(List<Product> productList) {
+        productRepository.deleteAll(productList);
     }
 
     public void deleteAllById(List<Long> productIdList) {
