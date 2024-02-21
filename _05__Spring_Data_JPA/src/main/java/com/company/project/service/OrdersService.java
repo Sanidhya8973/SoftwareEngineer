@@ -1,4 +1,4 @@
-package com.company.project.controller.service;
+package com.company.project.service;
 
 import java.util.ArrayList;
 import java.util.List;
