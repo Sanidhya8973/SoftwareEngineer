@@ -1,82 +1,21 @@
 package com.company.project.service;
 
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import com.company.project.domain.Product;
+import com.company.project.repository.ProductRepository;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Order;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.data.domain.*;
-import org.springframework.data.domain.Sort.*;
-import org.springframework.stereotype.Service;
-import org.springframework.beans.factory.annotation.Autowired;
-import com.company.project.repository.ProductRepository;
-import com.company.project.entity.Product;
-
 @Service(value = "service_product")
 public class ProductService {
-
-    // pageNumber and pageSize parameters come from client side
-    // in Spring Data JPA the pageNumber starts from 0
-    public List<Product> pagination(int pageNumber, int pageSize) {
-        Pageable pageable = PageRequest.of(pageNumber, pageSize);
-        Page<Product> page = productRepository.findAll(pageable);
-        List<Product> productList = page.getContent();
-        return productList;
-    }
-
-    // sortBy and sortDir parameters come from client side
-    // pass parameters with respect to the names provided in the Entity class and not the Database Table field names.
-    public List<Product> sortingSingle(String sortBy, String sortDir) {
-        Sort sort = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortBy).ascending() : Sort.by(sortBy).descending();
-        List<Product> productList = productRepository.findAll(sort);
-        return productList;
-    }
-
-    public List<Product> sortingDouble(String sortByField1, String sortByField2, String sortDir) {
-        Sort sortField1 = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortByField1).ascending() : Sort.by(sortByField1).descending();
-        Sort sortField2 = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortByField2).ascending() : Sort.by(sortByField2).descending();
-        Sort groupSort = sortField1.and(sortField2);
-        List<Product> productList = productRepository.findAll(groupSort);
-        return productList;
-    }
-
-    // PRODUCTION LEVEL
-    public List<Product> sortingMultiple(String[] sortBy, String sortDir) {
-        List<Order> orderList = new ArrayList<>();
-        for (int i = 0; i < sortBy.length; i++) {
-            // Order order = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name()) ? new Order(Sort.Direction.ASC, sortBy[i]) : new Order(Sort.Direction.DESC, sortBy[i]);
-            Order order;
-            if (sortDir.equalsIgnoreCase(Sort.Direction.ASC.name())) {
-                order = new Order(Sort.Direction.ASC, sortBy[i]);
-            } else {
-                order = new Order(Sort.Direction.DESC, sortBy[i]);
-            }
-            orderList.add(order);
-        }
-
-        Sort groupSort = Sort.by(orderList);
-
-        List<Product> productList = productRepository.findAll(groupSort);
-
-        return productList;
-    }
-
-    public List<Product> doPaginationAndSorting(int pageNumber, int pageSize, String[] sortBy, String sortDir) {
-        List<Order> orderList = new ArrayList<>();
-        for (int i = 0; i < sortBy.length; i++) {
-            // Order order = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name()) ? new Order(Sort.Direction.ASC, sortBy[i]) : new Order(Sort.Direction.DESC, sortBy[i]);
-            Order order;
-            if (sortDir.equalsIgnoreCase(Sort.Direction.ASC.name())) {
-                order = new Order(Sort.Direction.ASC, sortBy[i]);
-            } else {
-                order = new Order(Sort.Direction.DESC, sortBy[i]);
-            }
-            orderList.add(order);
-        }
-        Sort sort = Sort.by(orderList);
-        Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
-        Page<Product> page = productRepository.findAll(pageable);
-        List<Product> productList = page.getContent();
-        return productList;
-    }
 
     @Autowired
     private ProductRepository productRepository;
@@ -134,6 +73,67 @@ public class ProductService {
 
     public void deleteAllById(List<Long> productIdList) {
         productRepository.deleteAllById(productIdList);
+    }
+
+    public List<Product> pagination(int pageNumber, int pageSize) {
+        Pageable pageable = PageRequest.of(pageNumber, pageSize);
+        Page<Product> page = productRepository.findAll(pageable);
+        List<Product> productList = page.getContent();
+        return productList;
+    }
+
+    public List<Product> sortingSingle(String sortBy, String sortDir) {
+        Sort sort = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortBy).ascending()
+                : Sort.by(sortBy).descending();
+        List<Product> productList = productRepository.findAll(sort);
+        return productList;
+    }
+
+    public List<Product> sortingDouble(String sortByField1, String sortByField2, String sortDir) {
+        Sort sortField1 = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortByField1).ascending()
+                : Sort.by(sortByField1).descending();
+        Sort sortField2 = sortDir.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortByField2).ascending()
+                : Sort.by(sortByField2).descending();
+        Sort groupSort = sortField1.and(sortField2);
+        List<Product> productList = productRepository.findAll(groupSort);
+        return productList;
+    }
+
+    public List<Product> sortingMultiple(String[] sortBy, String sortDir) {
+        List<Order> orderList = new ArrayList<>();
+        for (int i = 0; i < sortBy.length; i++) {
+            Order order;
+            if (sortDir.equalsIgnoreCase(Sort.Direction.ASC.name())) {
+                order = new Order(Sort.Direction.ASC, sortBy[i]);
+            } else {
+                order = new Order(Sort.Direction.DESC, sortBy[i]);
+            }
+            orderList.add(order);
+        }
+
+        Sort groupSort = Sort.by(orderList);
+
+        List<Product> productList = productRepository.findAll(groupSort);
+
+        return productList;
+    }
+
+    public List<Product> doPaginationAndSorting(int pageNumber, int pageSize, String[] sortBy, String sortDir) {
+        List<Order> orderList = new ArrayList<>();
+        for (int i = 0; i < sortBy.length; i++) {
+            Order order;
+            if (sortDir.equalsIgnoreCase(Sort.Direction.ASC.name())) {
+                order = new Order(Sort.Direction.ASC, sortBy[i]);
+            } else {
+                order = new Order(Sort.Direction.DESC, sortBy[i]);
+            }
+            orderList.add(order);
+        }
+        Sort sort = Sort.by(orderList);
+        Pageable pageable = PageRequest.of(pageNumber, pageSize, sort);
+        Page<Product> page = productRepository.findAll(pageable);
+        List<Product> productList = page.getContent();
+        return productList;
     }
 
 }
