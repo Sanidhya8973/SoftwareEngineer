@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.company.project.domain.Product;
 import com.company.project.domain.ProductCategory;
-import com.company.project.controller.service.ProductService;
+import com.company.project.service.ProductService;
 
 @SpringBootTest
 public class ProductCategoryServiceTest {

@@ -9,8 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import com.company.project.domain.Address;
 import com.company.project.domain.OrdersItem;
 import com.company.project.domain.Orders;
-import com.company.project.controller.service.OrdersService;
-import com.company.project.controller.service.ProductService;
+import com.company.project.service.OrdersService;
+import com.company.project.service.ProductService;
 
 @SpringBootTest
 public class OrdersServiceTest {
