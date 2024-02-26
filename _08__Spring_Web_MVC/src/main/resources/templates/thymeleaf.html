@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- Add Thymeleaf To The html Web Page -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <!-- Give A Dynamic Title To The Web Page -->
+    <title th:text="${title}"></title>
+    <!-- Link .css File Stored In src/main/resources/static Package -->
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <!-- Link bootstrap.min.css File Stored In src/main/resources/static Package -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- Link .js File Stored In src/main/resources/static Package -->
+    <script type="text/javascript" th:src="@{/js/action.js}"></script>
+</head>
+<body>
+<div class="container">
+
+    <hr>
+    <!-- Basic Expression Representations -->
+    <h5>> Basic Expression Representations</h5>
+    <h6>- @{/path/file} : Access An URL</h6>
+    <h6>- ${object} : Access A Class Object</h6>
+    <h6>- ${obj.objField} : Access A Class Object</h6>
+    <h6>- *{objectField} :Access A Class Object.field</h6>
+    <h6>- #{message.name} : Access messages.properties</h6>
+
+    <hr>
+    <!-- Simple Expression -->
+    <h5>> Simple Expression</h5>
+    <h6 th:text="'- Name: ' + ${user.getFirstName()} + ' ' + ${user.getLastName()}"></h6>
+    <h6 th:text="'- Email: ' + ${user.getEmail()}"></h6>
+
+    <hr>
+    <!-- Selection Expression -->
+    <h5>> Selection Expression</h5>
+    <div th:object="${user}">
+        <h6 th:text="'- Name: ' + *{firstName} + ' ' + *{lastName}"></h6>
+        <h6 th:text="'- Email: ' + *{email}"></h6>
+    </div>
+
+    <hr>
+    <h5>> Linked style.css, action.js, and bootstrap.min.css Files</h5>
+    <button th:text="${message}" th:onclick="demo()"></button>
+
+    <hr>
+    <!-- Link URL Expression -->
+    <h5>> Link URL Expression</h5>
+    <a th:href="@{/home}">home page</a>
+
+    <hr>
+    <!-- Link API Expression -->
+    <h5>> Link API Expression: @RequestParam || Query String</h5>
+    <a th:href="@{/user(uid1=${ID})}">user details api</a>
+
+    <hr>
+    <!-- Link API Expression -->
+    <h5>> Link API Expression: @PathVariable & @PathParam</h5>
+    <a th:href="@{/user/{uid2}(uid2=${ID})}">user details api</a>
+
+    <hr>
+    <!-- Link messages.properties File Stored In src/main/resources Package -->
+    <h5>> Link messages.properties File Stored In src/main/resources Package</h5>
+    <h6>From src/main/resources/messages.properties,</h6>
+    <h6 th:text="#{admin.name}"></h6>
+    <h6 th:text="#{admin.email}"></h6>
+
+    <hr>
+    <!-- Conditional Statements -->
+    <h5>> th:if & th:unless</h5>
+    <h6>- th:if -> must require a true value to execute further code block</h6>
+    <h6>- th:unless -> must require a false value to execute further code block</h6>
+    <h6 th:if="10 > 5">- text-1-true</h6>
+    <h6 th:unless="10 > 5">- text-1-false</h6>
+    <h6 th:if="10 < 5">- text-2-true</h6>
+    <h6 th:unless="10 < 5">- text-2-false</h6>
+
+    <hr>
+    <!-- Switch Case -->
+    <h5>> th:switch & th:case</h5>
+    <div th:switch="#{user.name}">
+        <p th:case="u1">- user-1</p>
+        <p th:case="u2">- user-2</p>
+        <p th:case="u3">- user-3</p>
+        <p th:case="*">- default</p>
+    </div>
+
+    <hr>
+    <!-- Loops -->
+    <h5>> For Each Loop</h5>
+    <table class="table table-bordered">
+        <thead>
+        </thead>
+        <tr>
+            <th>INDEX</th>
+            <th>ID</th>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>EMAIL</th>
+            <th>PASSWORD</th>
+            <th>ROLES</th>
+        </tr>
+        <tbody>
+        <tr th:each="user,i : ${userList}">
+            <th th:text="${i.index+1}"></th>
+            <td scope="row" th:text="${user.getId()}"></td>
+            <td th:text="${user.getFirstName()}"></td>
+            <td th:text="${user.getLastName()}"></td>
+            <td th:text="${user.getEmail()}"></td>
+            <td th:text="${user.getPassword()}"></td>
+            <td th:text="${user.getRoleListToString()}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <hr>
+    <h5>> FORM</h5>
+    <div class="container">
+        <form th:action="@{/save}" method="post">
+            <input type="text" placeholder="USERNAME" name="username"/>
+            <br>
+            <input type="email" placeholder="EMAIL" name="email"/>
+            <br>
+            <input type="password" placeholder="PASSWORD" name="password"/>
+            <br>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+
+
+    <hr>
+    <h5>> Useful To Add Headers, Footers And Repetitive Content On Multiple Web Pages</h5>
+    <div th:replace="index.html"></div>
+</div>
+</body>
+</html>

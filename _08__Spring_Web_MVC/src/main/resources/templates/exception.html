@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"></title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <script type="type/javascript" th:src="@{/js/action.js}"></script>
+</head>
+<body>
+<div class="container">
+    <hr>
+    <h1 th:text="${title}"></h1>
+    <hr>
+    <br>
+    <hr>
+    <h2 th:text="${message}"></h2>
+    <hr>
+    <h2><a th:href="@{/index}">INDEX</a></h2>
+    <hr>
+</div>
+</body>
+</html>

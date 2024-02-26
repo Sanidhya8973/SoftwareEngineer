@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title th:text="${title}"></title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <script type="text/javascript" th:src="@{/js/action.js}"></script>
+</head>
+
+<body>
+<div class="container">
+    <hr>
+    <h6 th:text="${message}"></h6>
+    <hr>
+    <form th:action="@{/saveInquiry}" method="post">
+        <table style="border: 1px solid black; border-collapse: collapse;">
+            <tr>
+                <th><input type="text" placeholder="FIRST NAME" name="firstName"/></th>
+                <th><input type="text" placeholder="LAST NAME" name="lastName"/></th>
+            </tr>
+            <tr>
+                <th><input type="text" placeholder="QUESTION TYPE" name="type"/></th>
+                <th><input type="text" placeholder="ASK A QUESTION" name="question"/></th>
+            </tr>
+            <tr>
+                <th><input type="email" placeholder="EMAIL" name="email"/></th>
+                <th><input type="text" placeholder="CONTACT INFORMATION" name="contact"/></th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button type="submit">SUBMIT</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+    <hr>
+
+</div>
+</body>
+
+</html>
