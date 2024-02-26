@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.sanidhya</groupId>
-    <artifactId>_06__Spring_JDBC</artifactId>
+    <artifactId>_05__Spring_Data_JDBC</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
