@@ -2,40 +2,28 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="_07__Spring_Boot" />
-        <module name="_02__Spring_Beans" />
+        <module name="_09__Spring_Boot" />
+        <module name="_06__Spring_Data_JPA" />
         <module name="_03__Spring_AOP" />
+        <module name="_02__Spring_Beans" />
+        <module name="_05__Spring_Data_JDBC" />
         <module name="_00__Basic_Concepts" />
-        <module name="_06__Spring_JDBC" />
-        <module name="_06__Spring_MVC" />
+        <module name="_08__Spring_Web_MVC" />
         <module name="_01__Spring_Core" />
         <module name="_04__Spring_Scheduling" />
-        <module name="_05__Spring_Data_JPA" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="_01__Create_Beans_Inside_Spring_Context" target="20" />
-      <module name="_01__Spring_Beans" target="20" />
-      <module name="_02__Wiring_Beans_Using_Annotation" target="20" />
-      <module name="_03__Beans_Scope_Inside_Spring_Framework" target="20" />
-      <module name="_03__Spring_Aspect_Oriented_Programming" target="20" />
-      <module name="_04__Aspect_Oriented_Programming" target="20" />
-      <module name="_05__Spring_Annotations" target="20" />
-      <module name="_05__Spring_MVC" target="20" />
-      <module name="_08__Spring_Data_JPA" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="_04__Aspect_Oriented_Programming" options="-parameters" />
-      <module name="_05__Spring_Data_JPA" options="-parameters" />
-      <module name="_06__Spring_MVC" options="-parameters" />
-      <module name="_07__Spring_Boot" options="-parameters" />
-      <module name="_08__Spring_Data_JPA" options="-parameters" />
+      <module name="_06__Spring_Data_JPA" options="-parameters" />
+      <module name="_08__Spring_Web_MVC" options="-parameters" />
+      <module name="_09__Spring_Boot" options="-parameters" />
     </option>
   </component>
 </project>

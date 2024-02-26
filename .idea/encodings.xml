@@ -3,36 +3,18 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/_00__Basic_Concepts/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/_00__Basic_Concepts/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_01__Create_Beans_Inside_Spring_Context/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_01__Create_Beans_Inside_Spring_Context/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_01__Spring_Beans/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_01__Spring_Beans/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/_01__Spring_Core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/_01__Spring_Core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/_02__Spring_Beans/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/_02__Spring_Beans/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_02__Wiring_Beans_Using_Annotation/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_02__Wiring_Beans_Using_Annotation/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_03__Beans_Scope_Inside_Spring_Framework/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_03__Beans_Scope_Inside_Spring_Framework/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/_03__Spring_AOP/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/_03__Spring_AOP/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_03__Spring_Aspect_Oriented_Programming/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_03__Spring_Aspect_Oriented_Programming/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_04__Aspect_Oriented_Programming/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_04__Aspect_Oriented_Programming/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/_04__Spring_Scheduling/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/_04__Spring_Scheduling/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_05__Spring_Annotations/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_05__Spring_Annotations/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_05__Spring_Data_JPA/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_05__Spring_Data_JPA/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_05__Spring_MVC/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_05__Spring_MVC/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_06__Spring_JDBC/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_06__Spring_JDBC/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_06__Spring_MVC/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_07__Spring_Boot/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/_08__Spring_Data_JPA/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/_05__Spring_Data_JDBC/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/_05__Spring_Data_JDBC/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/_09__Spring_Boot/src/main/java" charset="UTF-8" />
   </component>
 </project>
