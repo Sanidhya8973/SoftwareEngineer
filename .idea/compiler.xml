@@ -7,8 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="_06__Spring_Data_JPA" />
         <module name="_03__Spring_AOP" />
         <module name="_02__Spring_Beans" />
+        <module name="_05__Spring_Data_JDBC" />
         <module name="_00__Basic_Concepts" />
         <module name="_08__Spring_Web_MVC" />
         <module name="_01__Spring_Core" />
@@ -16,8 +18,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="_05__Spring_Data_JDBC" target="20" />
-      <module name="_06__Spring_Data_JPA" target="17" />
       <module name="_09__Spring_Boot" target="17" />
     </bytecodeTargetLevel>
   </component>
