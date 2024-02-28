@@ -33,16 +33,19 @@ public class Inquiry {
     private String question;
 
     @Column(name = "inquiry_type", nullable = false)
-    private Type type;
-
-    public enum Type {
-        COURSES, FACULTY, FEE, TIMETABLE, EXAMINATION, HOLIDAY
-    }
+    private Tag tag;
 
     @Override
     public String toString() {
-        return "Inquiry -> [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-                + ", contact=" + contact + ", question=" + question + ", type=" + type + "]";
+        return "Inquiry {" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", contact='" + contact + '\'' +
+                ", question='" + question + '\'' +
+                ", tag=" + tag +
+                '}';
     }
 
 }
