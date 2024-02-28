@@ -1,6 +1,7 @@
 package com.company.project.controller;
 
 import com.company.project.model.Inquiry;
+import com.company.project.model.Tag;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +18,8 @@ public class InquiryController {
     @RequestMapping(path = "/inquiry", method = {RequestMethod.GET, RequestMethod.POST})
     public String displayInquiry(Model model) {
         model.addAttribute("title", "INQUIRY");
-        model.addAttribute("message", "ANY DOUBTS? ASK QUESTIONS!");
+        model.addAttribute("pageTitle", "[ INQUIRY FORM ]");
+        model.addAttribute("message", "DO YOU HAVE ANY DOUBTS? JUST ASK IT!");
         return "inquiry.html";
     }
 
@@ -32,7 +34,7 @@ public class InquiryController {
     }
 
     @PostMapping(path = "/saveInquiryX")
-    public ModelAndView saveInquiry(@RequestParam(name = "firstName") String firstName, @RequestParam(name = "lastName") String lastName, @RequestParam(name = "email") String email, @RequestParam(name = "contact") String contact, @RequestParam(name = "question") String question, @RequestParam(name = "type") Inquiry.Type type) {
+    public ModelAndView saveInquiry(@RequestParam(name = "firstName") String firstName, @RequestParam(name = "lastName") String lastName, @RequestParam(name = "email") String email, @RequestParam(name = "contact") String contact, @RequestParam(name = "question") String question, @RequestParam(name = "tag") Tag tag) {
         Consumer<String> log = (str) -> System.out.println("LOG:" + str);
         log.accept(firstName);
         log.accept(lastName);
