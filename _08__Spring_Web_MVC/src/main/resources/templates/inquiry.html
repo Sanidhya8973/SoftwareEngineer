@@ -12,6 +12,8 @@
 <body>
 <div class="container">
     <hr>
+    <h2 th:text="${pageTitle}"></h2>
+    <hr>
     <h6 th:text="${message}"></h6>
     <hr>
     <form th:action="@{/saveInquiry}" method="post">
@@ -21,11 +23,22 @@
                 <th><input type="text" placeholder="LAST NAME" name="lastName"/></th>
             </tr>
             <tr>
-                <th><input type="text" placeholder="QUESTION TYPE" name="type"/></th>
-                <th><input type="text" placeholder="ASK A QUESTION" name="question"/></th>
+                <th>
+                    <select name="tag" id="tag" required>
+                        <option label="-- SELECT A TAG --"></option>
+                        <option value="COURSE">course</option>
+                        <option value="FACULTY">faculty</option>
+                        <option value="FEE">fee-structure</option>
+                        <option value="TIMETABLE">time-table</option>
+                        <option value="EXAM">exam</option>
+                        <option value="HOLIDAY">holiday</option>
+                        <option value="OTHER">other</option>
+                    </select>
+                </th>
+                <th><input type="text" placeholder="ASK A QUESTION" name="question" required/></th>
             </tr>
             <tr>
-                <th><input type="email" placeholder="EMAIL" name="email"/></th>
+                <th><input type="email" placeholder="EMAIL" name="email" required/></th>
                 <th><input type="text" placeholder="CONTACT INFORMATION" name="contact"/></th>
             </tr>
             <tr>

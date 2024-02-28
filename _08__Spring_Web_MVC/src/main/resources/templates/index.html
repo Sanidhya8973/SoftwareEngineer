@@ -8,15 +8,17 @@
 <body>
 <div class="container">
     <hr>
-    <h1 th:text="${message}"></h1>
+    <h1 th:text="${pageTitle}"></h1>
     <hr>
-    <h2><a th:href="@{/index}">INDEX</a></h2>
+    <h2 th:text="${message}"></h2>
     <hr>
-    <h2><a th:href="@{/home}">HOME</a></h2>
+    <h3><a th:href="@{/index}">INDEX</a></h3>
     <hr>
-    <h2><a th:href="@{/inquiry}">INQUIRY</a></h2>
+    <h3><a th:href="@{/home}">HOME</a></h3>
     <hr>
-    <h2><a th:href="@{/thymeleaf}">THYMELEAF</a></h2>
+    <h3><a th:href="@{/inquiry}">INQUIRY</a></h3>
+    <hr>
+    <h3><a th:href="@{/thymeleaf}">THYMELEAF</a></h3>
     <hr>
 </div>
 </body>
