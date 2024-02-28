@@ -11,8 +11,9 @@ public class IndexController {
     @RequestMapping(path = {"/", "/index"}, method = {RequestMethod.GET, RequestMethod.POST})
     public String displayIndex(Model model) {
         model.addAttribute("title", "INDEX");
-        model.addAttribute("message", "[INDEX-PAGE]");
-        return "index";
+        model.addAttribute("pageTitle", "[ INDEX PAGE ]");
+        model.addAttribute("message", "INDEX SEARCH");
+        return "index.html";
     }
 
 }
