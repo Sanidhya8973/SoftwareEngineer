@@ -5,9 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0afa02b-24b9-4cd5-8cec-4b5b9bedd1fc" name="Changes" comment="files">
-      <change beforePath="$PROJECT_DIR$/SpringFrameworkProjects.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_MVC/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_07__Spring_Boot/pom.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/model/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_01__JakartaEE_JDBC_Operations/_01__CRUD_Operations/dao/EmployeeDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_01__JakartaEE_JDBC_Operations/_01__CRUD_Operations/dao/helper/ConnectionProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_01__JakartaEE_JDBC_Operations/_01__CRUD_Operations/dao/helper/Query.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_01__JakartaEE_JDBC_Operations/_01__CRUD_Operations/main/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_01__JakartaEE_JDBC_Operations/_01__CRUD_Operations/model/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_02__Spring_JDBC_Operations/_01__CRUD_Operations/beans/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_02__Spring_JDBC_Operations/_01__CRUD_Operations/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_02__Spring_JDBC_Operations/_01__CRUD_Operations/dao/implementations/RowMapperImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_02__Spring_JDBC_Operations/_01__CRUD_Operations/dao/implementations/StudentDaoImplementation$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_02__Spring_JDBC_Operations/_01__CRUD_Operations/dao/implementations/StudentDaoImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_02__Spring_JDBC_Operations/_01__CRUD_Operations/dao/interfaces/StudentDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_02__Spring_JDBC_Operations/_01__CRUD_Operations/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/controller/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/controller/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/controller/InquiryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/controller/InquiryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/controller/ThymeleafController.java" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/controller/ThymeleafController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/model/Inquiry.java" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/model/Inquiry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/exception.html" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/exception.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/inquiry.html" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/inquiry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/thymeleaf.html" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/thymeleaf.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,16 +68,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/_Programmer_/java/IntelliJ/SpringFrameworkProjects/_06__Spring_Web_MVC",
-    "settings.editor.selected.configurable": "advanced.settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/_Programmer_/java/IntelliJ/SpringFrameworkProjects/_06__Spring_Web_MVC&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\_Programmer_\java\IntelliJ\SpringFrameworkProjects\_06__Spring_Web_MVC\src\main\resources\static\js" />
@@ -139,12 +164,74 @@
       <option name="project" value="LOCAL" />
       <updated>1708984575935</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Spring Web MVC + Thymeleaf">
+      <option name="closed" value="true" />
+      <created>1708984660558</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708984660558</updated>
+    </task>
+    <task id="LOCAL-00006" summary=".iml file">
+      <option name="closed" value="true" />
+      <created>1708984679591</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708984679591</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Spring Core">
+      <option name="closed" value="true" />
+      <created>1708984708335</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708984708335</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Spring AOP">
+      <option name="closed" value="true" />
+      <created>1708984719240</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708984719240</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Spring Data JDBC">
+      <option name="closed" value="true" />
+      <created>1708984730481</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708984730481</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Spring Data JPA">
+      <option name="closed" value="true" />
+      <created>1708984736774</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708984736774</updated>
+    </task>
+    <task id="LOCAL-00011" summary="files">
+      <option name="closed" value="true" />
+      <created>1708984747113</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708984747113</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Spring Data: JDBC" />
     <MESSAGE value="Spring Data: JPA" />
+    <MESSAGE value="Spring Web MVC + Thymeleaf" />
+    <MESSAGE value=".iml file" />
+    <MESSAGE value="Spring Core" />
+    <MESSAGE value="Spring AOP" />
+    <MESSAGE value="Spring Data JDBC" />
+    <MESSAGE value="Spring Data JPA" />
     <MESSAGE value="files" />
     <option name="LAST_COMMIT_MESSAGE" value="files" />
   </component>
