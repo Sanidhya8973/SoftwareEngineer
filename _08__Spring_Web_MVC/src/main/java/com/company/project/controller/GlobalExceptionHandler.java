@@ -11,7 +11,8 @@ public class GlobalExceptionHandler {
     public ModelAndView handleException(Exception e) {
         ModelAndView mnv = new ModelAndView();
         mnv.setViewName("exception.html");
-        mnv.addObject("title", "404 NOT FOUND!");
+        mnv.addObject("title", "404");
+        mnv.addObject("pageTitle", "404 PAGE NOT FOUND!");
         e.printStackTrace();
         mnv.addObject("message", "BAD REQUEST: " + e.getMessage());
         return mnv;
