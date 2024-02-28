@@ -11,8 +11,9 @@ public class HomeController {
     @RequestMapping(path = "/home", method = {RequestMethod.GET, RequestMethod.POST})
     public String displayHome(Model model) {
         model.addAttribute("title", "HOME");
-        model.addAttribute("message", "[HOME-PAGE]");
-        return "home";
+        model.addAttribute("pageTitle", "[ HOME PAGE ]");
+        model.addAttribute("message", "WELCOME HOME!");
+        return "home.html";
     }
 
 }
