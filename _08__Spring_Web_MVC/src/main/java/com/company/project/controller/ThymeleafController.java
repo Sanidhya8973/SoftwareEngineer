@@ -23,7 +23,8 @@ public class ThymeleafController {
     @RequestMapping(path = "/thymeleaf", method = {RequestMethod.GET, RequestMethod.POST})
     public String displayThymeleaf(Model model) {
         model.addAttribute("title", "THYMELEAF");
-        model.addAttribute("message", "[THYMELEAF-PAGE]");
+        model.addAttribute("pageTitle", "[ THYMELEAF - PAGE ]");
+        model.addAttribute("message", "LEARN THYMELEAF");
         User user = userService.findById(1L);
         List<User> userList = userService.findAll();
         model.addAttribute("user", user);
