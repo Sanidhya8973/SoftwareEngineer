@@ -1,7 +1,12 @@
 package com.company.project.model;
 
-import jakarta.persistence.*;
+import java.time.LocalDateTime;
+
 import lombok.*;
+import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+import jakarta.validation.constraints.*;
+import jakarta.validation.Valid;
 
 @Getter
 @Setter
@@ -17,22 +22,35 @@ public class Inquiry {
     @Column(name = "inquiry_id")
     private Long id;
 
+    @CreationTimestamp
+    private LocalDateTime date;
+
+    @NotBlank(message = "first name must not be blank")
+    @Size(min = 3, max = 20, message = "length of first name must be between {min} and {max}")
     @Column(name = "inquiry_first_name", length = 25, nullable = false)
     private String firstName;
 
+    @NotBlank(message = "last name must not be blank")
+    @Size(min = 3, max = 20, message = "length of last name must be between {min} and {max}")
     @Column(name = "inquiry_last_name", length = 25, nullable = false)
     private String lastName;
 
+    @NotBlank(message = "email must not be blank")
+    @Email(regexp = "[a-zA-Z0-9][a-zA-Z0-9_.]*@gmail[.]com", message = "please provide a valid email")
     @Column(name = "inquiry_email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "inquiry_contact", nullable = true)
-    private String contact;
+    @Valid
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "inquiry", optional = true)
+    private Contact contact;
 
+    @NotBlank(message = "question must not be blank")
     @Column(name = "inquiry_question", nullable = false)
     private String question;
 
-    @Column(name = "inquiry_type", nullable = false)
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    @Column(name = "inquiry_tag", nullable = false)
     private Tag tag;
 
     @Override
@@ -42,9 +60,11 @@ public class Inquiry {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
-                ", contact='" + contact + '\'' +
-                ", question='" + question + '\'' +
                 ", tag=" + tag +
+                ", question='" + question + '\'' +
+                ", countryName='" + contact.getContactPrefix().getCountryName() + '\'' +
+                ", countryCode='" + contact.getContactPrefix().getCountryCode() + '\'' +
+                ", contactNumber='" + contact.getContactNumber() + '\'' +
                 '}';
     }
 
