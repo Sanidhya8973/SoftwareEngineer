@@ -16,30 +16,63 @@
     <hr>
     <h6 th:text="${message}"></h6>
     <hr>
-    <form th:action="@{/saveInquiry}" method="post">
+    <!--
+// when we are iterating over the entries of HashMap, then Thymeleaf can handle this without explicitly defining a Model attribute for HashMap
+// but when we are explicitly accessing the keys or values of the HashMap, we have to explicitly define a Model attribute
+<div th:each="start : ${fieldErrorMap}">
+    <div th:text="${start.key} + ': ' + ${start.value}" class="alert alert-danger" role="alert"></div>
+</div>
+ -->
+    <form th:object="${inquiry}" th:action="@{/saveInquiry}" method="post">
         <table style="border: 1px solid black; border-collapse: collapse;">
             <tr>
-                <th><input type="text" placeholder="FIRST NAME" name="firstName"/></th>
-                <th><input type="text" placeholder="LAST NAME" name="lastName"/></th>
+                <th th:if="${fieldErrorMap.containsKey('firstName')}" th:text="${fieldErrorMap['firstName']}"
+                    class=" alert alert-danger" role="alert"></th>
+                <th th:if="${fieldErrorMap.containsKey('lastName')}" th:text="${fieldErrorMap['lastName']}"
+                    class="alert alert-danger" role="alert"></th>
             </tr>
             <tr>
-                <th>
-                    <select name="tag" id="tag" required>
-                        <option label="-- SELECT A TAG --"></option>
-                        <option value="COURSE">course</option>
-                        <option value="FACULTY">faculty</option>
-                        <option value="FEE">fee-structure</option>
-                        <option value="TIMETABLE">time-table</option>
-                        <option value="EXAM">exam</option>
-                        <option value="HOLIDAY">holiday</option>
-                        <option value="OTHER">other</option>
-                    </select>
-                </th>
-                <th><input type="text" placeholder="ASK A QUESTION" name="question" required/></th>
+                <th><input th:field="*{firstName}" type="text" placeholder="FIRST NAME"/></th>
+                <th><input th:field="*{lastName}" type="text" placeholder="LAST NAME"/></th>
             </tr>
             <tr>
-                <th><input type="email" placeholder="EMAIL" name="email" required/></th>
-                <th><input type="text" placeholder="CONTACT INFORMATION" name="contact"/></th>
+                <th colspan="2" th:if="${fieldErrorMap.containsKey('question')}" th:text="${fieldErrorMap['question']}"
+                    class=" alert alert-danger" role="alert"></th>
+            </tr>
+            <tr>
+                <th><select th:field="*{tag}" id="tag">
+                    <option value="NULL">-- SELECT A TAG --</option>
+                    <option value="FEE">fee</option>
+                    <option value="COURSE">courses</option>
+                    <option value="FACULTY">faculties</option>
+                    <option value="TIMETABLE">time-table</option>
+                    <option value="EXAM">exams</option>
+                    <option value="HOLIDAY">holidays</option>
+                    <option value="OTHER">other</option>
+                </select></th>
+                <th><input th:field="*{question}" type="text" placeholder="ASK A QUESTION"/></th>
+            </tr>
+            <tr>
+                <th th:if="${fieldErrorMap.containsKey('contact.contactPrefix.countryName')}"
+                    th:text="${fieldErrorMap['contact.contactPrefix.countryName']}" class=" alert alert-danger"
+                    role="alert"></th>
+                <th th:if="${fieldErrorMap.containsKey('email')}" th:text="${fieldErrorMap['email']}"
+                    class="alert alert-danger" role="alert"></th>
+            </tr>
+            <tr>
+                <th><input th:field="*{contact.contactPrefix.countryName}" type="text" placeholder="COUNTRY NAME"/></th>
+                <th><input th:field="*{email}" type="email" placeholder="EMAIL"/></th>
+            </tr>
+            <tr>
+                <th th:if="${fieldErrorMap.containsKey('contact.contactPrefix.countryCode')}"
+                    th:text="${fieldErrorMap['contact.contactPrefix.countryCode']}" class=" alert alert-danger"
+                    role="alert"></th>
+                <th th:if="${fieldErrorMap.containsKey('contact.number')}" th:text="${fieldErrorMap['contact.number']}"
+                    class="alert alert-danger" role="alert"></th>
+            </tr>
+            <tr>
+                <th><input th:field="*{contact.contactPrefix.countryCode}" type="text" placeholder="COUNTRY CODE"/></th>
+                <th><input th:field="*{contact.contactNumber}" type="text" placeholder="CONTACT NUMBER"/></th>
             </tr>
             <tr>
                 <th colspan="2">
@@ -48,6 +81,7 @@
             </tr>
         </table>
     </form>
+
     <hr>
 
 </div>
