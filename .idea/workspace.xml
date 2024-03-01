@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0afa02b-24b9-4cd5-8cec-4b5b9bedd1fc" name="Changes" comment="Spring Data: JDBC">
+    <list default="true" id="e0afa02b-24b9-4cd5-8cec-4b5b9bedd1fc" name="Changes" comment="Spring Web MVC: Added ContactPrefix Class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/controller/InquiryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/java/com/company/project/controller/InquiryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/inquiry.html" beforeDir="false" afterPath="$PROJECT_DIR$/_08__Spring_Web_MVC/src/main/resources/templates/inquiry.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,16 +45,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/_Programmer_/java/IntelliJ/SpringFrameworkProjects/_05__Spring_Data_JDBC",
-    "settings.editor.selected.configurable": "advanced.settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/_Programmer_/java/IntelliJ/SpringFrameworkProjects/_06__Spring_Data_JPA&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\_Programmer_\java\IntelliJ\SpringFrameworkProjects\_08__Spring_Web_MVC\src\main\resources\templates" />
@@ -74,6 +78,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_08__Spring_Web_MVC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.project" />
+      <option name="MAIN_CLASS_NAME" value="com.company.project.ApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="_08__Spring_Web_MVC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.project.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.project.service" />
+      <option name="MAIN_CLASS_NAME" value="com.company.project.service.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="_08__Spring_Web_MVC" />
       <extension name="coverage">
@@ -93,6 +127,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.ApplicationTests" />
         <item itemvalue="JUnit.UserServiceTest.test" />
       </list>
     </recent_temporary>
@@ -282,7 +318,55 @@
       <option name="project" value="LOCAL" />
       <updated>1709081016335</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Spring Data: JDBC">
+      <option name="closed" value="true" />
+      <created>1709155627143</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1709155627143</updated>
+    </task>
+    <task id="LOCAL-00024" summary="files">
+      <option name="closed" value="true" />
+      <created>1709155645722</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1709155645722</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Spring Web MVC: Updated Inquiry Class">
+      <option name="closed" value="true" />
+      <created>1709299101311</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1709299101311</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Spring Web MVC: Updated Tag Class">
+      <option name="closed" value="true" />
+      <created>1709299107359</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1709299107359</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Spring Web MVC: Added Contact Class">
+      <option name="closed" value="true" />
+      <created>1709299117827</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1709299117827</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Spring Web MVC: Added ContactPrefix Class">
+      <option name="closed" value="true" />
+      <created>1709299125030</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1709299125030</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -298,13 +382,16 @@
     <MESSAGE value="Spring Web MVC: It Is A Index Controller For Our Web Application" />
     <MESSAGE value="Spring Web MVC: It Is A Inquiry Controller For Our Web Application" />
     <MESSAGE value="Spring Web MVC: Learning Thymeleaf" />
-    <MESSAGE value="Spring Web MVC: Updated Inquiry Class" />
     <MESSAGE value="Spring Web MVC: Created Tag Class" />
     <MESSAGE value="Spring Web MVC: Updated The Web Page" />
-    <MESSAGE value="files" />
     <MESSAGE value="Spring Data: JDBC: Jakarta EE Way" />
     <MESSAGE value="Spring Data: JDBC" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spring Data: JDBC" />
+    <MESSAGE value="files" />
+    <MESSAGE value="Spring Web MVC: Updated Inquiry Class" />
+    <MESSAGE value="Spring Web MVC: Updated Tag Class" />
+    <MESSAGE value="Spring Web MVC: Added Contact Class" />
+    <MESSAGE value="Spring Web MVC: Added ContactPrefix Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring Web MVC: Added ContactPrefix Class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
