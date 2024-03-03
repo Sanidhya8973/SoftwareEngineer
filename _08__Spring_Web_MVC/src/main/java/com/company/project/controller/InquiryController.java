@@ -17,10 +17,9 @@ import com.company.project.model.Tag;
 @Controller(value = "controller_inquiry")
 public class InquiryController {
 
-    @RequestMapping(path = "/inquiry", method = {RequestMethod.GET, RequestMethod.POST})
-    public ModelAndView displayHome() {
-        ModelAndView mnv = new ModelAndView();
-        mnv.setViewName("inquiry.html");
+    @RequestMapping(path = "/inquiry", method = { RequestMethod.GET, RequestMethod.POST })
+    public ModelAndView displayInquiry() {
+        ModelAndView mnv = new ModelAndView("inquiry.html");
         mnv.addObject("title", "INQUIRY");
         mnv.addObject("pageTitle", "[ INQUIRY-FORM ]");
         mnv.addObject("message", "Do You Have Any Doubts? Just Ask It!");
@@ -71,4 +70,3 @@ public class InquiryController {
     }
 
 }
-
