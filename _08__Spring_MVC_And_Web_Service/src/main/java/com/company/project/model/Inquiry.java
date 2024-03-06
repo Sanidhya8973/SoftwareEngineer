@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import jakarta.validation.constraints.*;
 import jakarta.validation.Valid;
+import org.hibernate.annotations.UpdateTimestamp;
 
 @Getter
 @Setter
@@ -23,7 +24,12 @@ public class Inquiry {
     private Long id;
 
     @CreationTimestamp
-    private LocalDateTime date;
+    @Column(name = "inquiry_date_created")
+    private LocalDateTime dateCreated;
+
+    @UpdateTimestamp
+    @Column(name = "inquiry_date_updated")
+    private LocalDateTime dateUpdated;
 
     @NotBlank(message = "first name must not be blank")
     @Size(min = 3, max = 20, message = "length of first name must be between {min} and {max}")
