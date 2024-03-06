@@ -1,23 +1,31 @@
 package com.company.project.controller;
 
-import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.function.Consumer;
+import java.time.LocalDateTime;
 
 import org.springframework.stereotype.Controller;
-import jakarta.validation.Valid;
-import org.springframework.validation.*;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import com.company.project.service.InquiryServiceImp;
 import com.company.project.model.Inquiry;
 import com.company.project.model.Tag;
+import org.springframework.validation.*;
+import jakarta.validation.Valid;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller(value = "controller_inquiry")
 public class InquiryController {
 
-    @RequestMapping(path = "/inquiry", method = { RequestMethod.GET, RequestMethod.POST })
+    private final InquiryServiceImp inquiryServiceImp;
+
+    @Autowired
+    public InquiryController(InquiryServiceImp inquiryServiceImp) {
+        this.inquiryServiceImp = inquiryServiceImp;
+    }
+
+    @RequestMapping(path = "/inquiry", method = {RequestMethod.GET, RequestMethod.POST})
     public ModelAndView displayInquiry() {
         ModelAndView mnv = new ModelAndView("inquiry.html");
         mnv.addObject("title", "INQUIRY");
@@ -52,8 +60,11 @@ public class InquiryController {
             return mnv;
         }
         // 2. use an object of Service Layer and perform business logic there
-        Consumer<Inquiry> log = (i) -> System.out.println(i.toString());
-        log.accept(inquiry);
+        try {
+            inquiryServiceImp.createInquiry(inquiry);
+        } catch (Exception e) {
+            System.out.println(e.getLocalizedMessage());
+        }
         // 3. return the obtained result from Service Layer
         mnv.setViewName("redirect:/inquiry");
         return mnv;
