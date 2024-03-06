@@ -7,12 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="_08__Spring_MVC_And_Web_Service" />
         <module name="_06__Spring_Data_JPA" />
         <module name="_03__Spring_AOP" />
         <module name="_02__Spring_Beans" />
         <module name="_05__Spring_Data_JDBC" />
         <module name="_00__Basic_Concepts" />
-        <module name="_08__Spring_Web_MVC" />
         <module name="_01__Spring_Core" />
         <module name="_04__Spring_Scheduling" />
       </profile>
@@ -24,7 +24,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="_06__Spring_Data_JPA" options="-parameters" />
-      <module name="_08__Spring_Web_MVC" options="-parameters" />
+      <module name="_08__Spring_MVC_And_Web_Service" options="-parameters" />
       <module name="_09__Spring_Boot" options="-parameters" />
     </option>
   </component>
