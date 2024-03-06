@@ -3,18 +3,16 @@ package com.company.project.service;
 import java.util.List;
 
 import com.company.project.model.User;
-import com.company.project.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import com.company.project.model.Role;
-import com.company.project.model.User;
 
 @SpringBootTest
-public class UserServiceTest {
+public class UserServiceImpTest {
 
     @Autowired
-    private UserService userService;
+    private UserServiceImp userServiceImp;
 
     @Test
     protected void test() {
@@ -75,7 +73,11 @@ public class UserServiceTest {
         u4.setRoleList(List.of(r3, r5));
         u5.setRoleList(List.of(r3));
 
-        userService.saveAll(List.of(u1, u2, u3, u4, u5));
+        try {
+            userServiceImp.createUsers(List.of(u1, u2, u3, u4, u5));
+        } catch (Exception e) {
+            System.out.println(e.getLocalizedMessage());
+        }
         // roleRepository.saveAll(List.of(r1, r2, r3, r4, r5));
 
     }
