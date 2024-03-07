@@ -1,8 +1,8 @@
-package com.company.project.service.interfaces;
+package com.company._01__WebMVC.service.interfaces;
 
 import java.util.List;
 
-import com.company.project.model.Inquiry;
+import com.company._01__WebMVC.model.Inquiry;
 
 public interface InquiryService {
 

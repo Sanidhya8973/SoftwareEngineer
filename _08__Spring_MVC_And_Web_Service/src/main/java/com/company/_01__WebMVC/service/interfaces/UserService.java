@@ -1,8 +1,8 @@
-package com.company.project.service.interfaces;
+package com.company._01__WebMVC.service.interfaces;
 
 import java.util.List;
 
-import com.company.project.model.User;
+import com.company._01__WebMVC.model.User;
 
 public interface UserService {
 

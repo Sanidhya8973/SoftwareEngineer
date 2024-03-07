@@ -1,14 +1,14 @@
-package com.company.project.service;
+package com.company._01__WebMVC.service;
 
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Optional;
 
+import com.company._01__WebMVC.service.interfaces.InquiryService;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.company.project.service.interfaces.InquiryService;
-import com.company.project.repository.InquiryRepository;
-import com.company.project.model.Inquiry;
+import com.company._01__WebMVC.repository.InquiryRepository;
+import com.company._01__WebMVC.model.Inquiry;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Order;
 import org.springframework.data.domain.Pageable;

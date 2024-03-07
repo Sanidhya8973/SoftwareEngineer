@@ -1,14 +1,14 @@
-package com.company.project.service;
+package com.company._01__WebMVC.service;
 
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Optional;
 
+import com.company._01__WebMVC.service.interfaces.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.company.project.service.interfaces.UserService;
-import com.company.project.repository.UserRepository;
-import com.company.project.model.User;
+import com.company._01__WebMVC.repository.UserRepository;
+import com.company._01__WebMVC.model.User;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Order;
 import org.springframework.data.domain.Pageable;
