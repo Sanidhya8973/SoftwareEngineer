@@ -1,7 +1,7 @@
-package com.company.project.controller;
+package com.company._01__WebMVC.controller;
 
-import com.company.project.model.User;
-import com.company.project.service.UserServiceImp;
+import com.company._01__WebMVC.model.User;
+import com.company._01__WebMVC.service.UserServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,4 +1,4 @@
-package com.company.project.controller;
+package com.company._01__WebMVC.controller;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

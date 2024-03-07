@@ -1,4 +1,4 @@
-package com.company.project.controller;
+package com.company._01__WebMVC.controller;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -7,9 +7,9 @@ import java.time.LocalDateTime;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.company.project.service.InquiryServiceImp;
-import com.company.project.model.Inquiry;
-import com.company.project.model.Tag;
+import com.company._01__WebMVC.service.InquiryServiceImp;
+import com.company._01__WebMVC.model.Inquiry;
+import com.company._01__WebMVC.model.Tag;
 import org.springframework.validation.*;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
