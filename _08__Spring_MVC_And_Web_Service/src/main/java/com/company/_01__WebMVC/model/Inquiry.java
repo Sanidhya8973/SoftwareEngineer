@@ -1,13 +1,13 @@
-package com.company.project.model;
+package com.company._01__WebMVC.model;
 
 import java.time.LocalDateTime;
 
 import lombok.*;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
-import jakarta.validation.constraints.*;
-import jakarta.validation.Valid;
 import org.hibernate.annotations.UpdateTimestamp;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
 
 @Getter
 @Setter

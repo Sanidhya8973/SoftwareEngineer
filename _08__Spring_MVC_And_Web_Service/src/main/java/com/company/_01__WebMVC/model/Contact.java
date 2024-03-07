@@ -1,4 +1,4 @@
-package com.company.project.model;
+package com.company._01__WebMVC.model;
 
 import lombok.*;
 import jakarta.persistence.*;

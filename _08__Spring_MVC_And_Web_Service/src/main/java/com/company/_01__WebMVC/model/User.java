@@ -1,13 +1,10 @@
-package com.company.project.model;
+package com.company._01__WebMVC.model;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
+
+import lombok.*;
+import jakarta.persistence.*;
 
 @Getter
 @Setter
