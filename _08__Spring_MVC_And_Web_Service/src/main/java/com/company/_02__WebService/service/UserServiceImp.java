@@ -47,6 +47,7 @@ public class UserServiceImp implements UserService {
     @Override
     public User createUser(User user) throws Exception {
         if (null != user) {
+            // Spring Boot DTO
             return userRepository.save(user);
         } else {
             throw new Exception("EXCEPTION -> user can not be null");
