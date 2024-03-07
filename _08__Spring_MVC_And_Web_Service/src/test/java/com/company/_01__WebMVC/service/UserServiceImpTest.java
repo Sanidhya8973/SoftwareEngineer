@@ -1,12 +1,13 @@
-package com.company.project.service;
+package com.company._01__WebMVC.service;
 
 import java.util.List;
 
-import com.company.project.model.User;
+import com.company._01__WebMVC.model.User;
+import com.company._01__WebMVC.service.UserServiceImp;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import com.company.project.model.Role;
+import com.company._01__WebMVC.model.Role;
 
 @SpringBootTest
 public class UserServiceImpTest {
