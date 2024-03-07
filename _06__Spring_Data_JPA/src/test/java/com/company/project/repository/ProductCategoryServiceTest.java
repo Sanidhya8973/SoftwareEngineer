@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.company.project.model.Product;
 import com.company.project.model.ProductCategory;
-import com.company.project.service.ProductService;
+import com.company.project.service.interfaces.ProductService;
 
 @SpringBootTest
 public class ProductCategoryServiceTest {
