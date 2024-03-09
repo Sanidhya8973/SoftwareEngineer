@@ -7,8 +7,8 @@ import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.company.project.model.Product;
-import com.company.project.model.ProductCategory;
+import com.company.project.entity.Product;
+import com.company.project.entity.ProductCategory;
 import com.company.project.service.interfaces.ProductService;
 
 @SpringBootTest
