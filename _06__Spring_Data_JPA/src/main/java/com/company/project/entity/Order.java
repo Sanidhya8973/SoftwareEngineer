@@ -1,4 +1,4 @@
-package com.company.project.model;
+package com.company.project.entity;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import lombok.*;
 @ToString
 @Entity(name = "entity_orders")
 @Table(name = "table_orders", schema = "ecommerce")
-public class Orders {
+public class Order {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_orders_id")
@@ -38,11 +38,11 @@ public class Orders {
 	private BigDecimal totalPrice;
 
 	@OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
-	private List<OrdersItem> ordersItemList = new ArrayList<>();
+	private List<OrderItem> orderItemList = new ArrayList<>();
 
 	public BigDecimal getTotalAmount() {
 		BigDecimal amount = new BigDecimal(0);
-		for (OrdersItem oi : this.ordersItemList) {
+		for (OrderItem oi : this.orderItemList) {
 			amount = amount.add(oi.getTotalOrdersItemAmount());
 		}
 		return amount;
