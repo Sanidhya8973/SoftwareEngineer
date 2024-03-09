@@ -1,4 +1,4 @@
-package com.company.project.model;
+package com.company.project.entity;
 
 import java.math.BigDecimal;
 
@@ -12,7 +12,7 @@ import lombok.*;
 @ToString
 @Entity(name = "entity_orders_item")
 @Table(name = "table_orders_item", schema = "ecommerce")
-public class OrdersItem {
+public class OrderItem {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_orders_item_id")
@@ -22,7 +22,7 @@ public class OrdersItem {
 
 	@ManyToOne
 	@JoinColumn(name = "fk_orders_id")
-	private Orders orders;
+	private Order order;
 
 	@OneToOne
 	@JoinColumn(name = "fk_product_id", nullable = false)
