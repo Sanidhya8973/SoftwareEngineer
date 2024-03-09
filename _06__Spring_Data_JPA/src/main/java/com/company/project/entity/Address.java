@@ -1,4 +1,4 @@
-package com.company.project.model;
+package com.company.project.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -35,6 +35,6 @@ public class Address {
 
 	@OneToOne
 	@JoinColumn(name = "fk_orders_id")
-	private Orders orders;
+	private Order order;
 
 }
