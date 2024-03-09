@@ -2,14 +2,15 @@ package com.company.project.controller;
 
 import java.util.List;
 
+import com.company.project.exception.ExceptionController;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.company.project.entity.User;
 import com.company.project.service.UserServiceImp;
 import org.springframework.http.*;
 
-@RestController(value = "rest_controller_webservice")
-@RequestMapping(path = "/rest", method = {RequestMethod.POST, RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.PATCH})
+@RestController
+@RequestMapping(path = "/rest")
 public class ControllerREST {
 
     private final UserServiceImp userServiceImp;
@@ -36,7 +37,7 @@ public class ControllerREST {
         }
     }
 
-    @GetMapping(path = "/users/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(path = "/users/{id}", produces = MediaType.APPLICATION_XML_VALUE)
     public ResponseEntity<?> readUser(@PathVariable(value = "id") Long id) {
         try {
             HttpStatus responseStatus = HttpStatus.OK;
@@ -45,7 +46,7 @@ public class ControllerREST {
             User responseBody = userServiceImp.readUser(id);
             return ResponseEntity.status(responseStatus).headers(responseHeaders).body(responseBody);
         } catch (Exception exception) {
-            HttpStatus responseStatus = HttpStatus.BAD_REQUEST;
+            HttpStatus responseStatus = HttpStatus.NOT_FOUND;
             HttpHeaders responseHeaders = new HttpHeaders();
             responseHeaders.add("key-failure", "value-failure");
             String responseBody = exception.getLocalizedMessage();
@@ -53,7 +54,7 @@ public class ControllerREST {
         }
     }
 
-    @GetMapping(path = "/users", consumes = MediaType.APPLICATION_JSON_VALUE, produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    @GetMapping(path = "/users", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<?> readUsers() {
         try {
             HttpStatus responseStatus = HttpStatus.OK;
@@ -62,7 +63,7 @@ public class ControllerREST {
             List<User> responseBody = userServiceImp.readUsers();
             return ResponseEntity.status(responseStatus).headers(responseHeaders).body(responseBody);
         } catch (Exception exception) {
-            HttpStatus responseStatus = HttpStatus.BAD_REQUEST;
+            HttpStatus responseStatus = HttpStatus.NOT_FOUND;
             HttpHeaders responseHeaders = new HttpHeaders();
             responseHeaders.add("key-failure", "value-failure");
             String responseBody = exception.getLocalizedMessage();
@@ -79,7 +80,7 @@ public class ControllerREST {
             User responseBody = userServiceImp.updateUser(id, user);
             return ResponseEntity.status(responseStatus).headers(responseHeaders).body(responseBody);
         } catch (Exception exception) {
-            HttpStatus responseStatus = HttpStatus.BAD_REQUEST;
+            HttpStatus responseStatus = HttpStatus.NOT_FOUND;
             HttpHeaders responseHeaders = new HttpHeaders();
             responseHeaders.add("key-failure", "value-failure");
             String responseBody = exception.getLocalizedMessage();
@@ -97,7 +98,7 @@ public class ControllerREST {
             responseHeaders.add("key-success", "value-success");
             responseBody = userServiceImp.deleteUser(id);
         } catch (Exception exception) {
-            responseStatus = HttpStatus.BAD_REQUEST;
+            responseStatus = HttpStatus.NOT_FOUND;
             responseHeaders.add("key-failure", "value-failure");
             responseBody = exception.getLocalizedMessage();
         }
@@ -113,7 +114,7 @@ public class ControllerREST {
             User responseBody = userServiceImp.patchUser(id, user);
             return ResponseEntity.status(responseStatus).headers(responseHeaders).body(responseBody);
         } catch (Exception exception) {
-            HttpStatus responseStatus = HttpStatus.BAD_REQUEST;
+            HttpStatus responseStatus = HttpStatus.NOT_FOUND;
             HttpHeaders responseHeaders = new HttpHeaders();
             responseHeaders.add("key-failure", "value-failure");
             String responseBody = exception.getLocalizedMessage();
