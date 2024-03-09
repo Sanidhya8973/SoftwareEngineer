@@ -1,6 +1,6 @@
 package com.company.project.service.interfaces;
 
-import com.company.project.model.User;
+import com.company.project.entity.User;
 
 import java.util.List;
 

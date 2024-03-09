@@ -2,7 +2,7 @@ package com.company.project.service.interfaces;
 
 import java.util.List;
 
-import com.company.project.model.Address;
+import com.company.project.entity.Address;
 
 public interface AddressService {
 
