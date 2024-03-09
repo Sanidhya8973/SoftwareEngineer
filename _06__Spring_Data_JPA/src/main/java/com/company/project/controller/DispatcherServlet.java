@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.company.project.model.User;
+import com.company.project.entity.User;
 import com.company.project.repository.UserRepository;
 
 @Controller(value = "controller_product")

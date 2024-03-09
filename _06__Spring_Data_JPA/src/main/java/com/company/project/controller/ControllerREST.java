@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.company.project.model.User;
+import com.company.project.entity.User;
 import com.company.project.service.UserServiceImp;
 import org.springframework.http.*;
 
