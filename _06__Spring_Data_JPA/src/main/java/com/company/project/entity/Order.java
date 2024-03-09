@@ -12,32 +12,32 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Entity(name = "entity_orders")
-@Table(name = "table_orders", schema = "ecommerce")
+@Entity(name = "entity_order")
+@Table(name = "table_order", schema = "ecommerce")
 public class Order {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_orders_id")
-	@SequenceGenerator(name = "generator_orders_id", sequenceName = "sequence_orders_id", initialValue = 1, allocationSize = 1)
-	@Column(name = "orders_id")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "generator_order_id")
+	@SequenceGenerator(name = "generator_orders_id", sequenceName = "sequence_order_id", initialValue = 1, allocationSize = 1)
+	@Column(name = "order_id")
 	private Long id;
 
-	@OneToOne(mappedBy = "orders", cascade = CascadeType.ALL)
+	@OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
 	private Address address;
 
-	@Column(name = "orders_tracking_number", nullable = false, unique = true)
+	@Column(name = "order_tracking_number", nullable = false, unique = true)
 	private String trackingNumber;
 
-	@Column(name = "orders_status", nullable = false)
+	@Column(name = "order_status", nullable = false)
 	private String status;
 
-	@Column(name = "orders_total_quantity", nullable = false)
+	@Column(name = "order_total_quantity", nullable = false)
 	private int totalQuantity;
 
-	@Column(name = "orders_total_price", nullable = false)
+	@Column(name = "order_total_price", nullable = false)
 	private BigDecimal totalPrice;
 
-	@OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
 	private List<OrderItem> orderItemList = new ArrayList<>();
 
 	public BigDecimal getTotalAmount() {
