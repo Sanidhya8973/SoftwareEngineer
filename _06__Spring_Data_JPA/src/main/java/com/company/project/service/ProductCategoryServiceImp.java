@@ -2,15 +2,13 @@ package com.company.project.service;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.company.project.repository.ProductCategoryRepository;
 import com.company.project.service.interfaces.ProductCategoryService;
-import com.company.project.model.ProductCategory;
+import com.company.project.entity.ProductCategory;
 import org.springframework.data.domain.*;
-import org.springframework.data.domain.Sort.Order;
 
 @Service(value = "service_product_category")
 public class ProductCategoryServiceImp implements ProductCategoryService {
@@ -23,13 +21,13 @@ public class ProductCategoryServiceImp implements ProductCategoryService {
     }
 
     public List<ProductCategory> doPaginationAndSorting(int pageNumber, int pageSize, String[] sortBy, String sortDir) {
-        List<Order> orderList = new ArrayList<>();
+        List<Sort.Order> orderList = new ArrayList<>();
         for (int i = 0; i < sortBy.length; i++) {
-            Order order;
+            Sort.Order order;
             if (sortDir.equalsIgnoreCase(Sort.Direction.ASC.name())) {
-                order = new Order(Sort.Direction.ASC, sortBy[i]);
+                order = new Sort.Order(Sort.Direction.ASC, sortBy[i]);
             } else {
-                order = new Order(Sort.Direction.DESC, sortBy[i]);
+                order = new Sort.Order(Sort.Direction.DESC, sortBy[i]);
             }
             orderList.add(order);
         }

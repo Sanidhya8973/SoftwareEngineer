@@ -8,9 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.company.project.repository.UserRepository;
 import com.company.project.service.interfaces.UserService;
-import com.company.project.model.User;
+import com.company.project.entity.User;
 import org.springframework.data.domain.*;
-import org.springframework.data.domain.Sort.Order;
 
 @Service(value = "service_user")
 public class UserServiceImp implements UserService {
@@ -24,13 +23,13 @@ public class UserServiceImp implements UserService {
 
     @Override
     public List<User> doPaginationAndSorting(int pageNumber, int pageSize, String[] sortBy, String sortDir) {
-        List<Order> orderList = new ArrayList<>();
+        List<Sort.Order> orderList = new ArrayList<>();
         for (int i = 0; i < sortBy.length; i++) {
-            Order order = null;
+            Sort.Order order = null;
             if (sortDir.equalsIgnoreCase(Sort.Direction.DESC.name())) {
-                order = new Order(Sort.Direction.DESC, sortBy[i]);
+                order = new Sort.Order(Sort.Direction.DESC, sortBy[i]);
             } else {
-                order = new Order(Sort.Direction.ASC, sortBy[i]);
+                order = new Sort.Order(Sort.Direction.ASC, sortBy[i]);
             }
             orderList.add(order);
         }
