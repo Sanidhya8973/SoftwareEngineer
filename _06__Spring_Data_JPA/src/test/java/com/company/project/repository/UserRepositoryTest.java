@@ -8,7 +8,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 public class UserRepositoryTest {
 
     @Test
-    @DisplayName(value = "givenData_whenOperation_thenReturnData")
+    @DisplayName(value = "givenPreconditions_whenOperation_thenVerifyOutput")
     public void given_when_then() {
         // given - precondition or setup
         // when  - action or the behavior that we are going to test
