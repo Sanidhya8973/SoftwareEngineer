@@ -2,15 +2,13 @@ package com.company.project.service;
 
 import java.util.List;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import com.company.project.entity.Address;
-import com.company.project.entity.OrderItem;
+import org.springframework.beans.factory.annotation.Autowired;
 import com.company.project.entity.Order;
-import com.company.project.service.OrderServiceImp;
-import com.company.project.service.ProductServiceImp;
+import com.company.project.entity.OrderItem;
+import com.company.project.entity.Address;
+import org.junit.jupiter.api.*;
+import org.assertj.core.api.Assertions;
 
 @SpringBootTest
 public class OrderServiceTest {
@@ -23,8 +21,9 @@ public class OrderServiceTest {
 
     @Test
     @DisplayName("test: persist orders")
-    protected void test() throws Exception {
+    protected void givenOrderAddressAndOrderItem_whenSaveAll_thenVerifyAll() throws Exception {
 
+        // given - precondition or setup
         Order o1 = new Order();
         o1.setTrackingNumber("order-1-1");
         o1.setStatus("order placed");
@@ -54,23 +53,27 @@ public class OrderServiceTest {
         o1.setTotalQuantity(o1.getOrderItemList().size());
         o1.setTotalPrice(o1.getTotalAmount());
 
-        orderServiceImp.createOrders(o1);
+        // when  - action or the behavior that we are going to test
+        Order order = orderServiceImp.createOrder(o1);
+
+        // then  - verify the output
+        Assertions.assertThat(order).isNotNull();
 
     }
 
-    //	@Test
-//	@DisplayName("test: merge order")
+    // @Test
+    // @DisplayName("test: merge order")
     protected void update() throws Exception {
         Long id = 1L;
         Order order = orderServiceImp.readOrders(id);
         order.setTrackingNumber("order-69-69");
-        orderServiceImp.createOrders(order);
+        orderServiceImp.createOrder(order);
     }
 
-    //	@Test
+    // @Test
     // protected void deleteAll() { ordersServiceImp.deleteAll(); }
 
-    //	@Test
+    // @Test
     protected void doPaginationAndSorting() {
         orderServiceImp.doPaginationAndSorting(0, 3, new String[]{"totalPrice"}, "desc").forEach(System.out::println);
     }

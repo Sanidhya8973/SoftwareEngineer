@@ -2,13 +2,12 @@ package com.company.project.service;
 
 import java.util.List;
 
-import com.company.project.repository.UserRepository;
-import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import com.company.project.entity.Role;
+import org.springframework.beans.factory.annotation.Autowired;
 import com.company.project.entity.User;
+import com.company.project.entity.Role;
+import org.junit.jupiter.api.*;
+import org.assertj.core.api.Assertions;
 
 @SpringBootTest
 public class UserServiceTest {
@@ -17,7 +16,7 @@ public class UserServiceTest {
     private UserServiceImp userServiceImp;
 
     @Test
-    protected void givenUsers_whenSaveAll_thenVerify() throws Exception {
+    protected void givenUsersAndRoles_whenSaveAll_thenVerifyAll() throws Exception {
 
         // given - preconditions or setup
         User u1 = new User();
