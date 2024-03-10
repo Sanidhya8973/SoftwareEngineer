@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0afa02b-24b9-4cd5-8cec-4b5b9bedd1fc" name="Changes" comment="Spring Data JPA: Payment Entity">
-      <change afterPath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/java/com/company/project/entity/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/java/com/company/project/exception/ExceptionController.java" afterDir="false" />
+    <list default="true" id="e0afa02b-24b9-4cd5-8cec-4b5b9bedd1fc" name="Changes" comment="files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_06__Spring_Data_JPA/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/java/com/company/project/WebAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/java/com/company/project/WebAppApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/java/com/company/project/controller/ControllerREST.java" beforeDir="false" afterPath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/java/com/company/project/controller/ControllerREST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/java/com/company/project/controller/DispatcherServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/java/com/company/project/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/java/com/company/project/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/java/com/company/project/entity/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/java/com/company/project/entity/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/resources/messages.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/resources/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/resources/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/resources/templates/thymeleaf.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/test/java/com/company/project/repository/OrdersServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/test/java/com/company/project/repository/OrderServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/test/java/com/company/project/repository/ProductCategoryServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/test/java/com/company/project/repository/ProductCategoryServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/test/java/com/company/project/repository/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/test/java/com/company/project/repository/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/java/com/company/project/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/_06__Spring_Data_JPA/src/main/java/com/company/project/repository/UserRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,86 +161,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708940044085</updated>
-    </task>
-    <task id="LOCAL-00033" summary="files">
-      <option name="closed" value="true" />
-      <created>1709299211621</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1709299211621</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Spring Web MVC: Updated InquiryController Class">
-      <option name="closed" value="true" />
-      <created>1709472922378</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1709472922378</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Spring Web MVC: I18N | Internationalization">
-      <option name="closed" value="true" />
-      <created>1709473108975</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1709473108975</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Spring MVC &amp; Web Service: dependencies">
-      <option name="closed" value="true" />
-      <created>1709741927357</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1709741927357</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Spring MVC &amp; Web Service: files">
-      <option name="closed" value="true" />
-      <created>1709741936826</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1709741936826</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Spring MVC &amp; Web Service: jar file">
-      <option name="closed" value="true" />
-      <created>1709741949601</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1709741949601</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Spring MVC &amp; Web Service: properties file">
-      <option name="closed" value="true" />
-      <created>1709741958165</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1709741958165</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Spring MVC &amp; Web Service: tests">
-      <option name="closed" value="true" />
-      <created>1709741978454</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1709741978454</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Spring MVC &amp; Web Service: Testing UserServiceImplementation Class">
-      <option name="closed" value="true" />
-      <created>1709742005774</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1709742005774</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Spring MVC &amp; Web Service: HTML Templates + Thymeleaf">
-      <option name="closed" value="true" />
-      <created>1709742027268</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1709742027268</updated>
     </task>
     <task id="LOCAL-00043" summary="Spring MVC &amp; Web Service: properties file">
       <option name="closed" value="true" />
@@ -569,22 +474,93 @@
       <option name="project" value="LOCAL" />
       <updated>1709973993866</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Spring Data JPA: Testing">
+      <option name="closed" value="true" />
+      <created>1709980288223</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1709980288224</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Spring Data JPA: deleting files">
+      <option name="closed" value="true" />
+      <created>1709980303144</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1709980303144</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Spring Data JPA: global exception handler">
+      <option name="closed" value="true" />
+      <created>1709980321542</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1709980321542</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Spring Data JPA: Order entity">
+      <option name="closed" value="true" />
+      <created>1709980339502</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1709980339502</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Spring Data JPA: OrderItem entity">
+      <option name="closed" value="true" />
+      <created>1709980346486</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1709980346486</updated>
+    </task>
+    <task id="LOCAL-00087" summary="Spring Data JPA: Payment entity">
+      <option name="closed" value="true" />
+      <created>1709980353401</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1709980353401</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Spring Data JPA: Spring Boot Application">
+      <option name="closed" value="true" />
+      <created>1709980369566</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1709980369566</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Spring Data JPA: Controller Layer">
+      <option name="closed" value="true" />
+      <created>1709980383948</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1709980383948</updated>
+    </task>
+    <task id="LOCAL-00090" summary="injecting dependencies">
+      <option name="closed" value="true" />
+      <created>1709980407995</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1709980407996</updated>
+    </task>
+    <task id="LOCAL-00091" summary="files">
+      <option name="closed" value="true" />
+      <created>1709980418960</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1709980418960</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Spring MVC: Testing" />
-    <MESSAGE value="Spring MVC: Controller Layer" />
-    <MESSAGE value="Spring MVC: Model Layer" />
-    <MESSAGE value="Spring MVC: Repository Layer" />
-    <MESSAGE value="Spring MVC: Service Layer" />
-    <MESSAGE value="Spring Web Service: Repository Layer" />
-    <MESSAGE value="Spring Web Service: Entity Layer" />
-    <MESSAGE value="Spring Web Service: Controller Layer" />
     <MESSAGE value="Spring Web Service: Testing" />
     <MESSAGE value="Spring Web Service: Spring Boot Application" />
     <MESSAGE value="Spring Web Service: Service Layer" />
-    <MESSAGE value="files" />
     <MESSAGE value="Spring Data JPA: OrderRequestDto Class" />
     <MESSAGE value="Spring Data JPA: OrderResponseDto Class" />
     <MESSAGE value="Spring Data JPA: Address Entity" />
@@ -597,8 +573,17 @@
     <MESSAGE value="Spring Data JPA: Service Layer" />
     <MESSAGE value="Spring Data JPA: Service Layer Implementation" />
     <MESSAGE value="Spring Data JPA: Repository Layer" />
+    <MESSAGE value="Spring Data JPA: Testing" />
+    <MESSAGE value="Spring Data JPA: deleting files" />
+    <MESSAGE value="Spring Data JPA: global exception handler" />
+    <MESSAGE value="Spring Data JPA: Order entity" />
+    <MESSAGE value="Spring Data JPA: OrderItem entity" />
+    <MESSAGE value="Spring Data JPA: Payment entity" />
+    <MESSAGE value="Spring Data JPA: Spring Boot Application" />
     <MESSAGE value="Spring Data JPA: Controller Layer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spring Data JPA: Controller Layer" />
+    <MESSAGE value="injecting dependencies" />
+    <MESSAGE value="files" />
+    <option name="LAST_COMMIT_MESSAGE" value="files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
