@@ -1,4 +1,4 @@
-package com.company.project.repository;
+package com.company.project.service;
 
 import java.util.List;
 

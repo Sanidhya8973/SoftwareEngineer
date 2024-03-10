@@ -1,8 +1,9 @@
-package com.company.project.repository;
+package com.company.project.service;
 
 import java.math.BigDecimal;
 import java.util.List;
 
+import com.company.project.repository.ProductCategoryRepository;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
