@@ -14,7 +14,7 @@ import com.company.project.entity.User;
 public class UserServiceTest {
 
     @Autowired
-    private UserRepository userRepository;
+    private UserServiceImp userServiceImp;
 
     @Test
     protected void givenUsers_whenSaveAll_thenVerify() throws Exception {
@@ -77,7 +77,7 @@ public class UserServiceTest {
         u5.setRoleList(List.of(r3));
 
         // when  - action or the behavior that we are going to test
-        List<User> userList = userRepository.saveAll(List.of(u1, u2, u3, u4, u5));
+        List<User> userList = userServiceImp.createUsers(List.of(u1, u2, u3, u4, u5));
 
         // then  - verify the output
         Assertions.assertThat(userList).isNotNull();
