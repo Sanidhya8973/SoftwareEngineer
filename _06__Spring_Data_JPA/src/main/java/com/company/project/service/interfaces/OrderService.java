@@ -8,9 +8,9 @@ public interface OrderService {
 
     public abstract List<Order> doPaginationAndSorting(int pageNumber, int pageSize, String[] sortBy, String sortDir);
 
-    public abstract Order createOrders(Order order) throws Exception;
+    public abstract Order createOrder(Order order) throws Exception;
 
-    public abstract List<Order> createAllOrders(List<Order> orderList) throws Exception;
+    public abstract List<Order> createOrders(List<Order> orderList) throws Exception;
 
     public abstract Order readOrders(Long id) throws Exception;
 

@@ -41,12 +41,12 @@ public class OrderServiceImp implements OrderService {
     }
 
     @Override
-    public Order createOrders(Order order) throws Exception {
+    public Order createOrder(Order order) throws Exception {
         return null;
     }
 
     @Override
-    public List<Order> createAllOrders(List<Order> orderList) throws Exception {
+    public List<Order> createOrders(List<Order> orderList) throws Exception {
         return null;
     }
 
