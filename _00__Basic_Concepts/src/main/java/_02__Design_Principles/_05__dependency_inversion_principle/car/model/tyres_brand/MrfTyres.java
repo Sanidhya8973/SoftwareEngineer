@@ -1,4 +1,4 @@
-package _01__Dependency_Injection.model.tyres_brand;
+package _02__Design_Principles._05__dependency_inversion_principle.car.model.tyres_brand;
 
 public class MrfTyres implements Tyres {
 

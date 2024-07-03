@@ -1,11 +1,11 @@
-package _01__Dependency_Injection.main;
+package _02__Design_Principles._05__dependency_inversion_principle.car.main;
 
-import _01__Dependency_Injection.model.speakers_brand.SonySpeakers;
-import _01__Dependency_Injection.model.tyres_brand.MichelinTyres;
-import _01__Dependency_Injection.factory.SpeakerFactory;
-import _01__Dependency_Injection.factory.TyreFactory;
-import _01__Dependency_Injection.model.speakers_brand.Speakers;
-import _01__Dependency_Injection.model.tyres_brand.Tyres;
+import _02__Design_Principles._05__dependency_inversion_principle.car.factory.SpeakerFactory;
+import _02__Design_Principles._05__dependency_inversion_principle.car.factory.TyreFactory;
+import _02__Design_Principles._05__dependency_inversion_principle.car.model.speakers_brand.SonySpeakers;
+import _02__Design_Principles._05__dependency_inversion_principle.car.model.speakers_brand.Speakers;
+import _02__Design_Principles._05__dependency_inversion_principle.car.model.tyres_brand.MichelinTyres;
+import _02__Design_Principles._05__dependency_inversion_principle.car.model.tyres_brand.Tyres;
 
 public class Main {
 

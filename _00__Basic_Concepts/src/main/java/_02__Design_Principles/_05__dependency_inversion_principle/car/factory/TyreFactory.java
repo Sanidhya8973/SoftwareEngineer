@@ -1,8 +1,8 @@
-package _01__Dependency_Injection.factory;
+package _02__Design_Principles._05__dependency_inversion_principle.car.factory;
 
-import _01__Dependency_Injection.model.tyres_brand.MichelinTyres;
-import _01__Dependency_Injection.model.tyres_brand.MrfTyres;
-import _01__Dependency_Injection.model.tyres_brand.Tyres;
+import _02__Design_Principles._05__dependency_inversion_principle.car.model.tyres_brand.MichelinTyres;
+import _02__Design_Principles._05__dependency_inversion_principle.car.model.tyres_brand.MrfTyres;
+import _02__Design_Principles._05__dependency_inversion_principle.car.model.tyres_brand.Tyres;
 
 public class TyreFactory {
 

@@ -1,4 +1,4 @@
-package _01__Dependency_Injection.model.speakers_brand;
+package _02__Design_Principles._05__dependency_inversion_principle.car.model.speakers_brand;
 
 public class SonySpeakers implements Speakers {
 

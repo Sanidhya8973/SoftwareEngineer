@@ -1,8 +1,8 @@
-package _01__Dependency_Injection.factory;
+package _02__Design_Principles._05__dependency_inversion_principle.car.factory;
 
-import _01__Dependency_Injection.model.speakers_brand.BoseSpeakers;
-import _01__Dependency_Injection.model.speakers_brand.SonySpeakers;
-import _01__Dependency_Injection.model.speakers_brand.Speakers;
+import _02__Design_Principles._05__dependency_inversion_principle.car.model.speakers_brand.BoseSpeakers;
+import _02__Design_Principles._05__dependency_inversion_principle.car.model.speakers_brand.SonySpeakers;
+import _02__Design_Principles._05__dependency_inversion_principle.car.model.speakers_brand.Speakers;
 
 public class SpeakerFactory {
 
