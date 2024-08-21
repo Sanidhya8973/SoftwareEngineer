@@ -4,8 +4,362 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0afa02b-24b9-4cd5-8cec-4b5b9bedd1fc" name="Changes" comment="files">
+    <list default="true" id="e0afa02b-24b9-4cd5-8cec-4b5b9bedd1fc" name="Changes" comment="Learning Log4J">
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_01__singleton/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_01__singleton/Singleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_01__singleton/_01__lazy_singleton/LazySingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_01__singleton/_02__eager_singleton/EagerSingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_01__singleton/_03__multithreaded_singleton/MultithreadedSingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_01__singleton/_04__serializable_singleton/SerializableSingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_01__singleton/_05__enum_singleton/EnumSingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_02__prototype/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_02__prototype/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_02__prototype/VehicleRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_02__prototype/VehicleWheelerFour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_02__prototype/VehicleWheelerTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_03__builder/Burger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_03__builder/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_03__builder/Meal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_03__builder/MealBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_03__builder/MealDirector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_03__builder/NonVegMealBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_03__builder/VegMealBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_04__factory_method/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_04__factory_method/OperatingSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_04__factory_method/OperatingSystemFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_04__factory_method/OperatingSystemLinux.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_04__factory_method/OperatingSystemWindows.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_05__abstract_factory/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_05__abstract_factory/buttons/Button.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_05__abstract_factory/buttons/ButtonLinux.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_05__abstract_factory/buttons/ButtonWindows.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_05__abstract_factory/checkboxes/Checkbox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_05__abstract_factory/checkboxes/CheckboxLinux.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_05__abstract_factory/checkboxes/CheckboxWindows.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_05__abstract_factory/client/ClientApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_05__abstract_factory/factories/AbstractFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_05__abstract_factory/factories/FactoryLinux.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_01__creational_design_pattern/_05__abstract_factory/factories/FactoryWindows.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_01__proxy_design_pattern/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_01__proxy_design_pattern/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_01__proxy_design_pattern/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_01__proxy_design_pattern/PaymentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_01__proxy_design_pattern/PaymentServiceProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_02__adapter_design_pattern/Adapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_02__adapter_design_pattern/ClientApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_02__adapter_design_pattern/FoodItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_02__adapter_design_pattern/FoodProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_02__adapter_design_pattern/GroceryItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_02__adapter_design_pattern/GroceryProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_02__adapter_design_pattern/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_03__decorator_design_pattern/Decorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_03__decorator_design_pattern/DecoratorCheesy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_03__decorator_design_pattern/DecoratorTandoori.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_03__decorator_design_pattern/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_03__decorator_design_pattern/Pizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_03__decorator_design_pattern/PizzaDominos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_03__decorator_design_pattern/PizzaLondonYard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_04__composite_design_pattern/Authorization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_04__composite_design_pattern/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_04__composite_design_pattern/Professor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_04__composite_design_pattern/ProfessorAssociate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_04__composite_design_pattern/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_05__bridge_design_pattern/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_05__bridge_design_pattern/quality/Quality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_05__bridge_design_pattern/quality/Quality4K.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_05__bridge_design_pattern/quality/Quality8K.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_05__bridge_design_pattern/quality/QualityHD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_05__bridge_design_pattern/quality/QualityUHD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_05__bridge_design_pattern/video/Video.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_05__bridge_design_pattern/video/VideoAmazonPrime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_05__bridge_design_pattern/video/VideoHotstar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_05__bridge_design_pattern/video/VideoNetflix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_05__bridge_design_pattern/video/VideoYouTube.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_06__facade_design_pattern/DeliveryBoy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_06__facade_design_pattern/DeliveryTeam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_06__facade_design_pattern/FoodDeliveryFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_06__facade_design_pattern/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_06__facade_design_pattern/Restaurant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_06__facade_design_pattern/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_07__flyweight_design_pattern/FlyweightFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_07__flyweight_design_pattern/FlyweightIcon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_07__flyweight_design_pattern/FlyweightIconIconFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_07__flyweight_design_pattern/FlyweightIconIconFolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_02__structural_design_pattern/_07__flyweight_design_pattern/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_01__chain_of_responsibility_design_pattern/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_01__chain_of_responsibility_design_pattern/Priority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_01__chain_of_responsibility_design_pattern/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_01__chain_of_responsibility_design_pattern/Responsibility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_01__chain_of_responsibility_design_pattern/ResponsibilityChainLevel1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_01__chain_of_responsibility_design_pattern/ResponsibilityChainLevel2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_01__chain_of_responsibility_design_pattern/ResponsibilityChainLevel3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_01__chain_of_responsibility_design_pattern/ResponsibilityChainNoSupport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_02__command_design_pattern/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_02__command_design_pattern/CommandAdjustVolume.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_02__command_design_pattern/CommandChangeChannel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_02__command_design_pattern/CommandTurnOff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_02__command_design_pattern/CommandTurnOn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_02__command_design_pattern/Invoker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_02__command_design_pattern/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_02__command_design_pattern/Receiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_03__observer_design_pattern/notification_system/EventType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_03__observer_design_pattern/notification_system/Listener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_03__observer_design_pattern/notification_system/ListenerMail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_03__observer_design_pattern/notification_system/ListenerSMS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_03__observer_design_pattern/notification_system/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_03__observer_design_pattern/notification_system/Publisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_03__observer_design_pattern/notification_system/PublisherNotification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_03__observer_design_pattern/weather_monitoring_system/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_03__observer_design_pattern/weather_monitoring_system/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_03__observer_design_pattern/weather_monitoring_system/ObserverPhone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_03__observer_design_pattern/weather_monitoring_system/ObserverTelevision.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_03__observer_design_pattern/weather_monitoring_system/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_03__observer_design_pattern/weather_monitoring_system/SubjectWeatherStation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_04__mediator_design_pattern/atc_system/ColleagueAirplane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_04__mediator_design_pattern/atc_system/ColleagueAirplaneImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_04__mediator_design_pattern/atc_system/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_04__mediator_design_pattern/atc_system/MediatorAirTrafficControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_04__mediator_design_pattern/atc_system/MediatorAirTrafficControlImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_04__mediator_design_pattern/chat_system/ColleagueUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_04__mediator_design_pattern/chat_system/ColleagueUserImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_04__mediator_design_pattern/chat_system/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_04__mediator_design_pattern/chat_system/Mediator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_04__mediator_design_pattern/chat_system/MediatorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_06__memento_design_pattern/method_1/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_06__memento_design_pattern/method_1/CareTaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_06__memento_design_pattern/method_1/Memento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_06__memento_design_pattern/method_1/Originator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_06__memento_design_pattern/method_2/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_06__memento_design_pattern/method_2/CareTaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_06__memento_design_pattern/method_2/Memento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_06__memento_design_pattern/method_2/Originator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_07__template_design_pattern/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_07__template_design_pattern/TemplateAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_07__template_design_pattern/TemplateAlgorithmBest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_07__template_design_pattern/TemplateAlgorithmBetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_07__template_design_pattern/TemplateAlgorithmGood.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_08__strategy_design_pattern/Context.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_08__strategy_design_pattern/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_08__strategy_design_pattern/Strategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_08__strategy_design_pattern/StrategyBubbleSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_08__strategy_design_pattern/StrategyMergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_08__strategy_design_pattern/StrategyQuickSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_09__state_design_pattern/Context.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_09__state_design_pattern/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_09__state_design_pattern/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_09__state_design_pattern/StateLocked.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_09__state_design_pattern/StateReady.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Design_Patterns/_03__behavioral_design_pattern/_09__state_design_pattern/StateUnlocked.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_02__Hibernate_Core_Annotations/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_02__Hibernate_Core_Annotations/model/Gender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_09__Spring_Boot/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_09__Spring_Boot/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_09__Spring_Boot/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_09__Spring_Boot/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_09__Spring_Boot/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_09__Spring_Boot/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_09__Spring_Boot/src/main/java/com/company/project/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_09__Spring_Boot/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_09__Spring_Boot/src/test/java/com/company/project/ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SoftwareEngineer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SoftwareEngineer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Dependency_Injection/model/speakers_brand/Speakers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Dependency_Injection/model/tyres_brand/Tyres.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Functional_Interface/_01__Predicate_Functional_Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Functional_Interface/_01__Predicate_Functional_Interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Functional_Interface/_02__Function_Functional_Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Functional_Interface/_02__Function_Functional_Interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Functional_Interface/_03__UnaryOperator_Functional_Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Functional_Interface/_03__UnaryOperator_Functional_Interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Functional_Interface/_04__BinaryOperator_Functional_Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Functional_Interface/_04__BinaryOperator_Functional_Interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Functional_Interface/_05__Consumer_Functional_Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Functional_Interface/_05__Consumer_Functional_Interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Functional_Interface/_06__Supplier_Functional_Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Functional_Interface/_06__Supplier_Functional_Interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Interface/Example_Default_Method/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Interface/Example_Default_Method/A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Interface/Example_Default_Method/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Interface/Example_Default_Method/B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Interface/Example_Default_Method/C.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Interface/Example_Default_Method/C.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Interface/Example_Static_Method/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Interface/Example_Static_Method/A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Interface/Example_Static_Method/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Interface/Example_Static_Method/B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Interface/NewInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Interface/NewInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Interface/OldInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Interface/OldInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Lambda_Expression/LambdaExpression1.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Lambda_Expression/LambdaExpression1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Lambda_Expression/LambdaExpression2.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Lambda_Expression/LambdaExpression2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Lambda_Expression/LambdaExpression3.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Lambda_Expression/LambdaExpression3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Lambda_Expression/LambdaExpression4.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Lambda_Expression/LambdaExpression4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Lambda_Expression/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Lambda_Expression/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Lambda_Expression/ScopeOfVariableInLambdaExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Lambda_Expression/ScopeOfVariableInLambdaExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Method_References/MethodReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Method_References/MethodReference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Method_References/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Method_References/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Stream_API/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Stream_API/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Stream_API/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Stream_API/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Time_API/_01__LocalDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Time_API/_01__LocalDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Time_API/_02__LocalTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Time_API/_02__LocalTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Time_API/_03__LocalDateTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Time_API/_03__LocalDateTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Time_API/_04__Instant_Duration_Period.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Time_API/_04__Instant_Duration_Period.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Time_API/_05__ZoneId_ZoneOffset_ZonedDateTime_OffsetDateTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Time_API/_05__ZoneId_ZoneOffset_ZonedDateTime_OffsetDateTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_03__Java_8/Java_Time_API/_06__DateTimeFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_01__Java/_03__Java_8/Java_Time_API/_06__DateTimeFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_01__Hibernate_Configurations/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_01__Hibernate_Configurations/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_01__Hibernate_Configurations/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_01__Hibernate_Configurations/config/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_01__Hibernate_Configurations/config/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_01__Hibernate_Configurations/config/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_02__Hibernate_Core_Annotations/main/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_02__Hibernate_Core_Annotations/model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_02__Hibernate_Core_Annotations/model/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_02__Hibernate_Core_Annotations/model/AuditEntityListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_02__Hibernate_Core_Annotations/model/AuditEntityListeners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_02__Hibernate_Core_Annotations/model/Certificate.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_02__Hibernate_Core_Annotations/model/Certificate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_02__Hibernate_Core_Annotations/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_02__Hibernate_Core_Annotations/model/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_02__Hibernate_Core_Annotations/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_02__Hibernate_Core_Annotations/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_02__Hibernate_Core_Annotations/model/Gender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_02__Hibernate_Core_Annotations/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_02__Hibernate_Core_Annotations/model/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/bidirectional_flow/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/bidirectional_flow/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/bidirectional_flow/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/bidirectional_flow/config/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/bidirectional_flow/model/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/bidirectional_flow/model/Answer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/bidirectional_flow/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/bidirectional_flow/model/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/unidirectional_flow/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/unidirectional_flow/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/unidirectional_flow/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/unidirectional_flow/config/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/unidirectional_flow/model/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/unidirectional_flow/model/Answer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/unidirectional_flow/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_01__OneToOne/unidirectional_flow/model/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/bidirectional_flow/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/bidirectional_flow/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/bidirectional_flow/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/bidirectional_flow/config/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/bidirectional_flow/model/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/bidirectional_flow/model/Answer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/bidirectional_flow/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/bidirectional_flow/model/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/unidirectional_flow/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/unidirectional_flow/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/unidirectional_flow/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/unidirectional_flow/config/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/unidirectional_flow/model/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/unidirectional_flow/model/Answer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/unidirectional_flow/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_02__OneToMany/unidirectional_flow/model/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/bidirectional_flow/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/bidirectional_flow/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/bidirectional_flow/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/bidirectional_flow/config/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/bidirectional_flow/model/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/bidirectional_flow/model/Answer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/bidirectional_flow/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/bidirectional_flow/model/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/unidirectional_flow/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/unidirectional_flow/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/unidirectional_flow/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/unidirectional_flow/config/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/unidirectional_flow/model/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/unidirectional_flow/model/Answer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/unidirectional_flow/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_03__ManyToOne/unidirectional_flow/model/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_04__ManyToMany/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_04__ManyToMany/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_04__ManyToMany/config/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_04__ManyToMany/config/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_04__ManyToMany/model/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_04__ManyToMany/model/Answer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_03__Hibernate_Mapping_Annotations/_04__ManyToMany/model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_03__Hibernate_Mapping_Annotations/_04__ManyToMany/model/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_05__Hibernate_Caching/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_05__Hibernate_Caching/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_05__Hibernate_Caching/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_05__Hibernate_Caching/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_05__Hibernate_Caching/_01__First_Level_Cache/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_05__Hibernate_Caching/_01__First_Level_Cache/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_05__Hibernate_Caching/_02__Second_Level_Cache/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_05__Hibernate_Caching/_02__Second_Level_Cache/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_07__Hibernate/_05__Hibernate_Caching/_03__Query_Level_Cache/HibernateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/_00__Basic_Concepts/src/main/java/_08__Hibernate/_05__Hibernate_Caching/_03__Query_Level_Cache/HibernateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_01__Create_Beans_Using_Annotation/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_01__Create_Beans_Using_Annotation/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_01__Create_Beans_Using_Annotation/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_02__Understand_NoUniqueBeanDefinitionException/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_02__Understand_NoUniqueBeanDefinitionException/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_02__Understand_NoUniqueBeanDefinitionException/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_03__Custom_Name_To_The_Bean/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_03__Custom_Name_To_The_Bean/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_03__Custom_Name_To_The_Bean/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_04__Primary_Annotation_Inside_Spring/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_04__Primary_Annotation_Inside_Spring/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_04__Primary_Annotation_Inside_Spring/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_05__Create_Beans_Using_Component_Annotation/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_05__Create_Beans_Using_Component_Annotation/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_05__Create_Beans_Using_Component_Annotation/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_06__PostConstruct_PreDestroy_Annotations/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_06__PostConstruct_PreDestroy_Annotations/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_06__PostConstruct_PreDestroy_Annotations/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_07__Create_Beans_Using_registerBean_Method/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_07__Create_Beans_Using_registerBean_Method/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_07__Create_Beans_Using_registerBean_Method/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_08__Create_Beans_Using_XML_Configurations/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_08__Create_Beans_Using_XML_Configurations/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_09__Spring_Stereotype_Annotations/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_01__no_wiring/beans/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_01__no_wiring/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_01__no_wiring/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_01__no_wiring/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_02__wiring/beans/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_02__wiring/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_02__wiring/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_02__wiring/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_01__autowiring_with_single_bean_of_same_type/beans/autowired_required_false/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_01__autowiring_with_single_bean_of_same_type/beans/autowired_required_false/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_01__autowiring_with_single_bean_of_same_type/beans/autowired_required_true/using_constructor/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_01__autowiring_with_single_bean_of_same_type/beans/autowired_required_true/using_constructor/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_01__autowiring_with_single_bean_of_same_type/beans/autowired_required_true/using_field/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_01__autowiring_with_single_bean_of_same_type/beans/autowired_required_true/using_field/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_01__autowiring_with_single_bean_of_same_type/beans/autowired_required_true/using_setter/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_01__autowiring_with_single_bean_of_same_type/beans/autowired_required_true/using_setter/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_01__autowiring_with_single_bean_of_same_type/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_01__autowiring_with_single_bean_of_same_type/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_02_autowiring_with_multiple_beans_of_same_type/step_1/beans/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_02_autowiring_with_multiple_beans_of_same_type/step_1/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_02_autowiring_with_multiple_beans_of_same_type/step_1/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_02_autowiring_with_multiple_beans_of_same_type/step_1/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_02_autowiring_with_multiple_beans_of_same_type/step_2/beans/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_02_autowiring_with_multiple_beans_of_same_type/step_2/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_02_autowiring_with_multiple_beans_of_same_type/step_2/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_02_autowiring_with_multiple_beans_of_same_type/step_2/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_02_autowiring_with_multiple_beans_of_same_type/step_3/beans/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_02_autowiring_with_multiple_beans_of_same_type/step_3/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_02_autowiring_with_multiple_beans_of_same_type/step_3/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_03__autowiring/_02_autowiring_with_multiple_beans_of_same_type/step_3/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_04__circular_dependency/beans/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_04__circular_dependency/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_04__circular_dependency/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_10__Wiring_And_Autowiring/_04__circular_dependency/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_11__Assignment/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_11__Assignment/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_11__Assignment/model/beans/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_11__Assignment/model/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_11__Assignment/model/implementation/BoseSpeakers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_11__Assignment/model/implementation/MichelinTyres.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_11__Assignment/model/implementation/MrfTyres.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_11__Assignment/model/implementation/SonySpeakers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_11__Assignment/model/interfaces/Speakers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_11__Assignment/model/interfaces/Tyres.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_11__Assignment/services/VehicleServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_12__Types_Of_Bean_Scopes/_1__Singleton_Beans_Scope/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_12__Types_Of_Bean_Scopes/_1__Singleton_Beans_Scope/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_12__Types_Of_Bean_Scopes/_1__Singleton_Beans_Scope/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_14__Eager_Instantiation/beans/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_14__Eager_Instantiation/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_14__Eager_Instantiation/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_14__Eager_Instantiation/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_15__Lazy_Instantiation/beans/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_15__Lazy_Instantiation/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_15__Lazy_Instantiation/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_01__Spring_Core/target/classes/_15__Lazy_Instantiation/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_01__Understand_Problems_In_WebApp_Without_AOP/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_01__Understand_Problems_In_WebApp_Without_AOP/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_01__Understand_Problems_In_WebApp_Without_AOP/model/beans/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_01__Understand_Problems_In_WebApp_Without_AOP/model/beans/Song.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_01__Understand_Problems_In_WebApp_Without_AOP/model/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_01__Understand_Problems_In_WebApp_Without_AOP/model/implementation/BoseSpeakers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_01__Understand_Problems_In_WebApp_Without_AOP/model/implementation/MichelinTyres.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_01__Understand_Problems_In_WebApp_Without_AOP/model/implementation/MrfTyres.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_01__Understand_Problems_In_WebApp_Without_AOP/model/implementation/SonySpeakers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_01__Understand_Problems_In_WebApp_Without_AOP/model/interfaces/Speakers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_01__Understand_Problems_In_WebApp_Without_AOP/model/interfaces/Tyres.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_01__Understand_Problems_In_WebApp_Without_AOP/services/VehicleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_02__AOP_Terms/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_02__AOP_Terms/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_02__AOP_Terms/model/annotations/LogAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_02__AOP_Terms/model/aspects/LoggerAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_02__AOP_Terms/model/beans/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_02__AOP_Terms/model/beans/Song.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_02__AOP_Terms/model/beans/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_02__AOP_Terms/model/implementation/BoseSpeakers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_02__AOP_Terms/model/implementation/MichelinTyres.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_02__AOP_Terms/model/implementation/MrfTyres.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_02__AOP_Terms/model/implementation/SonySpeakers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_02__AOP_Terms/model/interfaces/Speakers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_02__AOP_Terms/model/interfaces/Tyres.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_03__Spring_AOP/target/classes/_02__AOP_Terms/services/VehicleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_01__JakartaEE_JDBC_Operations/_01__CRUD_Operations/dao/EmployeeDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_01__JakartaEE_JDBC_Operations/_01__CRUD_Operations/dao/helper/ConnectionProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_01__JakartaEE_JDBC_Operations/_01__CRUD_Operations/dao/helper/Query.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_01__JakartaEE_JDBC_Operations/_01__CRUD_Operations/main/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_01__JakartaEE_JDBC_Operations/_01__CRUD_Operations/model/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_02__Spring_JDBC_Operations/_01__CRUD_Operations/beans/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_02__Spring_JDBC_Operations/_01__CRUD_Operations/config/ProjectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_02__Spring_JDBC_Operations/_01__CRUD_Operations/dao/implementations/RowMapperImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_02__Spring_JDBC_Operations/_01__CRUD_Operations/dao/implementations/StudentDaoImplementation$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_02__Spring_JDBC_Operations/_01__CRUD_Operations/dao/implementations/StudentDaoImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_02__Spring_JDBC_Operations/_01__CRUD_Operations/dao/interfaces/StudentDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_05__Spring_Data_JDBC/target/classes/_02__Spring_JDBC_Operations/_01__CRUD_Operations/main/Main.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +379,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -33,50 +388,76 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Sanidhya8973&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="53b22107-f369-4093-b0f5-f12bd01874d7" />
+        <option name="url" value="https://github.com/Sanidhya8973/Spring_Framework.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2cto4FR0CCqk3qDEWdRLVkmT5Tt" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/_Programmer_/java/IntelliJ/SpringFrameworkProjects/_06__Spring_Data_JPA/src/main/java/com/company/project/service&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "21",
+    "last_opened_file_path": "D:/_Programmer_/java/IntelliJ/SoftwareEngineer",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "advanced.settings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\_Programmer_\java\IntelliJ\SpringFrameworkProjects\_06__Spring_Data_JPA\src\main\java\com\company\project\service" />
+      <recent name="D:\_Programmer_\java\IntelliJ\SoftwareEngineer\_00__Basic_Concepts\src\main\java\_03__Design_Patterns\_03__behavioral_design_pattern\_09__memento_design_pattern\method_2" />
+      <recent name="D:\_Programmer_\java\IntelliJ\SoftwareEngineer\_00__Basic_Concepts\src\main\java\_03__Design_Patterns\_03__behavioral_design_pattern\_09__memento_design_pattern\method_1" />
+      <recent name="D:\_Programmer_\java\IntelliJ\SoftwareEngineer\_06__Spring_Data_JPA\src\main\java\com\company\project\service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\_Programmer_\java\IntelliJ\SpringFrameworkProjects\_08__Spring_Web_MVC\src\main\resources\templates" />
-      <recent name="D:\_Programmer_\java\IntelliJ\SpringFrameworkProjects\_06__Spring_Web_MVC\src\main\resources\static\js" />
+      <recent name="D:\_Programmer_\java\IntelliJ\SoftwareEngineer\_08__Spring_Web_MVC\src\main\resources\templates" />
+      <recent name="D:\_Programmer_\java\IntelliJ\SoftwareEngineer\_06__Spring_Web_MVC\src\main\resources\static\js" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.company.project.service" />
       <recent name="com.company._01__WebMVC" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="_03__Design_Patterns._03__behavioral_design_pattern._05__mediator_design_pattern.atc_system" />
+      <recent name="_03__Design_Patterns._03__behavioral_design_pattern._05__mediator_design_pattern.chat_system" />
       <recent name="com.company.project.service" />
       <recent name="com.company.project.controller" />
       <recent name="com.company.project.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WebAppApplication">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company._01__WebMVC.Application" />
-      <module name="_08__Spring_MVC_And_Web_Service" />
+      <option name="MAIN_CLASS_NAME" value="_03__Design_Patterns._03__behavioral_design_pattern._06__memento_design_pattern.method_1.Application" />
+      <module name="_00__Basic_Concepts" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company._01__WebMVC.*" />
+          <option name="PATTERN" value="_03__Design_Patterns._03__behavioral_design_pattern._06__memento_design_pattern.method_1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,12 +465,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebAppApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.project.WebAppApplication" />
-      <module name="_06__Spring_Data_JPA" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03__Design_Patterns._03__behavioral_design_pattern._07__template_design_pattern.Main" />
+      <module name="_00__Basic_Concepts" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.project.*" />
+          <option name="PATTERN" value="_03__Design_Patterns._03__behavioral_design_pattern._07__template_design_pattern.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,59 +478,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_08__Spring_MVC_And_Web_Service" />
+    <configuration name="_03__Design_Patterns._02__structural_design_pattern._07__flyweight_design_pattern.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03__Design_Patterns._02__structural_design_pattern._07__flyweight_design_pattern.Main" />
+      <module name="_00__Basic_Concepts" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company._01__WebMVC.*" />
+          <option name="PATTERN" value="_03__Design_Patterns._02__structural_design_pattern._07__flyweight_design_pattern.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company._01__WebMVC" />
-      <option name="MAIN_CLASS_NAME" value="com.company._01__WebMVC.ApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_08__Spring_MVC_And_Web_Service" />
+    <configuration name="_03__Design_Patterns._03__behavioral_design_pattern._03__observer_design_pattern.notification_system.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03__Design_Patterns._03__behavioral_design_pattern._03__observer_design_pattern.notification_system.Main" />
+      <module name="_00__Basic_Concepts" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.project.service.interfaces.*" />
+          <option name="PATTERN" value="_03__Design_Patterns._03__behavioral_design_pattern._03__observer_design_pattern.notification_system.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.project.service" />
-      <option name="MAIN_CLASS_NAME" value="com.company.project.service.UserServiceImpTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceImpTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="_08__Spring_MVC_And_Web_Service" />
+    <configuration name="_03__Design_Patterns._03__behavioral_design_pattern._06__memento_design_pattern.method_2.Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03__Design_Patterns._03__behavioral_design_pattern._06__memento_design_pattern.method_2.Application" />
+      <module name="_00__Basic_Concepts" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.project.service.interfaces.*" />
+          <option name="PATTERN" value="_03__Design_Patterns._03__behavioral_design_pattern._06__memento_design_pattern.method_2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.project.service" />
-      <option name="MAIN_CLASS_NAME" value="com.company.project.service.UserServiceImpTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WebAppApplication" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application._03__Design_Patterns._03__behavioral_design_pattern._06__memento_design_pattern.method_2.Application" />
         <item itemvalue="Application.Application" />
-        <item itemvalue="JUnit.UserServiceImpTest" />
-        <item itemvalue="JUnit.ApplicationTests" />
-        <item itemvalue="JUnit.UserServiceImpTest.test" />
+        <item itemvalue="Application._03__Design_Patterns._02__structural_design_pattern._07__flyweight_design_pattern.Main" />
+        <item itemvalue="Application._03__Design_Patterns._03__behavioral_design_pattern._03__observer_design_pattern.notification_system.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -161,46 +535,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708940044085</updated>
-    </task>
-    <task id="LOCAL-00052" summary="dependencies">
-      <option name="closed" value="true" />
-      <created>1709832111229</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1709832111229</updated>
-    </task>
-    <task id="LOCAL-00053" summary="Spring MVC: Testing UserServiceImpTest">
-      <option name="closed" value="true" />
-      <created>1709832262181</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1709832262181</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Spring MVC: Testing">
-      <option name="closed" value="true" />
-      <created>1709832267216</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1709832267217</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Spring MVC: Controller Layer">
-      <option name="closed" value="true" />
-      <created>1709832282983</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1709832282983</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Spring MVC: Model Layer">
-      <option name="closed" value="true" />
-      <created>1709832292220</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1709832292220</updated>
     </task>
     <task id="LOCAL-00057" summary="Spring MVC: Repository Layer">
       <option name="closed" value="true" />
@@ -554,13 +888,61 @@
       <option name="project" value="LOCAL" />
       <updated>1710082963904</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Spring Data JPA: Testing Repository Layer">
+      <option name="closed" value="true" />
+      <created>1710083380366</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1710083380366</updated>
+    </task>
+    <task id="LOCAL-00102" summary="files">
+      <option name="closed" value="true" />
+      <created>1710083394578</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1710083394578</updated>
+    </task>
+    <task id="LOCAL-00103" summary="test-project">
+      <option name="closed" value="true" />
+      <created>1714628876226</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1714628876226</updated>
+    </task>
+    <task id="LOCAL-00104" summary="software design principles">
+      <option name="closed" value="true" />
+      <created>1720028227530</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1720028227530</updated>
+    </task>
+    <task id="LOCAL-00105" summary="Learning Log4J">
+      <option name="closed" value="true" />
+      <created>1724259285865</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1724259285865</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Spring Web Service: Service Layer" />
-    <MESSAGE value="Spring Data JPA: OrderRequestDto Class" />
-    <MESSAGE value="Spring Data JPA: OrderResponseDto Class" />
     <MESSAGE value="Spring Data JPA: Address Entity" />
     <MESSAGE value="Spring Data JPA: Order Entity" />
     <MESSAGE value="Spring Data JPA: OrderItem Entity" />
@@ -578,12 +960,15 @@
     <MESSAGE value="Spring Data JPA: Spring Boot Application" />
     <MESSAGE value="Spring Data JPA: Controller Layer" />
     <MESSAGE value="injecting dependencies" />
-    <MESSAGE value="Spring Data JPA: Testing Repository Layer" />
     <MESSAGE value="Spring Data JPA: Repository Layer" />
     <MESSAGE value="Spring Data JPA: Testing Service Layer" />
     <MESSAGE value="Spring Data JPA: Service Layer" />
+    <MESSAGE value="Spring Data JPA: Testing Repository Layer" />
     <MESSAGE value="files" />
-    <option name="LAST_COMMIT_MESSAGE" value="files" />
+    <MESSAGE value="test-project" />
+    <MESSAGE value="software design principles" />
+    <MESSAGE value="Learning Log4J" />
+    <option name="LAST_COMMIT_MESSAGE" value="Learning Log4J" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

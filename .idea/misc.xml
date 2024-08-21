@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
@@ -17,10 +16,12 @@
         <option value="$PROJECT_DIR$/_05__Spring_Data_JDBC/pom.xml" />
         <option value="$PROJECT_DIR$/_06__Spring_Data_JPA/pom.xml" />
         <option value="$PROJECT_DIR$/_08__Spring_MVC_And_Web_Service/pom.xml" />
+        <option value="$PROJECT_DIR$/_09__Spring_Boot/pom.xml" />
+        <option value="$PROJECT_DIR$/backend/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="20" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="21" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
